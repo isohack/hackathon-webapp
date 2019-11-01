@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import LoadingPage from "./loadingPage";
 import "../css/landing.css";
 import bg from "../parallax1.svg";
 import bg2 from "../isohack1.svg";
@@ -28,7 +27,7 @@ class LandingPage extends Component {
           <p className="slogan blue-text text-darken-4" style={{fontSize: '25px'}}>This season, hack for a reason</p>
 
           <div class="bird-container bird-container--one">
-            <div class="bird bird--one"></div>
+            <div className="bird bird--one"></div>
           </div>
 
           <div class="bird-container bird-container--two">
