@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import "../css/landing.css";
-import bg from "../parallax1.svg";
-import bg2 from "../isohack1.svg";
 import M from "materialize-css";
 import Navbar from './navbar';
 import About from './about';
@@ -48,13 +46,6 @@ class LandingPage extends Component {
     );
   }
 }
-
-const styles = 
-  {
-    textStyle: {
-      position: 'relative'
-    }
-  }
 
 
 export default LandingPage;

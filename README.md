@@ -167,7 +167,7 @@ Once installed then you can run development server by doing:
 
 And if you want to test in production then:
 
-`npm build`
+`npm run build`
 `python manage.py runserver`
 
 Then Visit the given url from terminal
