@@ -3,7 +3,7 @@ import LandingPage from './components/landingPage'
 import LoadingFire from './components/loadingFire'
 import M from 'materialize-css'
 
-class App  extends Component {
+class App extends Component {
     state = {
         loadingFireBackground: {
             opacity: 1,
