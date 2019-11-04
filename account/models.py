@@ -1,3 +1,4 @@
+import uuid
 from django.db import models
 from django.core.mail import send_mail
 from django.contrib.auth.models import PermissionsMixin
@@ -12,6 +13,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     Custom user model to implement login with phone_number and password
 
     """
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     email = models.EmailField(_('email address'), max_length=80, unique=True)
     phone_number = models.CharField(_('phone number'), max_length=10, blank=True)
     first_name = models.CharField(_('first name'), max_length=30, blank=True)
