@@ -112,7 +112,7 @@ Explanation: `postgresql://<user>:<password>@localhost/<database_name>`
 
 *IMPORTANT*: After creating database the tables which will be created by Django will not be modified by you until and unless you know what you are doing.
 
-### 4. Setting up environemnt secrets
+### 4. Setting up environment secrets
 
 Working in public repository obviously you will not be sharing your secrets. With secrets I am talking about password, secret key or database url. So to avoid that we create one file called `.env`. This file is usually hidden but can be accessed locally. But usually we don't upload these information in repository and we encourage you to configure it by your own. So currently there are 2 main things you need to add in `.env` file.
 
