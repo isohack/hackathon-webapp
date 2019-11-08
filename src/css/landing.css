@@ -155,16 +155,16 @@
 	width: 100%;
 }
 
-.hack-name {
+.header-title {
 	position: absolute;
 	left: 7vh;
-	font-size: 8vw;
 	top: 15vh;
 }
 
+.hack-name {
+	font-size: 8vw;
+}
+
 .hack-slogan {
-	position: absolute;
-	left: 7vh;
 	font-size: 2vw;
-	top: 30vh;
 }

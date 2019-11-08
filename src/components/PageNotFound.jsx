@@ -14,7 +14,7 @@ class PageNotFound extends Component {
                  style={{display: "block", zIndex: 6, opacity: 1, height: "120vh"}}>
                 <div className={"row"}>
                     <div className={"col s12 m12 l6"}>
-                        <div className="fire">
+                        <div className="fire not-found-fire">
                             <div className="flames">
                                 <div className={"flame"}> </div>
                                 <div className={"flame"}> </div>

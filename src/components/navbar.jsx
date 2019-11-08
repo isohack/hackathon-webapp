@@ -7,10 +7,11 @@ class Navbar extends Component {
       <>
         <nav style={{backgroundColor: 'cyan'}}>
           <div className="nav-wrapper">
-            <a href="#!" className="brand-logo blue-text text-darken-4">
+            <a href={"/"} className="brand-logo blue-text text-darken-4">
               IsoHack
             </a>
-            <a href="#" data-target="mobile-demo" className="sidenav-trigger">
+              {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+            <a href={""} data-target="mobile-demo" className="sidenav-trigger">
               <i className="material-icons">menu</i>
             </a>
             <ul className="right hide-on-med-and-down">

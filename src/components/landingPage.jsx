@@ -26,10 +26,12 @@ class LandingPage extends Component {
       <>
         <Navbar />
         <div className={"landing-sky"}>
-          <h1 className={"hack-name"}>IsoHack</h1>
-          <p className={"hack-slogan"}>
-            This season, hack for a reason
-          </p>
+          <div className={"header-title"}>
+            <span className={"hack-name"}>IsoHack</span>
+            <p className={"hack-slogan"}>
+              This season, hack for a reason
+            </p>
+          </div>
 
           <img className={"landing-mountains"} src={Mountains} alt="" />
           <img className={"landing-grass"} src={Grass} alt="" />
