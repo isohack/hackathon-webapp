@@ -2,6 +2,8 @@
 
 ## Contribution
 
+[![Build Status](https://travis-ci.org/isohack/hackathon-webapp.svg?branch=master)](https://travis-ci.org/isohack/hackathon-webapp)
+
 In case if you want to contribute in this project then please follow these steps:
 
 1. Make sure that you are comfortable in coding and want to contribute something. There is no need to by shy and new comers are most welcome in this project, and we will surely guide you.
@@ -112,7 +114,7 @@ Explanation: `postgresql://<user>:<password>@localhost/<database_name>`
 
 *IMPORTANT*: After creating database the tables which will be created by Django will not be modified by you until and unless you know what you are doing.
 
-### 4. Setting up environemnt secrets
+### 4. Setting up environment secrets
 
 Working in public repository obviously you will not be sharing your secrets. With secrets I am talking about password, secret key or database url. So to avoid that we create one file called `.env`. This file is usually hidden but can be accessed locally. But usually we don't upload these information in repository and we encourage you to configure it by your own. So currently there are 2 main things you need to add in `.env` file.
 
@@ -154,6 +156,18 @@ And it should give no error. Once that is happen just go to
 `http://127.0.0.1:8000/`
 
 And you will see one welcome page.
+
+### Testing
+
+For Testing all you need to do is:
+
+`python manage.py test`
+
+*Note*: Make sure that before testing, your user should have the permission to create db and in order to do that execute command in psql shell:
+
+`ALTER USER dsc CREATEDB;`
+
+Here `dsc` is custom user which I created
 
 ## Getting Started with Frontend
 

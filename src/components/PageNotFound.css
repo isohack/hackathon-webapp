@@ -1,0 +1,16 @@
+@media only screen and (max-width: 800px) {
+    .fire {
+        left: 50% !important;
+    }
+}
+
+.fire {
+    top: auto !important;
+    left: 10%;
+    bottom: 20% !important;
+    /*margin: 10%;*/
+}
+
+.not-found-text {
+    font-size: 14vh;
+}
