@@ -1,44 +1,70 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class Navbar extends Component {
-    state = {  }
-    render() { 
-        return (
-          <nav style={{backgroundColor: '#c7eef5ff', marginTop: '-1130px'}} className="z-depth-0">
-            <div className="nav-wrapper">
-              <a href="index.html" className="brand-logo black-text">
-                  isoHack
-              </a>
-              <ul id="nav-mobile" className="right hide-on-med-and-down" style={{marginRight: '550px'}}>
-                <li>
-                  <a href="sass.html" className="black-text">Home</a>
-                </li>
-                <li>
-                  <a href="badges.html" className="black-text">About</a>
-                </li>
-                <li>
-                  <a href="collapsible.html" className="black-text">Schedule</a>
-                </li>
-                <li>
-                  <a href="collapsible.html" className="black-text">Sponsors</a>
-                </li>
-                <li>
-                  <a href="collapsible.html" className="black-text">Prizes</a>
-                </li>
-                <li>
-                  <a href="collapsible.html" className="black-text">FAQs</a>
-                </li>
-                <li>
-                  <a href="collapsible.html" className="black-text">Register</a>
-                </li>
-                <li>
-                  <a href="collapsible.html" className="black-text">Contact Us</a>
-                </li>
-              </ul>
-            </div>
-          </nav>
-        );
-    }
+  state = {};
+  render() {
+    return (
+      <>
+        <nav style={{backgroundColor: 'cyan'}}>
+          <div className="nav-wrapper">
+            <a href="#!" className="brand-logo blue-text text-darken-4">
+              IsoHack
+            </a>
+            <a href="#" data-target="mobile-demo" className="sidenav-trigger">
+              <i className="material-icons">menu</i>
+            </a>
+            <ul className="right hide-on-med-and-down">
+              <li>
+                <a  className = "blue-text text-darken-4" href="sass.html">Home</a>
+              </li>
+              <li>
+                <a  className = "blue-text text-darken-4" href="badges.html">About</a>
+              </li>
+              <li>
+                <a className = "blue-text text-darken-4"  href="collapsible.html">Schedule</a>
+              </li>
+              <li>
+                <a className = "blue-text text-darken-4"  href="mobile.html">Sponsors</a>
+              </li>
+              <li>
+                <a className = "blue-text text-darken-4"  href="mobile.html">Judges</a>
+              </li>
+              <li>
+                <a className = "blue-text text-darken-4"  href="mobile.html">Prizes</a>
+              </li>
+              <li>
+                <a className = "blue-text text-darken-4"  href="mobile.html">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <ul className="sidenav" id="mobile-demo">
+        <li>
+                <a href="sass.html">Home</a>
+              </li>
+              <li>
+                <a href="badges.html">About</a>
+              </li>
+              <li>
+                <a href="collapsible.html">Schedule</a>
+              </li>
+              <li>
+                <a href="mobile.html">Sponsors</a>
+              </li>
+              <li>
+                <a href="mobile.html">Judges</a>
+              </li>
+              <li>
+                <a href="mobile.html">Prizes</a>
+              </li>
+              <li>
+                <a href="mobile.html">Contact</a>
+              </li>
+        </ul>
+      </>
+    );
+  }
 }
- 
+
 export default Navbar;

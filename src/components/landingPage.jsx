@@ -1,29 +1,38 @@
 import React, { Component } from "react";
 import "../css/landing.css";
 import M from "materialize-css";
-import Navbar from './navbar';
-import About from './about';
-import Schedule from './schedule';
+import Navbar from "./navbar";
+import About from "./about";
+import Schedule from "./schedule";
+import Grass from "../img/grass.png";
+import LightGrass from "../img/light-grass.png";
+import Mountains from "../img/mountain.png";
+import Tent from "../img/tent.png";
 
 class LandingPage extends Component {
+  state = {
+    Grass: Grass,
+    LightGrass: LightGrass,
+    Tent: Tent,
+    Mountains: Mountains
+  };
+
   componentDidMount() {
     M.AutoInit();
   }
   render() {
+
     return (
       <>
-        
-        <div style={{height: '5px', marginBottom: '-5px', backgroundColor: '#c7eef5ff'}}></div>
-        <div
-          className="background"
-          style={{ height: "1200px" }}
-        >
-          <Navbar/>
-          <h4 className="college-Name blue-text text-darken-4">ATC, Indore</h4>
-          <p className="mid-text blue-text text-darken-4" style={{fontSize: '25px'}}>Presents</p>
-          <h1 className="hack-Name blue-text text-darken-4">IsoHack</h1>
-          <p className="slogan blue-text text-darken-4" style={{fontSize: '25px'}}>This season, hack for a reason</p>
+        <Navbar />
+        <div className={"landing-sky"}>
+          <h1 className={"hack-name"}>IsoHack</h1>
+          <p className={"hack-slogan"}>
+            This season, hack for a reason
+          </p>
 
+          <img className={"landing-mountains"} src={Mountains} alt="" />
+          <img className={"landing-grass"} src={Grass} alt="" />
           <div class="bird-container bird-container--one">
             <div className="bird bird--one"></div>
           </div>
@@ -40,12 +49,12 @@ class LandingPage extends Component {
             <div class="bird bird--four"></div>
           </div>
         </div>
-        <About/>
-        <Schedule/>
+
+        <About />
+        <Schedule />
       </>
     );
   }
 }
-
 
 export default LandingPage;

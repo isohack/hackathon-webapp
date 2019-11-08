@@ -3,49 +3,14 @@
 	 box-sizing: border-box;
 }
 
+
+
  *{
     font-family: 'Bree Serif', serif;
  }
 
- .college-Name {
-     position: absolute;
-     top: 200px;
-     left: 200px;
- }
 
- .mid-text {
-     position: absolute;
-     top: 265px;
-     left: 200px;
- }
- 
- .hack-Name {
-     position: absolute;
-     top: 255px;
-     left: 200px;
- }
 
- .slogan {
-     position: absolute;
-     top: 370px;
-     left: 200px;
- }
-
- .background {
-	 z-index: 1;
-	 position: relative;
-	 overflow: hidden;
-	 width: 100%;
-	 display: flex;
-	 align-items: center;
-	 justify-content: center;
-	 min-height: 35rem;
-	 background-image: url('../parallax1.png') ;
-	 background-blend-mode: soft-light;
-	 background-size: cover;
-	 background-position: center center;
-	 padding: 2rem;
-}
 .scheduleBg {
 	z-index: 1;
 	position: relative;
@@ -167,4 +132,39 @@
 		 transform: translateY(0vh) translateX(110vw) scale(0.45);
 	}
 }
- 
+
+.landing-sky{
+	position: relative;
+    height: 100vh;
+    background-image: linear-gradient(
+            to bottom,
+            cyan, white
+    );
+    z-index: 1;
+}
+
+.landing-mountains {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+.landing-grass {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+.hack-name {
+	position: absolute;
+	left: 7vh;
+	font-size: 8vw;
+	top: 15vh;
+}
+
+.hack-slogan {
+	position: absolute;
+	left: 7vh;
+	font-size: 2vw;
+	top: 30vh;
+}
