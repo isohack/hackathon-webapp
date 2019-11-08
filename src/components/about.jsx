@@ -3,7 +3,7 @@ import React from "react";
 const About = () => (
   <div
     className="section"
-    style={{ backgroundColor: "#02244aff", margin: "-3px" }}
+    style={{ backgroundColor: "#02244aff"}}
   >
     <div className="row">
       <div className="col s12 m6 l6">

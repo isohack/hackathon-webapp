@@ -14,11 +14,15 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, re_path, include
+from rest_framework.documentation import include_docs_urls
 
 from .views import index
 
 urlpatterns = [
-    path('', index, name='index'),
     path('admin/', admin.site.urls),
+    re_path(r'^api/v1/account/', include('account.api.urls')),
+    re_path(r'^api/v1/docs/', include_docs_urls(title='Isohack API', permission_classes=[], public=True)),
+    path('', index, name='index'),
+    re_path(r'^(?:.*)/?$', index)
 ]

@@ -23,7 +23,7 @@ class App extends Component {
                     opacity: 0
                 }
             });
-        }, 1800);
+        }, 100);
         setTimeout(() => {
             this.setState({
                 loadingFireBackground: {
