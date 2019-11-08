@@ -155,6 +155,18 @@ And it should give no error. Once that is happen just go to
 
 And you will see one welcome page.
 
+### Testing
+
+For Testing all you need to do is:
+
+`python manage.py test`
+
+*Note*: Make sure that before testing, your user should have the permission to create db and in order to do that execute command in psql shell:
+
+`ALTER USER dsc CREATEDB;`
+
+Here `dsc` is custom user which I created
+
 ## Getting Started with Frontend
 
 To work in frontend at first you need to install all the packages from root directory by doing:

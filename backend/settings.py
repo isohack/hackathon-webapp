@@ -15,6 +15,14 @@ import django_heroku
 import dj_database_url
 from decouple import config
 
+import sentry_sdk
+from sentry_sdk.integrations.django import DjangoIntegration
+
+sentry_sdk.init(
+    dsn="https://802f20e5fbe745a29258d70affa58627@sentry.io/1812623",
+    integrations=[DjangoIntegration()]
+)
+
 production = False
 debug_setting = True
 
