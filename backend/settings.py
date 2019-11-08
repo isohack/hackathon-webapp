@@ -15,14 +15,6 @@ import django_heroku
 import dj_database_url
 from decouple import config
 
-import sentry_sdk
-from sentry_sdk.integrations.django import DjangoIntegration
-
-sentry_sdk.init(
-    dsn="https://802f20e5fbe745a29258d70affa58627@sentry.io/1812623",
-    integrations=[DjangoIntegration()]
-)
-
 production = False
 debug_setting = True
 
@@ -32,9 +24,64 @@ if config('PRODUCTION', default='False').lower() == 'true':
 if config('DEBUG', default='True').lower() == 'false':
     debug_setting = False
 
+print('=' * 30)
+print('PRODUCTION:', production)
+print('DEBUG:', debug_setting)
+
+if production:
+    print('SENTRY SETTINGS: ON')
+    RAVEN_CONFIG = {
+        'dsn': config('SENTRY_DSN'),
+    }
+
+    LOGGING = {
+        'version': 1,
+        'disable_existing_loggers': True,
+        'root': {
+            'level': 'WARNING',
+            'handlers': ['sentry'],
+        },
+        'formatters': {
+            'verbose': {
+                'format': '%(levelname)s %(asctime)s %(module)s '
+                          '%(process)d %(thread)d %(message)s'
+            },
+        },
+        'handlers': {
+            'sentry': {
+                'level': 'ERROR',  # To capture more than ERROR, change to WARNING, INFO, etc.
+                'class': 'raven.contrib.django.raven_compat.handlers.SentryHandler',
+                'tags': {'custom-tag': 'x'},
+            },
+            'console': {
+                'level': 'DEBUG',
+                'class': 'logging.StreamHandler',
+                'formatter': 'verbose'
+            }
+        },
+        'loggers': {
+            'django.db.backends': {
+                'level': 'ERROR',
+                'handlers': ['console'],
+                'propagate': False,
+            },
+            'raven': {
+                'level': 'DEBUG',
+                'handlers': ['console'],
+                'propagate': False,
+            },
+            'sentry.errors': {
+                'level': 'DEBUG',
+                'handlers': ['console'],
+                'propagate': False,
+            },
+        },
+    }
+else:
+    print('SENTRY SETTINGS: OFF')
+print('=' * 30)
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
@@ -47,7 +94,6 @@ DEBUG = debug_setting
 
 ALLOWED_HOSTS = []
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -59,7 +105,8 @@ INSTALLED_APPS = [
     'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
     'rest_framework',
-    'account'
+    'account',
+    'raven.contrib.django.raven_compat'
 ]
 
 MIDDLEWARE = [
@@ -71,6 +118,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'raven.contrib.django.raven_compat.middleware.Sentry404CatchMiddleware',
+    'raven.contrib.django.raven_compat.middleware.SentryResponseErrorIdMiddleware',
 ]
 
 ROOT_URLCONF = 'backend.urls'
@@ -93,19 +142,16 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'backend.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
 if not production:
-    print('PRODUCTION: False')
     DATABASES = {
         'default': dj_database_url.config(
             default=config('DATABASE_URL')
         )
     }
 else:
-    print('PRODUCTION: True')
     DATABASES = {
         'default': dj_database_url.config(
             default=config('DATABASE_URL')
@@ -113,7 +159,6 @@ else:
     }
     db_from_env = dj_database_url.config()
     DATABASES['default'].update(db_from_env)
-
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
@@ -132,7 +177,6 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
