@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "../css/landing.css";
+import "../css/timeGradient.css";
 import M from "materialize-css";
 import Navbar from "./navbar";
 import About from "./about";
@@ -20,7 +21,12 @@ class LandingPage extends Component {
 
   componentDidMount() {
     M.AutoInit();
+    const currentDate = new Date();
+    const hours = currentDate.getHours();
+    const sky = document.getElementsByClassName("landing-sky")[0];
+    sky.classList.add("g" + hours);
   }
+
   render() {
 
     return (

@@ -162,10 +162,6 @@
 .landing-sky{
 	position: relative;
     height: 100vh;
-    background-image: linear-gradient(
-            to bottom,
-            cyan, white
-    );
     z-index: 1;
 }
 
