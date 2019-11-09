@@ -3,26 +3,63 @@
     box-sizing: border-box;
 }
 
+@media only screen and (max-width: 1000px) {
+    .landing-sky{
+        position: relative;
+        height: 100vh !important;
+        z-index: 1;
+    }
 
-@media only screen and (max-width: 500px) {
+    .landing-tent {
+        position: absolute;
+        bottom: 13vw;
+        height: 15vw !important;
+        right: 4%;
+    }
+
+    .landing-waterfall {
+        position: absolute;
+        right: 0;
+        bottom: 0 !important;
+    }
+}
+
+
+@media only screen and (max-width: 670px) {
     .landing-waterfall {
         position: absolute;
         right: 0;
         bottom: 0;
         height: 70vh !important;
     }
+
+    .hack-name {
+        font-size: 5rem !important;
+    }
+
+    .hack-slogan {
+        font-size: 2rem !important;
+    }
 }
 
-@media only screen and (max-width: 350px) {
+@media only screen and (max-width: 470px) {
     .landing-waterfall {
         position: absolute;
         right: 0;
         bottom: 0;
         height: 60vh !important;
     }
+
+    .hack-name {
+        font-size: 4rem !important;
+    }
+
+    .hack-slogan {
+        font-size: 1.5rem !important;
+    }
 }
 
-@media only screen and (max-width: 250px) {
+@media only screen and (max-width: 400px) {
     .landing-waterfall {
         position: absolute;
         right: 0;
@@ -161,39 +198,66 @@
 
 .landing-sky{
 	position: relative;
-    height: 100vh;
+    height: 120vh;
     z-index: 1;
 }
 
 .landing-waterfall {
     position: absolute;
     right: 0;
-    bottom: 0;
+    bottom: 10vw;
     height: 100vh;
 }
 
 .landing-mountains {
 	position: absolute;
+	bottom: 20vw;
+	width: 100%;
+}
+
+.landing-mountain-1 {
+    position: absolute;
+    bottom: 20vw;
+    height: 20vw;
+    left: 0;
+}
+
+.landing-sea {
+    position: absolute;
+    bottom: 5.2vw;
+    width: 100%;
+}
+
+.landing-light-grass {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.landing-dark-grass {
+	position: absolute;
 	bottom: 0;
 	width: 100%;
 }
 
-.landing-grass {
-	position: absolute;
-	bottom: 0;
-	width: 100%;
+.landing-tent {
+    position: absolute;
+    bottom: 13vw;
+    height: 10vw;
+    right: 4%;
 }
 
 .header-title {
 	position: absolute;
 	left: 7vh;
 	top: 15vh;
+    z-index: 2;
 }
 
 .hack-name {
-	font-size: 8vw;
+	font-size: 6rem;
 }
 
 .hack-slogan {
-	font-size: 2vw;
+	font-size: 3rem;
 }
