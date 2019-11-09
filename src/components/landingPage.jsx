@@ -3,6 +3,7 @@ import "../css/landing.css";
 import "../css/timeGradient.css";
 import M from "materialize-css";
 import Navbar from "./navbar";
+import Footer from "./Footer";
 import About from "./about";
 import Schedule from "./schedule";
 import LightGrass from "../img/light-grass.png";
@@ -55,25 +56,26 @@ class LandingPage extends Component {
           <img className={"landing-tent"} src={this.state.Tent} alt="" />
           <img className={"landing-light-grass"} src={LightGrass} alt="" />
           <img className={"landing-dark-grass"} src={DarkGrass} alt="" />
-          <div class="bird-container bird-container--one">
-            <div className="bird bird--one"></div>
+          <div className="bird-container bird-container--one">
+            <div className={"bird bird--one"}></div>
           </div>
 
-          <div class="bird-container bird-container--two">
-            <div class="bird bird--two"></div>
+          <div className={"bird-container bird-container--two"}>
+            <div className={"bird bird--two"}></div>
           </div>
 
-          <div class="bird-container bird-container--three">
-            <div class="bird bird--three"></div>
+          <div className={"bird-container bird-container--three"}>
+            <div className="bird bird--three"></div>
           </div>
 
-          <div class="bird-container bird-container--four">
-            <div class="bird bird--four"></div>
+          <div className={"bird-container bird-container--four"}>
+            <div className={"bird bird--four"}></div>
           </div>
         </div>
 
         <About />
         <Schedule />
+        <Footer />
       </>
     );
   }

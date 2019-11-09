@@ -1,0 +1,90 @@
+@media only screen and (max-width: 600px) {
+    #runner {
+        position: absolute;
+        bottom: 10%;
+        background: url("../img/panda-small.png") !important;
+        width: 125px !important;
+        height: 115px !important;
+        float: left;
+        animation: smallwalk 1s steps(13) infinite !important;
+        /*forward 6s linear infinite;*/
+    }
+}
+
+.footer-container {
+    position: relative;
+    bottom: 0;
+    height: 50vh;
+}
+
+#runner {
+    position: absolute;
+    bottom: 10%;
+    background: url("../img/panda.png");
+    width:245px;
+    height:230px;
+    float: left;
+    animation: walk 1s steps(13) infinite
+    /*forward 6s linear infinite;*/
+}
+@keyframes walk{
+    0%{
+        background-position: 0;
+    }
+    100%{
+        background-position: 3250px;
+    }
+}
+
+@keyframes smallwalk{
+    0%{
+        background-position: 0;
+    }
+    100%{
+        background-position: 1625px;
+    }
+}
+
+.footer-background-1 {
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    background: url("../img/background-1.png");
+    background-repeat: repeat;
+    background-position: 0 0;
+    background-size: auto 100%;
+    /*adjust s value for speed*/
+    animation: animatedBackground 500s linear infinite;
+}
+
+.footer-ground {
+    width: 100%;
+    height: 50%;
+    bottom: 0;
+    position: absolute;
+    background: url("../img/footer-grass.png");
+    background-repeat: repeat;
+    background-position: 0 0;
+    background-size: auto 100%;
+    /*adjust s value for speed*/
+    animation: animatedBackground 500s linear infinite;
+}
+
+@keyframes animatedBackground {
+    from {
+        background-position: 0 0;
+    }
+    /*use negative width if you want it to flow right to left else and positive for left to right*/
+    to {
+        background-position: -10000px 0;
+    }
+}
+
+/*@keyframes forward{*/
+    /*0%{*/
+        /*transform: translateX(-100px);*/
+    /*}*/
+    /*100%{*/
+        /*transform: translateX(1400px);*/
+    /*}*/
+/*}*/
