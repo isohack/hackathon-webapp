@@ -8,6 +8,14 @@ class Footer extends Component {
   componentDidMount() {
   }
 
+  runPanda() {
+    const panda = document.getElementsByClassName("footer-runner")[0];
+    panda.classList.add("footer-walk");
+    setTimeout(() => {
+      panda.classList.remove("footer-walk");
+    }, 3000);
+  }
+
   render() {
     return (
       <div className={"footer-container"}>
@@ -15,7 +23,7 @@ class Footer extends Component {
         </div>
         <div className={"footer-background-1"}>
         </div>
-        <div id="runner">
+        <div onClick={this.runPanda} className={"footer-runner"}>
         </div>
       </div>
 

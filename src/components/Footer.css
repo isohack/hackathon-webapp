@@ -17,16 +17,22 @@
     height: 50vh;
 }
 
-#runner {
+.footer-runner {
     position: absolute;
     bottom: 10%;
     background: url("../img/panda.png");
     width:245px;
     height:230px;
     float: left;
-    animation: walk 1s steps(13) infinite
-    /*forward 6s linear infinite;*/
+    animation: walk 1s steps(13) infinite;
+    cursor: pointer;
 }
+
+.footer-walk {
+    animation: walk 1s steps(13) infinite,
+                forward 3s linear !important;
+}
+
 @keyframes walk{
     0%{
         background-position: 0;
@@ -80,11 +86,11 @@
     }
 }
 
-/*@keyframes forward{*/
-    /*0%{*/
-        /*transform: translateX(-100px);*/
-    /*}*/
-    /*100%{*/
-        /*transform: translateX(1400px);*/
-    /*}*/
-/*}*/
+@keyframes forward{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(100vw);
+    }
+}
