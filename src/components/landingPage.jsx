@@ -8,6 +8,7 @@ import Grass from "../img/grass.png";
 import LightGrass from "../img/light-grass.png";
 import Mountains from "../img/mountain.png";
 import Tent from "../img/tent.png";
+import Waterfall from "../img/waterfall.png";
 
 class LandingPage extends Component {
   state = {
@@ -33,6 +34,7 @@ class LandingPage extends Component {
             </p>
           </div>
 
+          <img className={"landing-waterfall hide-on-large-only"} src={Waterfall} alt="" />
           <img className={"landing-mountains"} src={Mountains} alt="" />
           <img className={"landing-grass"} src={Grass} alt="" />
           <div class="bird-container bird-container--one">

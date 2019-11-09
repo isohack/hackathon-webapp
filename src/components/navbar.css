@@ -1,0 +1,9 @@
+.absolute-navbar {
+    position: absolute !important;
+    z-index: 2 !important;
+}
+
+.main-nav {
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: none;
+}

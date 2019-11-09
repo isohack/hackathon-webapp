@@ -1,9 +1,35 @@
 @import url('https://fonts.googleapis.com/css?family=Arima+Madurai:300');
- *, *::before, *::after {
-	 box-sizing: border-box;
+*, *::before, *::after {
+    box-sizing: border-box;
 }
 
 
+@media only screen and (max-width: 500px) {
+    .landing-waterfall {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        height: 70vh !important;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .landing-waterfall {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        height: 60vh !important;
+    }
+}
+
+@media only screen and (max-width: 250px) {
+    .landing-waterfall {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        height: 50vh !important;
+    }
+}
 
  *{
     font-family: 'Bree Serif', serif;
@@ -141,6 +167,13 @@
             cyan, white
     );
     z-index: 1;
+}
+
+.landing-waterfall {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
 }
 
 .landing-mountains {
