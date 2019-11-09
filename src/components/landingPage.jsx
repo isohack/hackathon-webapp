@@ -25,12 +25,12 @@ class LandingPage extends Component {
     const hours = currentDate.getHours();
     const sky = document.getElementsByClassName("landing-sky")[0];
     sky.classList.add("g" + hours);
-    if (hours >= 19) {
+    if (hours >= 19 || hours <= 7) {
       this.setState({
         Tent: TentInvert
       });
     }
-    if (hours >= 17) {
+    if (hours >= 16 || hours <= 7) {
       document.getElementsByClassName("header-title")[0].classList.add("white-text");
     }
   }
