@@ -14,10 +14,12 @@ import TentInvert from "../img/tent-invert.png";
 import Waterfall from "../img/waterfall.png";
 import Sea from "../img/sea-new.png";
 import Moutain from "../img/mountain-1.png";
+import TestPage from "./TestPage";
 
 class LandingPage extends Component {
   state = {
     Tent: Tent,
+    isTest: false
   };
 
   componentDidMount() {
@@ -35,6 +37,27 @@ class LandingPage extends Component {
       document.getElementsByClassName("header-title")[0].classList.add("white-text");
     }
   }
+
+  testCloseHandler = (e) => {
+    document.documentElement.style.overflowY = 'visible';
+    this.setState({
+      isTest: false
+    })
+  };
+
+  footerTestHandler = (e) => {
+    document.documentElement.style.overflowY = 'hidden';
+    const panda = document.getElementsByClassName("footer-runner")[0];
+    panda.classList.add("footer-walk");
+    setTimeout(() => {
+      panda.classList.remove("footer-walk");
+    }, 3000);
+    setTimeout(() => {
+      this.setState({
+        isTest: true
+      })
+    }, 1000);
+  };
 
   render() {
 
@@ -75,7 +98,11 @@ class LandingPage extends Component {
 
         <About />
         <Schedule />
-        <Footer />
+        <Footer footerTestHandler={this.footerTestHandler} />
+        {(this.state.isTest) ?
+          <TestPage testCloseHandler={this.testCloseHandler}/>
+          : <div> </div>
+        }
       </>
     );
   }

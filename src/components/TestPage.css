@@ -1,0 +1,74 @@
+.test-background {
+    position: absolute;
+    background-image: url("../img/test-background.png");
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: transform .2s;
+    animation: background-zoom 3s ease, background-reveal 3s forwards;
+}
+
+.test-base {
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 5;
+}
+
+.test-body {
+    position: absolute;
+    margin-right: 40px;
+    margin-left: 40px;
+}
+
+.test-title {
+    color: white;
+    opacity: 0;
+    font-size: 4rem;
+    animation: text-rotate-blur 2s ease forwards;
+    animation-delay: 1s;
+}
+
+.test-close {
+    color: white;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+@keyframes background-zoom {
+    0% {
+        transform: scale(1) rotate(0deg);
+    }
+    100% {
+        transform: scale(1.05) rotate(0.1deg);
+
+    }
+
+}
+
+@keyframes text-rotate-blur {
+    0% {
+        opacity: 1;
+        transform: rotate3d(1, 0, 1, 15deg) scale(.8) translate3d(0, 0, 0);
+        filter: blur(15px);
+    }
+    100% {
+        opacity: 1;
+        transform: rotate3d(1, 0, 1, 0deg) scale(1) translate3d(0, 0, 0);
+        filter: blur(0.001px);
+    }
+}
+
+@keyframes background-reveal {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
