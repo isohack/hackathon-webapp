@@ -29,3 +29,18 @@ class HackathonTeam(models.Model):
 
     def __str__(self):
         return self.team_name
+
+
+class HackathonTiming(models.Model):
+    registration_time = models.DateTimeField(blank=True, null=True)
+    registration_end_time = models.DateTimeField(blank=True, null=True)
+    preparation_time = models.DateTimeField(blank=True, null=True)
+    preparation_end_time = models.DateTimeField(blank=True, null=True)
+    category_start_time = models.DateTimeField(blank=True, null=True)
+    category_end_time = models.DateTimeField(blank=True, null=True)
+    problem_start_time = models.DateTimeField(blank=True, null=True)
+    problem_end_time = models.DateTimeField(blank=True, null=True)
+    event_start_time = models.DateTimeField(blank=True, null=True)
+    event_end_time = models.DateTimeField(blank=True, null=True)
+    final_start_time = models.DateTimeField(blank=True, null=True)
+    final_end_time = models.DateTimeField(blank=True, null=True)
