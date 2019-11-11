@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from hackathon.models import ProblemCategory, ProblemStatement, HackathonTeam
+from hackathon.models import ProblemCategory, ProblemStatement, HackathonTeam, HackathonEvent
 
 
 class ProblemCategorySerializer(serializers.ModelSerializer):
@@ -39,5 +39,20 @@ class HackathonTeamSerializer(serializers.ModelSerializer):
             'city',
             'state',
             'created_at',
+        ]
+        read_only_fields = ['id', 'created_at']
+
+
+class HackathonEventSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = HackathonEvent
+        fields = [
+            'id',
+            'event_name',
+            'event_description',
+            'start_time',
+            'end_time',
+            'location',
+            'created_at'
         ]
         read_only_fields = ['id', 'created_at']

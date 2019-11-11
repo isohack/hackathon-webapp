@@ -44,3 +44,13 @@ class HackathonTiming(models.Model):
     event_end_time = models.DateTimeField(blank=True, null=True)
     final_start_time = models.DateTimeField(blank=True, null=True)
     final_end_time = models.DateTimeField(blank=True, null=True)
+
+
+class HackathonEvent(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    event_name = models.CharField(max_length=80)
+    event_description = models.TextField()
+    start_time = models.DateTimeField()
+    end_time = models.DateTimeField()
+    location = models.CharField(max_length=80)
+    created_at = models.DateTimeField(auto_now_add=True)
