@@ -69,23 +69,11 @@
 }
 
  *{
-    font-family: 'Bree Serif', serif;
+    font-family: 'Open Sans', sans-serif;
  }
 
 
 
-.scheduleBg {
-	z-index: 1;
-	position: relative;
-	overflow: hidden;
-	display: flex;
-	min-height: 35rem;
-	background-image: url('../scheduleBg.svg') ;
-	background-blend-mode: soft-light;
-	background-size: cover;
-	background-position: center center;
-	padding: 2rem;
-}
  .bird {
 	 background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/174479/bird-cells.svg);
 	 background-size: auto 100%;

@@ -15,6 +15,8 @@ import Waterfall from "../img/waterfall.png";
 import Sea from "../img/sea-new.png";
 import Moutain from "../img/mountain-1.png";
 import TestPage from "./TestPage";
+import SimpleBar from 'simplebar-react';
+import "../css/customScroll.css";
 
 class LandingPage extends Component {
   state = {
@@ -63,6 +65,7 @@ class LandingPage extends Component {
 
     return (
       <>
+        <SimpleBar style={{ maxHeight: "100vh", overflowX: "hidden"}}>
         <Navbar />
         <div className={"landing-sky"}>
           <div className={"header-title"}>
@@ -103,6 +106,7 @@ class LandingPage extends Component {
           <TestPage testCloseHandler={this.testCloseHandler}/>
           : <div> </div>
         }
+        </SimpleBar>
       </>
     );
   }

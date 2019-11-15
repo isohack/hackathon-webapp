@@ -1,5 +1,8 @@
 from rest_framework.filters import OrderingFilter
 from rest_framework.pagination import LimitOffsetPagination
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from backend.settings import LATEST_COMMIT_VERSION, LATEST_COMMIT_DATE
 
 from hackathon.models import (ProblemStatement,
                               ProblemCategory,
@@ -17,6 +20,20 @@ from hackathon.api.serializers import (ProblemCategorySerializer,
 
 from rest_framework import generics, mixins
 from django.utils import timezone
+
+
+class HackathonCommitVersion(APIView):
+    permission_classes = []
+
+    def get(self, request):
+        return Response({'version': LATEST_COMMIT_VERSION})
+
+
+class HackathonLastUpdated(APIView):
+    permission_classes = []
+
+    def get(self, request):
+        return Response({'date': LATEST_COMMIT_DATE})
 
 
 class ProblemCategoryAPIView(generics.ListAPIView):
