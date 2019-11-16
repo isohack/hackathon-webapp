@@ -9,22 +9,22 @@ class Schedule extends Component {
 
       <div className="scheduleBg">
       <h1 className="header-text">Schedule</h1>
-       <input type="radio" name="choice" id="day1" checked="checked" />
-       <input type="radio" name="choice" id="day2" />
+       <input type="radio" name="choice" className={"schedule-input"} id="day1" checked="checked" />
+       <input type="radio" name="choice" className={"schedule-input"} id="day2" />
        <label for="day2"></label>
        <label for="day1"></label>
        <div class={"cards"}>
-         <div class="cards__content">IsoHack</div><br/>
-         <div class="cards__content">Hackathon duration</div><br/>
-         <div class="cards__content">7th, 00:00</div>
-         <div class="cards__content">to</div>
-         <div class="cards__content">9th, 12:00</div>
-         <footer class="cards__footer">
+         <div className={"cards__content"}>IsoHack</div><br/>
+         <div className={"cards__content"}>Hackathon duration</div><br/>
+         <div className={"cards__content"}>7th, 00:00</div>
+         <div className={"cards__content"}>to</div>
+         <div className={"cards__content"}>9th, 12:00</div>
+         <footer className={"cards__footer"}>
            <span>This season, hack for a reason</span>
          </footer>
        </div>
-       <div class="cards cards--answer cards--day2">
-         <div class="cards__content">9th February</div><br/>
+       <div className={"cards cards--answer cards--day2"}>
+         <div className={"cards__content"}>9th February</div><br/>
          <div className="row">
            <div className="col s4 m4 l4">12:00</div>
            <div className="col s8 m8 l8">End of hack</div>
@@ -47,8 +47,8 @@ class Schedule extends Component {
          </div>
        
        </div>
-       <div class="cards cards--answer cards--day1">
-         <div class="cards__content">7th February</div><br/>
+       <div className={"cards cards--answer cards--day1"}>
+         <div className={"cards__content"}>7th February</div><br/>
          <div className="row">
            <div className="col s4 m4 l4">16:00</div>
            <div className="col s8 m8 l8">Arrival</div>
