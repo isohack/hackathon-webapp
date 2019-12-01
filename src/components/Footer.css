@@ -30,7 +30,7 @@
 
 .footer-walk {
     animation: walk 1s steps(13) infinite,
-                forward 3s linear !important;
+                forward 3s ease-in-out !important;
 }
 
 @keyframes walk{
