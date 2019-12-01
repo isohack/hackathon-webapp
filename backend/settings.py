@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 import os
 import django_heroku
 import dj_database_url
+import subprocess
 from decouple import config
 
 production = False
@@ -226,3 +227,11 @@ JWT_AUTH = {
     'JWT_RESPONSE_PAYLOAD_HANDLER':
         'account.api.utils.jwt_response_payload_handler',
 }
+
+try:
+    vcs_data = subprocess.check_output(["git", "log", "-1"]).strip().decode('utf-8').split('\n')
+    LATEST_COMMIT_VERSION = vcs_data[0].split(' ')[-1]
+    LATEST_COMMIT_DATE = vcs_data[2].split('   ')[-1]
+except:
+    LATEST_COMMIT_VERSION = ''
+    LATEST_COMMIT_DATE = ''
