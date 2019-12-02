@@ -11,8 +11,8 @@ render() {
      <h1 className="header-text white-text">Schedule</h1>
  
  
-      <input type="radio" name="choice" id="day1" checked="checked" />
-      <input type="radio" name="choice" id="day2" />
+      <input className={'schedule-input'} type="radio" name="choice" id="day1" checked="checked" />
+      <input className={'schedule-input'} type="radio" name="choice" id="day2" />
       <label for="day2"></label>
       <label for="day1"></label>
  

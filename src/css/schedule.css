@@ -6,10 +6,10 @@
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%)
    }
-   
-   
-   
-   input {
+
+
+
+   .schedule-input {
       visibility: hidden;
     }
     @media (min-width: 755px) {
