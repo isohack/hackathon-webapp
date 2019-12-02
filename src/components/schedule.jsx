@@ -50,11 +50,18 @@ class Schedule extends Component {
            <div className="col s4 m4 l4">19:00</div>
            <div className="col s8 m8 l8">Terminus</div>
          </div>
+<<<<<<< HEAD
        </div>
 
 
        <div class="cards cards--answer cards--day1">
          <div class="cards__content">7th February</div><br/>
+=======
+       
+       </div>
+       <div className={"cards cards--answer cards--day1"}>
+         <div className={"cards__content"}>7th February</div><br/>
+>>>>>>> d14cc4038a0808b1cf05b77bf990f1f8ef0ded11
          <div className="row">
            <div className="col s4 m4 l4">16:00</div>
            <div className="col s8 m8 l8">Arrival</div>
