@@ -10,12 +10,19 @@ class ProblemCategory(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
 
 
+class ProblemDomain(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    name = models.CharField(max_length=127)
+    description = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+
 class ProblemStatement(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     category = models.ForeignKey(ProblemCategory, on_delete=models.CASCADE)
     statement = models.TextField()
     description = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
+    domain = models.ManyToManyField(ProblemDomain)
 
 
 class HackathonTeam(models.Model):
@@ -54,3 +61,5 @@ class HackathonEvent(models.Model):
     end_time = models.DateTimeField()
     location = models.CharField(max_length=80)
     created_at = models.DateTimeField(auto_now_add=True)
+
+

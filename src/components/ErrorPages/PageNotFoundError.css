@@ -1,0 +1,15 @@
+.page-not-found-error-background {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(0, 125, 254);
+    color: white;
+}
+
+.page-not-found-error-body {
+    margin: 0 10vw;
+}
+
+.page-not-found-character {
+    font-size: 5rem;
+}

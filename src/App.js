@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
+import ReactGA from 'react-ga';
 import LandingPage from './components/landingPage'
 import LoadingFire from './components/loadingFire'
 import M from 'materialize-css'
+import ErrorBoundary from "./components/ErrorPages/ErrorBoundary";
 
 class App extends Component {
     state = {
@@ -13,8 +15,12 @@ class App extends Component {
             opacity: 1
         },
         loading: true
-     };
+    };
 
+    initializeReactGA() {
+        ReactGA.initialize('UA-154119463-1');
+        ReactGA.pageview('/');
+    }
     componentDidMount() {
         M.AutoInit();
         setTimeout(() => {
@@ -39,20 +45,22 @@ class App extends Component {
         }, 3000);
     }
 
-    render() { 
+    render() {
         return (
             <div>
                 <div>
                     <LoadingFire isLoading={this.state.loading}
-                                 opacity={this.state.loadingFireBackground.opacity}
-                                 height={this.state.loadingFireBackground.height}
-                                 itemOpacity={this.state.loadingFireItem.opacity} />
+                        opacity={this.state.loadingFireBackground.opacity}
+                        height={this.state.loadingFireBackground.height}
+                        itemOpacity={this.state.loadingFireItem.opacity} />
                 </div>
-                <LandingPage/>
+                <ErrorBoundary>
+                    <LandingPage />
+                </ErrorBoundary>
             </div>
         );
     }
 }
- 
- 
+
+
 export default App;

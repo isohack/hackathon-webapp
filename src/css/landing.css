@@ -22,6 +22,12 @@
         right: 0;
         bottom: 0 !important;
     }
+
+	.webapp-status {
+		position: absolute;
+		bottom: 95vh !important;
+		right: 1vw;
+	}
 }
 
 
@@ -69,7 +75,7 @@
 }
 
  *{
-    font-family: 'Bree Serif', serif;
+    font-family: 'Open Sans', sans-serif;
  }
 
 
@@ -248,4 +254,30 @@
 
 .hack-slogan {
 	font-size: 3rem;
+}
+
+.webapp-status {
+	position: absolute;
+	bottom: 22vh;
+	right: 1vw;
+}
+
+.maintenance-status {
+	background-color: #f57f17 !important;
+	box-shadow: 0 0 5px 5px #f57f17;
+}
+
+.live-status {
+	background-color: #43a047 !important;
+	box-shadow: 0 0 5px 5px #43a047;
+}
+
+.down-status {
+	background-color: #e53935 !important;
+	box-shadow: 0 0 5px 5px #e53935;
+}
+
+.testing-status {
+	background-color: #7b1fa2 !important;
+	box-shadow: 0 0 5px 5px #7b1fa2;
 }
