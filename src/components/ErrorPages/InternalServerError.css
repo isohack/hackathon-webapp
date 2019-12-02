@@ -1,0 +1,33 @@
+@font-face {
+    font-family: 'DosFont';
+    src: local('DosFont'), url(../../fonts/dos-vga-437-win.ttf) format('truetype');
+}
+
+@media only screen and (max-width: 1000px) {
+    .server-error-body p {
+        color: white;
+        font-family: 'DosFont', Fallback, sans-serif !important;
+        font-size: 1rem !important;
+    }
+}
+
+.server-error-background {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(1, 0, 173);
+}
+
+.server-error-body {
+    margin: 10vh 5vw;
+}
+
+.server-error-body p {
+    color: white;
+    font-family: 'DosFont', Fallback, sans-serif !important;
+    font-size: 1.5rem;
+}
+
+.server-error-focus {
+    font-weight: 500;
+}

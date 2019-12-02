@@ -2,7 +2,7 @@ from rest_framework.filters import OrderingFilter
 from rest_framework.pagination import LimitOffsetPagination
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from backend.settings import LATEST_COMMIT_VERSION, LATEST_COMMIT_DATE
+from backend.settings import LATEST_COMMIT_VERSION, LATEST_COMMIT_DATE, app_status
 
 from hackathon.models import (ProblemStatement,
                               ProblemCategory,
@@ -34,6 +34,13 @@ class HackathonLastUpdated(APIView):
 
     def get(self, request):
         return Response({'date': LATEST_COMMIT_DATE})
+
+
+class HackathonAppStatus(APIView):
+    permission_classes = []
+
+    def get(self, request):
+        return Response({'status': app_status})
 
 
 class ProblemCategoryAPIView(generics.ListAPIView):

@@ -1,9 +1,10 @@
-import React, { Component } from "react";
+import React, {Component} from "react";
 import "../css/landing.css";
 import "../css/timeGradient.css";
 import M from "materialize-css";
 import Navbar from "./navbar";
 import Footer from "./Footer";
+import Theme from "./theme";
 import About from "./about";
 import Schedule from "./schedule";
 import LightGrass from "../img/light-grass.png";
@@ -18,6 +19,11 @@ import TestPage from "./TestPage";
 import SimpleBar from 'simplebar-react';
 import "../css/customScroll.css";
 
+import {getAppStatus} from '../services/hackathon';
+
+import {connect} from 'react-redux';
+import {changeAppStatus} from "../actions";
+
 class LandingPage extends Component {
   state = {
     Tent: Tent,
@@ -26,6 +32,14 @@ class LandingPage extends Component {
 
   componentDidMount() {
     M.AutoInit();
+    getAppStatus().then((data) => {
+      this.props.changeAppStatus(data);
+    }).catch((err) => {
+      console.log(err);
+      M.toast({html: 'Error connecting to backend', classes: 'rounded'});
+      // this.setState(() => { throw err; });
+    });
+
     const currentDate = new Date();
     const hours = currentDate.getHours();
     const sky = document.getElementsByClassName("landing-sky")[0];
@@ -62,54 +76,82 @@ class LandingPage extends Component {
   };
 
   render() {
+    const appStatus = this.props.appStatus;
+    let webapp_status;
+    if (appStatus === 'live') {
+      webapp_status = <span className="new badge webapp-status live-status" data-badge-caption="">Live</span>;
+    } else if (appStatus === 'maintenance') {
+      webapp_status =
+        <span className="new badge webapp-status maintenance-status" data-badge-caption="">Maintenance</span>;
+    } else if (appStatus === 'down') {
+      webapp_status = <span className="new badge webapp-status down-status" data-badge-caption="">Down</span>;
+    } else if (appStatus === 'testing') {
+      webapp_status = <span className="new badge webapp-status testing-status" data-badge-caption="">Testing</span>;
+    } else if (appStatus === 'offline'){
+      webapp_status = <span className="new badge webapp-status down-status" data-badge-caption="">Offline</span>;
+    }
 
     return (
       <>
-        <SimpleBar style={{ maxHeight: "100vh", overflowX: "hidden"}}>
-        <Navbar />
-        <div className={"landing-sky"}>
-          <div className={"header-title"}>
-            <span className={"hack-name"}>IsoHack</span>
-            <p className={"hack-slogan"}>
-              This season, hack for a reason
-            </p>
+        <SimpleBar style={{maxHeight: "100vh", overflowX: "hidden"}}>
+          <Navbar/>
+          <div className={"landing-sky"}>
+            <div className={"header-title"}>
+              <span className={"hack-name"}>IsoHack</span>
+              <p className={"hack-slogan"}>
+                This season, hack for a reason
+              </p>
+            </div>
+
+            <img className={"landing-mountains"} src={Mountains} alt=""/>
+            <img className={"landing-mountain-1"} src={Moutain} alt=""/>
+            <img className={"landing-waterfall"} src={Waterfall} alt=""/>
+            <img className={"landing-sea"} src={Sea} alt=""/>
+            <img className={"landing-tent"} src={this.state.Tent} alt=""/>
+            <img className={"landing-light-grass"} src={LightGrass} alt=""/>
+            <img className={"landing-dark-grass"} src={DarkGrass} alt=""/>
+            <div className="bird-container bird-container--one">
+              <div className={"bird bird--one"}></div>
+            </div>
+
+            <div className={"bird-container bird-container--two"}>
+              <div className={"bird bird--two"}></div>
+            </div>
+
+            <div className={"bird-container bird-container--three"}>
+              <div className="bird bird--three"></div>
+            </div>
+
+            <div className={"bird-container bird-container--four"}>
+              <div className={"bird bird--four"}></div>
+            </div>
+            {webapp_status}
           </div>
 
-          <img className={"landing-mountains"} src={Mountains} alt="" />
-          <img className={"landing-mountain-1"} src={Moutain} alt="" />
-          <img className={"landing-waterfall"} src={Waterfall} alt="" />
-          <img className={"landing-sea"} src={Sea} alt="" />
-          <img className={"landing-tent"} src={this.state.Tent} alt="" />
-          <img className={"landing-light-grass"} src={LightGrass} alt="" />
-          <img className={"landing-dark-grass"} src={DarkGrass} alt="" />
-          <div className="bird-container bird-container--one">
-            <div className={"bird bird--one"}></div>
-          </div>
-
-          <div className={"bird-container bird-container--two"}>
-            <div className={"bird bird--two"}></div>
-          </div>
-
-          <div className={"bird-container bird-container--three"}>
-            <div className="bird bird--three"></div>
-          </div>
-
-          <div className={"bird-container bird-container--four"}>
-            <div className={"bird bird--four"}></div>
-          </div>
-        </div>
-
-        <About />
-        <Schedule />
-        <Footer footerTestHandler={this.footerTestHandler} />
-        {(this.state.isTest) ?
-          <TestPage testCloseHandler={this.testCloseHandler}/>
-          : <div> </div>
-        }
+          <About/>
+          <Theme/>
+          <Schedule/>
+          <Footer footerTestHandler={this.footerTestHandler}/>
+          {(this.state.isTest) ?
+            <TestPage testCloseHandler={this.testCloseHandler}/>
+            : <div></div>
+          }
         </SimpleBar>
       </>
     );
   }
 }
 
-export default LandingPage;
+const mapStateToProps = (state) => {
+  return {
+    appStatus: state.appStatus
+  }
+};
+
+const mapDispatchToProps = () => {
+  return {
+    changeAppStatus
+  }
+};
+
+export default connect(mapStateToProps, mapDispatchToProps())(LandingPage);

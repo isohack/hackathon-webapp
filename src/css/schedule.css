@@ -1,36 +1,40 @@
 .header-text {
-    font-size: 4vw;
     position: absolute;
     left: 50%;
     top: 0;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%)
    }
-   
-   
-   
-   input {
+
+
+
+   .schedule-input {
       visibility: hidden;
     }
     @media (min-width: 755px) {
       .cards {
         font-size: 20px;
         height: 28rem;
-        width: 20rem
-  
+        width: 20rem;
+        padding: 2.5rem;
+      }
+      .header-text{
+        font-size: 60px;
       }
     }
     @media (max-width: 755px) {
       .cards {
-        font-size: 1.8vw;
-        height: 20rem;
-        width: 14rem;
+        font-size: 12px;
+        height: 19rem;
+        width: 13rem;
+        padding: 1rem;
       }
     }
   
     .cards {
       background: #000;
-      top: 30%;
+      top: 0;
+      bottom: 0;
       left: 0;
       right: 0;
       margin: auto;
@@ -40,7 +44,6 @@
       flex-shrink: 0;
       font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
       font-weight: bolder;
-      padding: 2.5rem;
       position: absolute;
       transition: transform 0.25s ease-out;
     }
