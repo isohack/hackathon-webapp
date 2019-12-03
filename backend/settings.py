@@ -18,6 +18,7 @@ from decouple import config
 
 production = False
 debug_setting = True
+app_status = 'down'
 
 if config('PRODUCTION', default='False').lower() == 'true':
     production = True
@@ -25,9 +26,21 @@ if config('PRODUCTION', default='False').lower() == 'true':
 if config('DEBUG', default='True').lower() == 'false':
     debug_setting = False
 
+if config('APP_STATUS', default='down').lower() == 'down':
+    app_status = 'down'
+elif config('APP_STATUS').lower() == 'live':
+    app_status = 'live'
+elif config('APP_STATUS').lower() == 'maintenance':
+    app_status = 'maintenance'
+elif config('APP_STATUS').lower() == 'testing':
+    app_status = 'testing'
+else:
+    app_status = 'down'
+
 print('=' * 30)
 print('PRODUCTION:', production)
 print('DEBUG:', debug_setting)
+print('APP STATUS:', app_status)
 
 if production:
     print('SENTRY SETTINGS: ON')
@@ -97,6 +110,11 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
+CORS_ORIGIN_WHITELIST = (
+    'http://localhost:8000',
+    'http://localhost:3000'
+)
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -108,10 +126,12 @@ INSTALLED_APPS = [
     'rest_framework',
     'account',
     'hackathon',
+    'corsheaders',
     'raven.contrib.django.raven_compat'
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
