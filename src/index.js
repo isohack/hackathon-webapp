@@ -5,7 +5,8 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import LoginPage from './components/Dashboard/LoginPage';
-import PageNotFound from './components/PageNotFound';
+import PageNotFoundError from './components/ErrorPages/PageNotFoundError';
+import InternalServerError from './components/ErrorPages/InternalServerError';
 import { createStore } from 'redux';
 import allReducer from './reducers';
 import { Provider } from 'react-redux';
@@ -18,7 +19,8 @@ const routing = (
         <Switch>
             <Route exact={true} path={"/"} component={App} />
             <Route path={"/login"} component={LoginPage} />
-            <Route component={PageNotFound} />
+            <Route path={"/error/500"} component={InternalServerError} />
+            <Route component={PageNotFoundError} />
         </Switch>
     </Router>
   </Provider>

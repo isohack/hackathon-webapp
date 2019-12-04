@@ -36,6 +36,7 @@ class LandingPage extends Component {
     }).catch((err) => {
       console.log(err);
       M.toast({html: 'Error connecting to backend', classes: 'rounded'});
+      // this.setState(() => { throw err; });
     });
 
     const currentDate = new Date();
