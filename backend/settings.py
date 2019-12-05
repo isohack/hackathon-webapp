@@ -39,6 +39,7 @@ else:
 
 print('=' * 30)
 print('PRODUCTION:', production)
+print('HTTPS:', production)
 print('DEBUG:', debug_setting)
 print('APP STATUS:', app_status)
 
@@ -222,8 +223,9 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'build', 'static')
 STATICFILES_DIRS = []
 
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-SECURE_SSL_REDIRECT = True
+if production:
+    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+    SECURE_SSL_REDIRECT = True
 
 # If you want to serve user uploaded files add these settings
 MEDIA_URL = '/media/'
