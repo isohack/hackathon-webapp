@@ -4,6 +4,7 @@ import "../css/timeGradient.css";
 import M from "materialize-css";
 import Navbar from "./navbar";
 import Footer from "./Footer";
+import Theme from "./theme";
 import About from "./about";
 import Schedule from "./schedule";
 import LightGrass from "../img/light-grass.png";
@@ -128,6 +129,7 @@ class LandingPage extends Component {
           </div>
 
           <About/>
+          <Theme/>
           <Schedule/>
           <Footer footerTestHandler={this.footerTestHandler}/>
           {(this.state.isTest) ?

@@ -1,0 +1,18 @@
+.about-body {
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+
+.about-body-background {
+    background-image: linear-gradient(rgb(2, 36, 74), black);
+}
+
+.about-header {
+    color: white;
+    font-weight: 800;
+}
+
+.about-world {
+    margin: 5vw;
+    height: 30vw;
+}
