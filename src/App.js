@@ -19,7 +19,7 @@ class App extends Component {
 
     initializeReactGA() {
         ReactGA.initialize('UA-154119463-1');
-        ReactGA.pageview('/homepage');
+        ReactGA.pageview('/');
     }
     componentDidMount() {
         M.AutoInit();
