@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import LandingPage from './components/landingPage'
 import LoadingFire from './components/loadingFire'
 import M from 'materialize-css'
+import ErrorBoundary from "./components/ErrorPages/ErrorBoundary";
 
 class App extends Component {
     state = {
@@ -48,7 +49,9 @@ class App extends Component {
                                  height={this.state.loadingFireBackground.height}
                                  itemOpacity={this.state.loadingFireItem.opacity} />
                 </div>
-                <LandingPage/>
+                <ErrorBoundary>
+                    <LandingPage/>
+                </ErrorBoundary>
             </div>
         );
     }
