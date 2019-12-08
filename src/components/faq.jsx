@@ -1,10 +1,17 @@
 import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
 import ic from '../img/qa.png';
 import './faq.css';
-import '../js/popout';
-
+import M from "materialize-css";
 class Faq extends Component {
+
+    componentDidMount(){
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.collapsible');
+             M.Collapsible.init(elems, {
+                accordion: false
+            });
+        });
+    }
   
   render()
   {
