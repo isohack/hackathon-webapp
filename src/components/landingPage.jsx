@@ -23,7 +23,6 @@ import {getAppStatus} from '../services/hackathon';
 
 import {connect} from 'react-redux';
 import {changeAppStatus} from "../actions";
-import Prizes from "./prizes";
 
 class LandingPage extends Component {
   state = {
@@ -130,7 +129,6 @@ class LandingPage extends Component {
           </div>
         <About />
         <Schedule />
-        <Prizes/>
         <div className="faqback"> <Faq /> </div>
         <Footer footerTestHandler={this.footerTestHandler} />
         {(this.state.isTest) ?

@@ -10,6 +10,7 @@ render() {
      <div className="scheduleBg">
      <h1 className="header-text white-text">Schedule</h1>
  
+ 
       <input className={'schedule-input'} type="radio" name="choice" id="day1" checked="checked" readOnly />
       <input className={'schedule-input'} type="radio" name="choice" id="day2" />
       <label htmlFor="day2"> </label>
