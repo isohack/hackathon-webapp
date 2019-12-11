@@ -13,7 +13,7 @@ from hackathon.models import (ProblemStatement,
                               HackathonEvent)
 from .permissions import (
     IsAdminOrSuperUser,
-    CustomOrIsAdminOrSuperUserPermission)
+    )
 
 from hackathon.api.serializers import (ProblemCategorySerializer,
                                        ProblemStatementSerializer,
@@ -70,28 +70,40 @@ class HackathonEventAPIView(generics.ListAPIView):
         return HackathonEvent.objects.all()
 
 
-class ProblemCategoryClass(HttpResponse):
+class ProblemCategoryClass(generics.RetrieveUpdateDestroyAPIView):
+
+
+    lookup_field = 'pk'
+    permission_classes = (IsAdminOrSuperUser,)
     serializer_class = ProblemCategorySerializer
 
-    def get_problem_category(request):
-        if request.method == 'GET':
-            category = ProblemCategory.objects.all().values('id','category','description','created_at')
-            # serializer = ProblemCategorySerializer(category,many=True)
-            listed = list(category)
-            return JsonResponse(listed, safe=False)
-        else:
-            print("Only GET is allowed")
-
-    def get_problem_statements(request, category_id):
-        if request.method == 'GET':
-            statements = ProblemStatement.objects.filter(category=category_id).values("id","statement","description","created_at","category_id")
-            # serializer = ProblemCategorySerializer(category, many=True)
-            listed = list(statements)
-            return JsonResponse(listed, safe=False)
-        else:
-            print("Only GET is allowed")
+    def get_queryset(self):
+        return ProblemCategory.objects.all()
 
 
 
+    # def get_problem_category(request):
+    #     category = ProblemCategory.objects.all().values('id','category','description','created_at')
+    #     listed = list(category)
+    #     return JsonResponse(listed, safe=False)
+
+
+
+
+
+class ProblemStatementClass(generics.RetrieveUpdateDestroyAPIView):
+
+    lookup_field = 'category_id'
+    permission_classes = (IsAdminOrSuperUser,)
+    serializer_class = ProblemCategorySerializer
+
+    def get_queryset(self,):
+        category_id = self.kwargs['category_id']
+        return ProblemCategory.objects.filter(category=category_id)
+
+    # def get_problem_statements(request, category_id):
+    #     statements = ProblemStatement.objects.filter(category=category_id).values("id","statement","description","created_at","category_id")
+    #     listed = list(statements)
+    #     return JsonResponse(listed, safe=False)
 
 

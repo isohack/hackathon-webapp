@@ -12,6 +12,6 @@ urlpatterns = [
     path('status/', HackathonAppStatus.as_view(), name='hackathon-app-status'),
     path('categories/', ProblemCategoryAPIView.as_view(), name='hackathon-problem-category'),
     path('events/', HackathonEventAPIView.as_view(), name='hackathon-event'),
-    path('problem/category', ProblemCategoryClass.get_problem_category, name='hackathon-problem-categoryAPI'),
-    path('problem/category/<category_id>', ProblemCategoryClass.get_problem_statements, name='hackathon-problem_statementAPI'),
+    path('problem/category', ProblemCategoryClass.as_view(), name='hackathon-problem-categoryAPI'),
+    path('problem/category/<category_id>', ProblemCategoryClass.as_view(), name='hackathon-problem_statementAPI'),
 ]
