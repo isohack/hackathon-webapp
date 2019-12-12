@@ -25,5 +25,6 @@ urlpatterns = [
     re_path(r'^api/v1/hackathon/', include('hackathon.api.urls')),
     re_path(r'^api/v1/docs/', include_docs_urls(title='Isohack API', permission_classes=[], public=True)),
     path('', index, name='index'),
-    re_path(r'^(?:.*)/?$', index)
+    re_path(r'^(?:.*)/?$', index),
+
 ]

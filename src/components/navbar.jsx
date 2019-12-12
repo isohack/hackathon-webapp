@@ -37,6 +37,9 @@ class Navbar extends Component {
                   <a className="blue-text text-darken-4" href="mobile.html">Prizes</a>
                 </li>
                 <li>
+                  <a className="blue-text text-darken-4" href="mobile.html">Faq</a>
+                </li>
+                <li>
                   <a className="blue-text text-darken-4" href="mobile.html">Contact Us</a>
                 </li>
               </ul>
