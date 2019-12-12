@@ -8,7 +8,8 @@ from hackathon.models import (ProblemStatement,
                               ProblemCategory,
                               HackathonTeam,
                               HackathonTiming,
-                              HackathonEvent)
+                              HackathonEvent,
+							  HackathonTeamProgress)
 from .permissions import (
     IsAdminOrSuperUser,
     CustomOrIsAdminOrSuperUserPermission)
@@ -16,7 +17,8 @@ from .permissions import (
 from hackathon.api.serializers import (ProblemCategorySerializer,
                                        ProblemStatementSerializer,
                                        HackathonTeamSerializer,
-                                       HackathonEventSerializer)
+                                       HackathonEventSerializer,
+									   HackathonTeamProgressSerializer)
 
 from rest_framework import generics, mixins
 from django.utils import timezone
@@ -66,3 +68,13 @@ class HackathonEventAPIView(generics.ListAPIView):
 
     def get_queryset(self):
         return HackathonEvent.objects.all()
+
+
+class HackathonTeamProgressAPIView(generics.ListAPIView):
+	serializer_class = HackathonTeamProgressSerializer
+	permission_classes = (IsAdminOrSuperUser,)
+	# filter_backends = [OrderingFilter]
+	# pagination_class = LimitOffsetPagination
+
+	def get_queryset(self):
+		return HackathonTeamProgress.objects.all()
