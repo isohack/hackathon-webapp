@@ -7,6 +7,7 @@ import Footer from "./Footer";
 import About from "./about";
 import Schedule from "./schedule";
 import Faq from "./faq";
+import Sponsor from "./Sponsor";
 import LightGrass from "../img/light-grass.png";
 import DarkGrass from "../img/dark-grass.png";
 import Mountains from "../img/mountains.png";
@@ -129,7 +130,8 @@ class LandingPage extends Component {
           </div>
         <About />
         <Schedule />
-        <div className="faqback"> <Faq /> </div>
+        <Faq />
+        <Sponsor />
         <Footer footerTestHandler={this.footerTestHandler} />
         {(this.state.isTest) ?
           <TestPage testCloseHandler={this.testCloseHandler}/>
