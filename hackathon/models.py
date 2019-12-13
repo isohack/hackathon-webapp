@@ -63,7 +63,6 @@ class HackathonEvent(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
 
 
-<<<<<<< HEAD
 class HackathonTeamProgress(models.Model):
 	team_name = models.TextField(primary_key=True, null=False)	
 	arrival_time = models.DateTimeField() 
@@ -92,5 +91,3 @@ class HackathonTeamProgress(models.Model):
 	#review_rating = #most probably separate model
 	created_at = models.DateTimeField(auto_now_add=True) 
 	updated_at = models.DateTimeField(auto_now_add=True) 
-=======
->>>>>>> c3ab826fd1eaec98a219b8838c3d80bd226576c7

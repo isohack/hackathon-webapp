@@ -5,11 +5,8 @@
   "dependencies": {
     "@sentry/browser": "^5.10.0",
     "axios": "^0.19.0",
-<<<<<<< HEAD
     "material-ui": "^0.20.2",
-=======
     "jquery": "^3.4.1",
->>>>>>> c3ab826fd1eaec98a219b8838c3d80bd226576c7
     "materialize-css": "^1.0.0-rc.2",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
