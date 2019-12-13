@@ -1,0 +1,34 @@
+.sponsor-back
+    {
+        background: linear-gradient(-45deg, #c53f3d, #aa5088, #ba69e9, #36a8c5) ;
+        animation: gradientBG 10s ease infinite;
+        justify-content: center;
+    }
+      @keyframes gradientBG {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+    
+      .sponsor-header
+      {
+        margin-top:0;
+        padding:0;
+        text-align: center;
+        color: white;
+        
+      }
+      .sponsor-img
+      {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
