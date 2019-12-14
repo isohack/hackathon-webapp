@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400|PT+Sans:400,700');
+/* Colours ================================================== */
+/* Mixins ================================================== */
+/* Global ================================================== */
+ * {
+	 font: 300 16px 
+}
+
+@media (min-width: 755px ){
+    .acc{
+        max-width: 760px;
+    }
+    .content{
+        margin-top: 8%;
+        margin-bottom: 8%;
+    }
+
+}
+@media (max-width: 755px ){
+    
+.content{
+    margin-top: 25%;
+}
+
+
+}
+
+
+
+ .content {
+	 background-position: center center;
+	 background-size: cover;
+	 background-repeat: no-repeat;
+	 background-origin: padding-box;
+	 background-clip: border-box;
+	 background-attachment: fixed;
+	/*scroll on mobile*/
+	 color: #fff;
+	 text-align: center;
+}
+/* Accordion ================================================== */
+ .acc {
+	 margin: 0 auto;
+}
+ .acc__card {
+	 margin: 2em;
+	 position: relative;
+}
+ .acc__title {
+	 background: #fff;
+	 box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+	 color: #212121;
+	 cursor: pointer;
+	 display: block;
+	 padding: 1em 1.5em;
+	 position: relative;
+	 text-align: left;
+}
+ .acc__title::after {
+	 width: 8px;
+	 height: 8px;
+	 border-right: 1px solid #4a6e78;
+	 border-bottom: 1px solid #4a6e78;
+	 position: absolute;
+	 right: 10px;
+	 content: " ";
+	 top: 17px;
+	 transform: rotate(-45deg);
+	 transition: all 0.2s ease-in-out;
+}
+ .acc__title.active::after {
+	 transform: rotate(45deg);
+	 transition: all 0.2s ease-in-out;
+}
+ .acc__panel {
+	 background: #fff;
+	 color: #212121;
+	 display: none;
+	 margin: 0;
+	 padding: 2em;
+	 text-align: left;
+}
+ 
+.faqBackground {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    display: flex;
+    padding: 0;
+    justify-content: center;
+}
+
+@keyframes gradientBG {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .faq-header {
+    position: absolute;
+    color: white;
+   }

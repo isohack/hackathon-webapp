@@ -3,6 +3,7 @@ from rest_framework.pagination import LimitOffsetPagination
 from django.http import HttpResponse, JsonResponse
 from django.core.mail import send_mail
 
+
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from backend.settings import LATEST_COMMIT_VERSION, LATEST_COMMIT_DATE, app_status
@@ -71,6 +72,7 @@ class HackathonEventAPIView(generics.ListAPIView):
         return HackathonEvent.objects.all()
 
 
+
 class ProblemCategoryClass(generics.ListAPIView):
     permission_classes = []
     serializer_class = ProblemCategorySerializer
@@ -103,6 +105,10 @@ def Send_to_Email(request):
     print("mail sent")
     response = json.dumps([{'message': 'mail sent'}])
     return HttpResponse(response, content_type='text/json')
+
+
+
+
 
 
 
