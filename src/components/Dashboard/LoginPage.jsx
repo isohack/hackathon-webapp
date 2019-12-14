@@ -53,7 +53,6 @@ class LoginPage extends Component {
 
 		
 		 var apiBaseUrl = config.BASE_URL
-		 var self = this;
 		 const payload={
 			 "email":this.state.username,
 			 "password":this.state.password
