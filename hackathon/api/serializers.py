@@ -22,7 +22,7 @@ class ProblemStatementSerializer(serializers.ModelSerializer):
             'id',
             'category',
             'statement',
-            'description'
+            'description',
             'created_at',
         ]
         read_only_fields = ['id', 'created_at']
