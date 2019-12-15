@@ -84,7 +84,7 @@ class HackathonTeamProgressAPIView(generics.ListAPIView):
 	def get_queryset(self):
 		return HackathonTeamProgress.objects.all()
 
-class ProblemCategoryClass(HttpResponse):
+class ProblemCategoryClass(generics.ListAPIView):
     permission_classes = []
     serializer_class = ProblemCategorySerializer
 
