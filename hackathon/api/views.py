@@ -11,7 +11,7 @@ from hackathon.models import (ProblemStatement,
                               HackathonTeam,
                               HackathonTiming,
                               HackathonEvent,
-							  HackathonTeamProgress)
+                              HackathonTeamProgress)
 from .permissions import (
     IsAdminOrSuperUser,
     CustomOrIsAdminOrSuperUserPermission)
