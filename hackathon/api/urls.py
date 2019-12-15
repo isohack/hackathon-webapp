@@ -15,4 +15,5 @@ urlpatterns = [
     path('problem/category', ProblemCategoryClass.as_view(), name='hackathon-problem-categoryAPI'),
     path('problem/category/<category_id>', ProblemStatementClass.as_view(), name='hackathon-problem_statementAPI'),
     path('mail/', Send_to_Email),
+
 ]
