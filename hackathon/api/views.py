@@ -12,7 +12,8 @@ from hackathon.models import (ProblemStatement,
                               ProblemCategory,
                               HackathonTeam,
                               HackathonTiming,
-                              HackathonEvent)
+                              HackathonEvent,
+                              HackathonTeamProgress)
 from .permissions import (
     IsAdminOrSuperUser,
     )
@@ -20,10 +21,12 @@ from .permissions import (
 from hackathon.api.serializers import (ProblemCategorySerializer,
                                        ProblemStatementSerializer,
                                        HackathonTeamSerializer,
-                                       HackathonEventSerializer)
+                                       HackathonEventSerializer,
+									   HackathonTeamProgressSerializer)
 
 from rest_framework import generics, mixins
 from django.utils import timezone
+import json
 
 
 class HackathonCommitVersion(APIView):
@@ -72,8 +75,16 @@ class HackathonEventAPIView(generics.ListAPIView):
         return HackathonEvent.objects.all()
 
 
+class HackathonTeamProgressAPIView(generics.ListAPIView):
+	serializer_class = HackathonTeamProgressSerializer
+	permission_classes = (IsAdminOrSuperUser,)
+	# filter_backends = [OrderingFilter]
+	# pagination_class = LimitOffsetPagination
 
-class ProblemCategoryClass(generics.ListAPIView):
+	def get_queryset(self):
+		return HackathonTeamProgress.objects.all()
+
+class ProblemCategoryClass(HttpResponse):
     permission_classes = []
     serializer_class = ProblemCategorySerializer
 
@@ -90,10 +101,6 @@ class ProblemStatementClass(generics.ListAPIView):
         print(category_id)
         return ProblemStatement.objects.filter(category=category_id)
 
-
-
-import json
-
 def Send_to_Email(request):
     email_to = "harshzf2@gmail.com"
     subject = 'Thank you for registering to our site'
@@ -105,6 +112,7 @@ def Send_to_Email(request):
     print("mail sent")
     response = json.dumps([{'message': 'mail sent'}])
     return HttpResponse(response, content_type='text/json')
+
 
 
 
