@@ -84,6 +84,7 @@ class HackathonTeamProgressAPIView(generics.ListAPIView):
 	def get_queryset(self):
 		return HackathonTeamProgress.objects.all()
 
+
 class ProblemCategoryClass(generics.ListAPIView):
     permission_classes = []
     serializer_class = ProblemCategorySerializer
@@ -112,6 +113,7 @@ def Send_to_Email(request):
     print("mail sent")
     response = json.dumps([{'message': 'mail sent'}])
     return HttpResponse(response, content_type='text/json')
+
 
 
 
