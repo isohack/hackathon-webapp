@@ -1,6 +1,8 @@
 from rest_framework.filters import OrderingFilter
 from rest_framework.pagination import LimitOffsetPagination
 from django.http import HttpResponse, JsonResponse
+from django.core.mail import send_mail
+
 
 from rest_framework.views import APIView
 from rest_framework.response import Response
@@ -14,7 +16,7 @@ from hackathon.models import (ProblemStatement,
                               HackathonTeamProgress)
 from .permissions import (
     IsAdminOrSuperUser,
-    CustomOrIsAdminOrSuperUserPermission)
+    )
 
 from hackathon.api.serializers import (ProblemCategorySerializer,
                                        ProblemStatementSerializer,
@@ -24,6 +26,7 @@ from hackathon.api.serializers import (ProblemCategorySerializer,
 
 from rest_framework import generics, mixins
 from django.utils import timezone
+import json
 
 
 class HackathonCommitVersion(APIView):
@@ -81,26 +84,39 @@ class HackathonTeamProgressAPIView(generics.ListAPIView):
 	def get_queryset(self):
 		return HackathonTeamProgress.objects.all()
 
-class ProblemCategoryClass(HttpResponse):
+
+class ProblemCategoryClass(generics.ListAPIView):
+    permission_classes = []
     serializer_class = ProblemCategorySerializer
 
-    def get_problem_category(request):
-        if request.method == 'GET':
-            category = ProblemCategory.objects.all().values('id','category','description','created_at')
-            # serializer = ProblemCategorySerializer(category,many=True)
-            listed = list(category)
-            return JsonResponse(listed, safe=False)
-        else:
-            print("Only GET is allowed")
+    def get_queryset(self):
+        return ProblemCategory.objects.all()
 
-    def get_problem_statements(request, category_id):
-        if request.method == 'GET':
-            statements = ProblemStatement.objects.filter(category=category_id).values("id","statement","description","created_at","category_id")
-            # serializer = ProblemCategorySerializer(category, many=True)
-            listed = list(statements)
-            return JsonResponse(listed, safe=False)
-        else:
-            print("Only GET is allowed")
+
+class ProblemStatementClass(generics.ListAPIView):
+    permission_classes = []
+    serializer_class = ProblemStatementSerializer
+
+    def get_queryset(self,):
+        category_id = self.kwargs['category_id']
+        print(category_id)
+        return ProblemStatement.objects.filter(category=category_id)
+
+def Send_to_Email(request):
+    email_to = "harshzf2@gmail.com"
+    subject = 'Thank you for registering to our site'
+    message = ' message'
+    email_from = "taacropolis@gmail.com"
+    recipient_list = [email_to]
+
+    send_mail(subject, message, email_from, recipient_list)
+    print("mail sent")
+    response = json.dumps([{'message': 'mail sent'}])
+    return HttpResponse(response, content_type='text/json')
+
+
+
+
 
 
 
