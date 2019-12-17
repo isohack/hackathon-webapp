@@ -109,7 +109,6 @@ class LandingPage extends Component {
 
     return (
       <>
-		<ScrollUp/>
 		<SimpleBar style={{maxHeight: "100vh", overflowX: "hidden"}}>
           <Navbar/>
           <div className={"landing-sky"}>
