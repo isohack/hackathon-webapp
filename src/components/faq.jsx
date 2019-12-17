@@ -16,7 +16,7 @@ class Faq extends Component {
               <img
                 src={this.state.FaqImage}
                 className="faq-image"
-                alt="faq image"
+                alt="faq"
               />
               <p className="yellow-text text-darken-2 top-text">Have any more questions?</p>
               <p className="white-text mid-text">Reach us out anytime</p>
