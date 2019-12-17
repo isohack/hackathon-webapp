@@ -1,108 +1,82 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:300,400|PT+Sans:400,700');
-/* Colours ================================================== */
-/* Mixins ================================================== */
-/* Global ================================================== */
- * {
-	 font: 300 16px 
-}
-
-@media (min-width: 755px ){
-    .acc{
-        max-width: 760px;
-    }
-    .content{
-        margin-top: 8%;
-        margin-bottom: 8%;
-    }
-
-}
-@media (max-width: 755px ){
-    
-.content{
-    margin-top: 25%;
-}
 
 
+@media (min-width: 755px){
+	.faq-section{
+		margin-right: 5%;
+	}
 }
 
+@media (min-width: 755px){
+	.top-text, .mid-text, .bottom-text{
+		margin-left: 30%;
+	}
+	.top-text{
+		margin-top: -10%;
+	}
+	.faq-image{
+		margin-left: 20%;
+	}
+}
 
+@media (max-width: 755px){
+	.top-text, .mid-text, .bottom-text{
+		margin-left: 25%;
+	}
+	.top-text{
+		margin-top: -15%;
+	}
+	.faq-image{
+		margin-left: 5%;
+	}
+}
 
- .content {
-	 background-position: center center;
-	 background-size: cover;
-	 background-repeat: no-repeat;
-	 background-origin: padding-box;
-	 background-clip: border-box;
-	 background-attachment: fixed;
-	/*scroll on mobile*/
-	 color: #fff;
-	 text-align: center;
-}
-/* Accordion ================================================== */
- .acc {
-	 margin: 0 auto;
-}
- .acc__card {
-	 margin: 2em;
-	 position: relative;
-}
- .acc__title {
-	 background: #fff;
-	 box-shadow: 0 0 20px rgba(0, 0, 0, .2);
-	 color: #212121;
-	 cursor: pointer;
-	 display: block;
-	 padding: 1em 1.5em;
-	 position: relative;
-	 text-align: left;
-}
- .acc__title::after {
-	 width: 8px;
-	 height: 8px;
-	 border-right: 1px solid #4a6e78;
-	 border-bottom: 1px solid #4a6e78;
-	 position: absolute;
-	 right: 10px;
-	 content: " ";
-	 top: 17px;
-	 transform: rotate(-45deg);
-	 transition: all 0.2s ease-in-out;
-}
- .acc__title.active::after {
-	 transform: rotate(45deg);
-	 transition: all 0.2s ease-in-out;
-}
- .acc__panel {
-	 background: #fff;
-	 color: #212121;
-	 display: none;
-	 margin: 0;
-	 padding: 2em;
-	 text-align: left;
-}
  
 .faqBackground {
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-    background-size: 400% 400%;
-    animation: gradientBG 15s ease infinite;
-    display: flex;
-    padding: 0;
-    justify-content: center;
+    height: auto;
+	padding: 0;
+	justify-content: center;
+	position: relative;
+	background-image: linear-gradient(rgb(2, 34, 76), black );
+
 }
 
-@keyframes gradientBG {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
+.faq-image {
+	height: 60vh;
+	margin-top: 20%;
+}
 
-  .faq-header {
+
+.text-gradient{
+	background: -webkit-linear-gradient(45deg,#FF8008, #FFC837);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.header-text {
     position: absolute;
-    color: white;
+    left: 50%;
+	top: 0;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%)
    }
+
+.faq-section{
+	margin-top: 30%;
+	border: none;
+}
+
+.collapsible-header{
+	
+	background-color: transparent;
+	border-color: transparent;
+	z-index: 0;
+}
+
+.top-text{
+
+}
+
+.mid-text{
+}
+.bottom-text{
+}

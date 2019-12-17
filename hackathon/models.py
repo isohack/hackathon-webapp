@@ -63,3 +63,31 @@ class HackathonEvent(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
 
 
+class HackathonTeamProgress(models.Model):
+	team_name = models.TextField(primary_key=True, null=False)	
+	arrival_time = models.DateTimeField() 
+	team_number = models.IntegerField(unique=True, null=True) 
+	is_kit_received = models.BooleanField(default=False) 
+	problem_statement = models.ForeignKey(ProblemStatement, on_delete=models.CASCADE, null=True)
+	problem_statement_select_time = models.DateTimeField(null=True) 
+	project_name = models.TextField(null=True) 
+	is_repo_private = models.BooleanField()
+	tech_stack = models.TextField() 
+	first_midnight_snack_status = models.BooleanField()
+	first_breakfast_status = models.BooleanField()
+	first_lunch_status = models.BooleanField()
+	first_dinner_status = models.BooleanField()
+	second_midnidht_snack_status = models.BooleanField()
+	second_breakfast_status = models.BooleanField()
+	second_lunch_status = models.BooleanField()
+	second_dinner_status = models.BooleanField()
+	drinks_count = models.IntegerField()
+	day_one_evaluation_one = models.FloatField()
+	day_one_evaluation_two = models.FloatField()
+	day_two_evaluation_one = models.FloatField()
+	day_two_evaluation_two = models.FloatField()
+	#break_time_in_minutes = #sleep time #to be discussed
+	#final_position = #top 15 or top 20 #to be 
+	#review_rating = #most probably separate model
+	created_at = models.DateTimeField(auto_now_add=True) 
+	updated_at = models.DateTimeField(auto_now_add=True) 

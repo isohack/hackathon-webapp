@@ -1,0 +1,112 @@
+@media only screen and (max-width: 600px) {
+    .login-bg {
+        position: fixed;
+        height: 50vh !important;
+        bottom: 0;
+        width: 100%;
+        transition: all 1s ease-in-out;
+    }
+
+    .login-bg-building {
+        position: fixed;
+        height: 50vh !important;
+        right: 0;
+        bottom: 0;
+        transition: all 1s ease-in-out;
+    }
+}
+
+.login-sky {
+    position: relative;
+    height: 100vh;
+    background-image: linear-gradient(
+            to bottom,
+            #457fd9, #7ba2dd
+    );
+    z-index: 1;
+    transition: opacity 0.5s linear;
+}
+
+.login-sky::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    transition: opacity 0.5s linear;
+    opacity: 0;
+}
+.main-background-grad-hover::before {
+    opacity: 1;
+}
+
+.add-opacity::before {
+    opacity: 0;
+}
+
+.grad-night::before {
+    background-image: linear-gradient(to bottom, #210638, #101010); /* Standard syntax (must be last) */
+}
+
+.grad-normal::before {
+    background-image: linear-gradient(to bottom, #457fd9, #7ba2dd); /* Standard syntax (must be last) */
+}
+
+
+.login-bg {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    transition: all 1s ease-in-out;
+}
+
+.login-bg-building {
+    position: fixed;
+    height: 100vh;
+    right: 0;
+    bottom: 0;
+    transition: all 1s ease-in-out;
+}
+
+.login-bg-tree-one{
+    position: fixed;
+    height: 35vh;
+    left: 0;
+    bottom: 10%;
+    transition: all 1s ease-in-out;
+}
+
+.login-bg-tree-two{
+    position: fixed;
+    height: 35vh;
+    left: 20%;
+    bottom: 10%;
+    transition: all 1s ease-in-out;
+}
+
+.login-container {
+    position: absolute;
+}
+
+.login-card {
+    margin: 30px;
+}
+
+/* label focus color */
+.input-field input[type=text]:focus + label, input[type=password]:focus + label {
+    color: #f4f4f4 !important;
+}
+/* label underline focus color */
+.input-field input[type=text]:focus, input[type=password]:focus {
+    border-bottom: 1px solid #f4f4f4 !important;
+    box-shadow: 0 1px 0 0 #f4f4f4 !important;
+}
+.input-field>label {
+    color: #bababa
+}
+
+.login-title {
+    margin-bottom: 40px !important;
+}
