@@ -31,7 +31,22 @@ class LandingPage extends Component {
     isTest: false
   };
 
+  handleScroll = () => {
+    
+	/*console.log(document.body.scrollTop, document.documentElement.);
+
+	if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+			document.getElementById("scroll-up-button").classList.add("scale-in");
+	} else {
+			document.getElementById("scroll-up-button").classList.remove("scale-in");
+	}*/
+
+  };
+
   componentDidMount() {
+
+	window.addEventListener('scroll', this.handleScroll, true);
+
     M.AutoInit();
     getAppStatus().then((data) => {
       this.props.changeAppStatus(data);
@@ -94,7 +109,7 @@ class LandingPage extends Component {
 
     return (
       <>
-        <SimpleBar style={{maxHeight: "100vh", overflowX: "hidden"}}>
+		<SimpleBar style={{maxHeight: "100vh", overflowX: "hidden"}}>
           <Navbar/>
           <div className={"landing-sky"}>
             <div className={"header-title"}>
