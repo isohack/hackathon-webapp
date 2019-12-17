@@ -7,6 +7,8 @@ import Footer from "./Footer";
 import About from "./about";
 import Schedule from "./schedule";
 import Faq from "./faq";
+import Sponsor from "./Sponsor";
+import ScrollUp from "./Utilities/ScrollUp"
 import LightGrass from "../img/light-grass.png";
 import DarkGrass from "../img/dark-grass.png";
 import Mountains from "../img/mountains.png";
@@ -30,7 +32,22 @@ class LandingPage extends Component {
     isTest: false
   };
 
+  handleScroll = () => {
+    
+	/*console.log(document.body.scrollTop, document.documentElement.);
+
+	if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+			document.getElementById("scroll-up-button").classList.add("scale-in");
+	} else {
+			document.getElementById("scroll-up-button").classList.remove("scale-in");
+	}*/
+
+  };
+
   componentDidMount() {
+
+	window.addEventListener('scroll', this.handleScroll, true);
+
     M.AutoInit();
     getAppStatus().then((data) => {
       this.props.changeAppStatus(data);
@@ -93,7 +110,8 @@ class LandingPage extends Component {
 
     return (
       <>
-        <SimpleBar style={{maxHeight: "100vh", overflowX: "hidden"}}>
+		<ScrollUp/>
+		<SimpleBar style={{maxHeight: "100vh", overflowX: "hidden"}}>
           <Navbar/>
           <div className={"landing-sky"}>
             <div className={"header-title"}>
@@ -129,7 +147,8 @@ class LandingPage extends Component {
           </div>
         <About />
         <Schedule />
-        <div className="faqback"> <Faq /> </div>
+        <Faq />
+        <Sponsor />
         <Footer footerTestHandler={this.footerTestHandler} />
         {(this.state.isTest) ?
           <TestPage testCloseHandler={this.testCloseHandler}/>

@@ -131,6 +131,12 @@ If you followed the same procedure as mentioned in Database configuration sectio
 Update: There is another environment variable which needs to be there called `APP_STATUS`, for local testing
 it will be `APP_STATUS=testing`
 
+Update #2: 
+```
+EMAIL_HOST_USER = random@gmail.com
+EMAIL_HOST_PASSWORD = randompassword
+```
+
 There is one more configuration which is `PRODUCTION=False`, but if you will not type anything or ignore it then also it will work fine.
 
 Note: When working in git version control system, we have one file called `.gitignore`, this tells us that what files we need to ignore when pushing the changes. So currently we add `.env` in gitignore file so that this particular file will never be uploaded in repository and by this you will avoid publishing your secrets. 
