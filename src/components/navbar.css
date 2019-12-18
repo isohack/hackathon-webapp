@@ -1,9 +1,30 @@
 .absolute-navbar {
-    position: absolute !important;
+    position: sticky !important;
     z-index: 2 !important;
 }
 
 .main-nav {
-    background-color: rgba(0, 0, 0, 0);
-    box-shadow: none;
+    background-color: #fff;
+    width: 94% !important;
+    height: 80px !important;
+    left: 3%;
+    top: 3%;
+    border-radius: 20px;
+    box-shadow: 0 2px 10px 0 rgba(0,0,0,.1);
+    transition: top 2s, left 2s;
+}
+
+.nav-logo {
+    float: left;
+    position: relative;
+    width: 70px;
+}
+
+.absolute-navbar {
+    position: absolute !important;
+    z-index: 2 !important;
+}
+
+.main-nav-content {
+    margin: 8px 40px 20px 50px !important;
 }
