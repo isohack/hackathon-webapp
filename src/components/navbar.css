@@ -7,3 +7,11 @@
     background-color: rgba(0, 0, 0, 0);
     box-shadow: none;
 }
+
+.nav-logo {
+    float: left;
+    position: relative;
+    margin: 6px 15px 15px 6px;
+    max-width: 100px;
+    max-height: 80px;
+}
