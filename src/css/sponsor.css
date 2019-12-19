@@ -1,34 +1,75 @@
-.sponsor-back
-    {
-        background: linear-gradient(-45deg, #c53f3d, #aa5088, #ba69e9, #36a8c5) ;
-        animation: gradientBG 10s ease infinite;
-        justify-content: center;
-    }
-      @keyframes gradientBG {
-        0% {
-          background-position: 0% 50%;
-        }
-        50% {
-          background-position: 100% 50%;
-        }
-        100% {
-          background-position: 0% 50%;
-        }
-      }
-    
-      .sponsor-header
-      {
-        margin-top:0;
-        padding:0;
-        text-align: center;
-        color: white;
-        
-      }
-      .sponsor-img
-      {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 10px;
-        margin-bottom: 10px;
-      }
+
+@media (min-width: 755px){
+ 
+  .devfolio{
+    left: 50%;
+    top: 30%;
+  }
+  .matic{
+    left: 50%;
+    top: 55%
+  }
+}
+
+@media (max-width: 755px){
+
+  .devfolio{
+    left: 50%;
+    top: 30%;
+  }
+  .matic{
+    left: 50%;
+    top: 55%;
+  }
+}
+
+
+.text-gradient{
+	background: -webkit-linear-gradient(45deg,#240b36, #c31432);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+
+.sponsorBg{
+  height: 100vh;
+  margin-top: -20px;
+  position: relative;
+}
+
+.header-text {
+  position: absolute;
+  font-family: 'Fredoka One', cursive;
+  left: 50%;
+  top: 0;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%)
+ }
+
+
+.title-sponsor-text {
+  font-size: 48px;
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%)
+ }
+
+
+
+ .devfolio{
+   position: absolute;
+   height: 10vh;
+   width: 45vh;
+   -webkit-transform: translateX(-50%);
+   transform: translateX(-50%);
+ }
+
+ .matic{
+   position: absolute;
+   height: 20vh;
+   width: 20vh;
+   -webkit-transform: translateX(-50%);
+   transform: translateX(-50%);
+ }
