@@ -1,10 +1,5 @@
 import React, { Component } from "react";
 import "../css/sponsor.css";
-import Sponsor_1 from "../img/sponsor_1.png";
-import Sponsor_2 from "../img/sponsor_2.jpeg";
-import Sponsor_3 from "../img/sponsor_3.png";
-import Sponsor_4 from "../img/sponsor_4.jpg";
-import Sponsor_dell from "../img/sponsor-dell.jpg";
 class Sponsor extends Component {
   render() {
     return (
