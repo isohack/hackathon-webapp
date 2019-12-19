@@ -5,12 +5,24 @@ import logo from '../IsoHack-trans-logo.png'
 class Navbar extends Component {
   state = {};
 
+  componentDidMount = () => {
+    window.addEventListener('scroll', this.handleScroll);
+  };
+
+  componentWillUnmount = () => {
+    window.removeEventListener('scroll', this.handleScroll);
+  };
+
+  handleScroll = (event) => {
+    console.log(event);
+  }
+
   render() {
     return (
       <div>
         <div className="navbar-fixed absolute-navbar">
           <nav className={"main-nav"}>
-            <div className="nav-wrapper">
+            <div className="nav-wrapper main-nav-content">
               <a href={"/"} className=" brand-logo blue-text text-darken-4">
                 <img className="nav-logo" src={logo} alt="NOT LOADED" />
               </a>
