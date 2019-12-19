@@ -2,16 +2,12 @@
 @media (min-width: 755px){
  
   .devfolio{
-    left: 20%;
-    top: 55%;
+    left: 50%;
+    top: 30%;
   }
   .matic{
     left: 50%;
-    top: 50%;
-  }
-  .mlh{
-    right: 20%;
-    top: 53%;
+    top: 55%
   }
 }
 
@@ -19,15 +15,11 @@
 
   .devfolio{
     left: 50%;
-    top: 55%;
+    top: 30%;
   }
   .matic{
     left: 50%;
-    top: 70%;
-  }
-  .mlh{
-    right: 50%;
-    top: 95%;
+    top: 55%;
   }
 }
 
@@ -65,15 +57,6 @@
  }
 
 
- .github{
-   position: absolute;
-   height: 25vh;
-   width: 28vh;
-   left: 50%;
-   top: 20%;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%)
- }
 
  .devfolio{
    position: absolute;
@@ -90,12 +73,3 @@
    -webkit-transform: translateX(-50%);
    transform: translateX(-50%);
  }
-
-
- .mlh{
-  position: absolute;
-  height: 15vh;
-  width: 40vh;
-  -webkit-transform: translateX(50%);
-  transform: translateX(50%);
-}

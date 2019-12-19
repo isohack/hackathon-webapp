@@ -11,26 +11,24 @@ class Sponsor extends Component {
       <>
         <div className="sponsorBg">
           <h1 className="header-text text-gradient">Sponsors</h1>
+
           <div className="row">
-            <img
-              className="github"
-              src="http://pngimg.com/uploads/github/github_PNG20.png"
-            />
+            <a href="https://devfolio.co/">
+              <img
+                className="devfolio"
+                src="https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/spaces%2F-LX2wpUXI1eWMY46nkHR%2Favatar-rectangle.png?generation=1570189666128075&alt=media"
+                alt="devfolio"
+              />
+            </a>
           </div>
           <div className="row">
-            <img
-              className="devfolio"
-              src="https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/spaces%2F-LX2wpUXI1eWMY46nkHR%2Favatar-rectangle.png?generation=1570189666128075&alt=media"
-            />
-          </div>
-          <div className="row">
-          <img
-                  className="matic"
-                  src="https://cryptologos.cc/logos/matic-network-matic-logo.png"
-                />
-          </div>
-          <div className="row">
-              <img className="mlh" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Major_League_Hacking_logo.svg/1200px-Major_League_Hacking_logo.svg.png"/>
+            <a href="https://matic.network/">
+              <img
+                className="matic"
+                src="https://cryptologos.cc/logos/matic-network-matic-logo.png"
+                alt="matic"
+              />
+            </a>
           </div>
         </div>
       </>
