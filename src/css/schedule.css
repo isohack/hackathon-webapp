@@ -27,22 +27,25 @@
 .teepee-one{
   position: absolute;
   bottom: 2vw;
-  width: 15%;
+  width: 10%;
+  cursor: pointer;
   left: 5%;
 }
 
 
 .teepee-two{
   position: absolute;
-  bottom: 9vw;
-  width: 15%;
+  bottom: 9vw;  
+  width: 10%;
+  cursor: pointer;
   left: 20%;
 }
 
 .teepee-three{
   position: absolute;
   bottom: 2vw;
-  width: 15%;
+  width: 10%;
+  cursor: pointer;
   left: 35%;
 }
 
@@ -50,14 +53,16 @@
 .teepee-four{
   position: absolute;
   bottom: 2vw;
-  width: 15%;
+  width: 10%;
+  cursor: pointer;
   left: 55%;
 }
 
 .teepee-five{
   position: absolute;
   bottom: 11vw;
-  width: 15%;
+  width: 10%;
+  cursor: pointer;
   right: 20%;
 }
 
@@ -65,6 +70,7 @@
 .teepee-six{
   position: absolute;
   bottom: 7vw;
-  width: 15%;
+  width: 10%;
+  cursor: pointer;
   right: 5%;
 }
