@@ -1,96 +1,79 @@
-@media only screen and (max-width: 600px) {
-    #runner {
-        position: absolute;
-        bottom: 10%;
-        background: url("../img/panda-small.png") !important;
-        width: 125px !important;
-        height: 115px !important;
-        float: left;
-        animation: smallwalk 1s steps(13) infinite !important;
-        /*forward 6s linear infinite;*/
+
+
+
+.footer{
+    padding-top: 6%;
+    padding-bottom: 3%;
+}
+
+.footer-row{
+    width: 35%;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 3%;
+}
+
+.footer-title{
+    font-weight: 600;
+    font-size: 24px;
+    font-family: circularStdBook;
+}
+
+.footer-info{
+    font-family: circularStdBook;
+    font-size: 20px;
+    color: #575757;
+    line-height: 140%;
+}
+
+.footer-social-links{
+    font-family: circularStdBook;
+    font-size: 20px;
+    color: black;
+}
+
+.footer-logo-img{
+    width: 40%;
+}
+
+
+
+@media screen and (max-width: 992px){
+    .footer-row{
+        width: 50%;
+    }
+
+    .footer-info, .footer-social-links{
+        font-size: 16px;
+    }
+
+    .footer-logo-img{
+        width: 60%;
     }
 }
 
-.footer-container {
-    position: relative;
-    bottom: 0;
-    height: 50vh;
-}
 
-.footer-runner {
-    position: absolute;
-    bottom: 10%;
-    background: url("../img/panda.png");
-    width:245px;
-    height:230px;
-    float: left;
-    animation: walk 1s steps(13) infinite;
-    cursor: pointer;
-}
-
-.footer-walk {
-    animation: walk 1s steps(13) infinite,
-                forward 3s ease-in-out !important;
-}
-
-@keyframes walk{
-    0%{
-        background-position: 0;
+@media screen and (max-width: 768px){
+    .footer{
+        padding-top: 15%;
+        padding-bottom: 10%;
     }
-    100%{
-        background-position: 3250px;
+
+    .footer-row{
+        width: 80%;
+        margin-bottom: 5%;
+    }
+
+    .footer-title{
+        font-size: 18px;
+    }
+
+    .footer-info, .footer-social-links{
+        font-size: 14px;
+    }
+
+    .footer-logo-img{
+        width: 50%;
     }
 }
 
-@keyframes smallwalk{
-    0%{
-        background-position: 0;
-    }
-    100%{
-        background-position: 1625px;
-    }
-}
-
-.footer-background-1 {
-    width: 100%;
-    height: 50%;
-    position: absolute;
-    background: url("../img/background-1.png");
-    background-repeat: repeat;
-    background-position: 0 0;
-    background-size: auto 100%;
-    /*adjust s value for speed*/
-    animation: animatedBackground 500s linear infinite;
-}
-
-.footer-ground {
-    width: 100%;
-    height: 50%;
-    bottom: 0;
-    position: absolute;
-    background: url("../img/footer-grass.png");
-    background-repeat: repeat;
-    background-position: 0 0;
-    background-size: auto 100%;
-    /*adjust s value for speed*/
-    animation: animatedBackground 500s linear infinite;
-}
-
-@keyframes animatedBackground {
-    from {
-        background-position: 0 0;
-    }
-    /*use negative width if you want it to flow right to left else and positive for left to right*/
-    to {
-        background-position: -10000px 0;
-    }
-}
-
-@keyframes forward{
-    0%{
-        transform: translateX(0);
-    }
-    100%{
-        transform: translateX(100vw);
-    }
-}
