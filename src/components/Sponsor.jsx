@@ -6,7 +6,6 @@ class Sponsor extends Component {
       <>
         <div className="sponsorBg">
           <h1 className="header-text text-gradient">Sponsors</h1>
-
           <div className="row">
             <a href="https://devfolio.co/">
               <img

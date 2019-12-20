@@ -1,129 +1,70 @@
-.header-text {
-    position: absolute;
-    left: 50%;
-    top: 0;
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%)
-   }
+.scheduleBg{
+  position: relative;
+  height: 100vh;  
+  background-image: linear-gradient(black, rgb(2, 36, 74) );
+}
+
+.schedule-background{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.schedule-dark-grass{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.schedule-light-grass{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.teepee-one{
+  position: absolute;
+  bottom: 2vw;
+  width: 15%;
+  left: 5%;
+}
 
 
+.teepee-two{
+  position: absolute;
+  bottom: 9vw;
+  width: 15%;
+  left: 20%;
+}
 
-   .schedule-input {
-      visibility: hidden;
-    }
-    @media (min-width: 755px) {
-      .cards {
-        font-size: 20px;
-        height: 28rem;
-        width: 20rem;
-        padding: 2.5rem;
-      }
-      .header-text{
-        font-size: 60px;
-      }
-    }
-    @media (max-width: 755px) {
-      .cards {
-        font-size: 12px;
-        height: 19rem;
-        width: 13rem;
-        padding: 1rem;
-      }
-    }
-  
-    .cards {
-      background: #000;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      margin: auto;
-      border-radius: 1.25rem;
-      color: #fff;
-      filter: drop-shadow(5px 5px 5px #000);
-      flex-shrink: 0;
-      font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
-      font-weight: bolder;
-      position: absolute;
-      transition: transform 0.25s ease-out;
-    }
-    .cards:nth-of-type(1) {
-      transform: translate(-40%, 0) rotate(-15deg);
-    }
-    .cards__footer {
-      align-items: center;
-      bottom: 30px;
-      display: flex;
-      font-size: 0.75rem;
-      left: 2.5rem;
-      position: absolute;
-      right: 2.5rem;
-    }
-    .cards__footer img {
-      height: 2rem;
-      margin-right: 6px;
-      width: 2rem;
-    }
-    .cards--answer {
-      color: #000;
-      background: #fff;
-    }
-    #day1:checked ~ .cards--day1 {
-      transform: translate(40%, 0) rotate(15deg) translate(0, 10%);
-      z-index: 3;
-    }
-    #day1:checked ~ .cards--day2 {
-      transform: translate(40%, 0) rotate(15deg) translate(0, -10%);
-      z-index: 2;
-    }
-   
-    #day1:checked ~ label[for='day2'] {
-      z-index: 3;
-    }
-    #day2:checked ~ .cards--day2 {
-      transform: translate(40%, 0) rotate(15deg)translate(0, 10%);
-      z-index: 2;
-    }
-    #day2:checked ~ .cards--day1 {
-      transform: translate(40%, 0) rotate(15deg)translate(0, -10%);
-      z-index: 1;
-    }
-    #day2:checked ~ label[for='day1'] {
-      z-index: 3;
-    }
-     label {
-      cursor: pointer;
-      height: 33.6rem;
-      position: absolute;
-      transform: translate(40%, 0) rotate(15deg);
-      width: 20rem;
-    }
-     .scheduleBg{
-      background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-      background-size: 400% 400%;
-      animation: gradientBG 15s ease infinite;
-      align-items: center;
-      font-size: 10px;
-      justify-content: center;
-      margin: 0;
-      min-height: 100vh;
-      padding: 0;
-      position: relative;
-     
-    }
-  
-    @keyframes gradientBG {
-      0% {
-        background-position: 0% 50%;
-      }
-      50% {
-        background-position: 100% 50%;
-      }
-      100% {
-        background-position: 0% 50%;
-      }
-    }
- 
+.teepee-three{
+  position: absolute;
+  bottom: 2vw;
+  width: 15%;
+  left: 35%;
+}
 
-  
- 
+
+.teepee-four{
+  position: absolute;
+  bottom: 2vw;
+  width: 15%;
+  left: 55%;
+}
+
+.teepee-five{
+  position: absolute;
+  bottom: 11vw;
+  width: 15%;
+  right: 20%;
+}
+
+
+.teepee-six{
+  position: absolute;
+  bottom: 7vw;
+  width: 15%;
+  right: 5%;
+}
