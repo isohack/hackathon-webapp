@@ -9,6 +9,13 @@
     left: 50%;
     top: 55%
   }
+  .sponsor-us-button{
+    font-size: 70px;
+    width: 30%;
+  }
+  .sponsor-header-text{
+    font-size: 75px;
+  }
 }
 
 @media (max-width: 755px){
@@ -21,11 +28,18 @@
     left: 50%;
     top: 55%;
   }
+  .sponsor-us-button{
+    font-size: 22px;
+    width: 50%;
+  }
+  .sponsor-header-text{
+    font-size: 25px;
+  }
 }
 
 
 .text-gradient{
-	background: -webkit-linear-gradient(45deg,#240b36, #c31432);
+	background: white;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
@@ -35,9 +49,10 @@
   height: 100vh;
   margin-top: -20px;
   position: relative;
+  background: linear-gradient(to bottom,rgba(0,0,0,1) 0, rgba(26, 60, 104, 0.99) 100%);
 }
 
-.header-text {
+.sponsor-header-text {
   position: absolute;
   font-family: 'Fredoka One', cursive;
   left: 50%;
@@ -47,29 +62,43 @@
  }
 
 
-.title-sponsor-text {
-  font-size: 48px;
-  position: absolute;
-  left: 50%;
-  top: 20%;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%)
- }
 
 
 
  .devfolio{
    position: absolute;
-   height: 10vh;
-   width: 45vh;
+   height: 7vmax;
    -webkit-transform: translateX(-50%);
    transform: translateX(-50%);
  }
 
  .matic{
    position: absolute;
-   height: 20vh;
-   width: 20vh;
+   height: 7vmax;
    -webkit-transform: translateX(-50%);
    transform: translateX(-50%);
  }
+
+ 
+ .sponsor-us-button{
+   position: absolute;
+   left: 50%;
+   -webkit-transform: translateX(-50%);
+   transform: translateX(-50%);
+   top: 80%;
+   border: 5px solid white;
+   padding: 10px;
+   font-weight: 500;
+   font-size: 2rem;
+   font-family: 'Fredoka One', cursive;
+   background:  rgba(26, 60, 104, 0.99);
+   color: white;
+   height: auto;
+   transition: background-color 0.2s linear, color 0.2s linear;
+ }
+
+.sponsor-us-button:hover{
+  background-color: white;
+  color: black !important;
+  cursor: pointer;
+}

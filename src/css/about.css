@@ -5,6 +5,7 @@
 
 .about-body-background {
     background-image: linear-gradient(rgb(2, 36, 74), black);
+    position: relative;
 }
 
 .about-header {
@@ -15,4 +16,9 @@
 .about-world {
     margin: 5vw;
     height: 30vw;
+}
+
+.iso-images{
+    margin-left: 3vw;
+    height: 20vw;
 }
