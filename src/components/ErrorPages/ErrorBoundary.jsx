@@ -4,17 +4,24 @@ import InternalServerError from "./InternalServerError";
 class ErrorBoundary extends Component {
   constructor(props) {
     super(props);
-    this.state = {error: null};
+    this.state = {
+      error: null,
+      safeURL: window.location.host !== 'www.isohack.in' && window.location.host !== 'localhost:3000' && window.location.host !== 'isohack.herokuapp.com'
+    };
   }
 
   componentDidCatch(error, errorInfo) {
-    console.log('YESSSS');
     this.setState({error});
     // Raven.captureException(error, {extra: errorInfo});
   }
 
   render() {
-    if (this.state.error) {
+    if (this.state.safeURL) {
+      return (
+      <InternalServerError safeURL={this.state.safeURL} />
+      );
+    }
+    else if (this.state.error) {
       return (
         <div
           className="snap"
