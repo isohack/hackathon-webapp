@@ -1,84 +1,63 @@
 import React, { Component } from "react";
 import "../css/schedule.css";
- 
+import scheduleDarkGrass from '../img/schedule-dark-grass.svg'
+import scheduleLightGrass from '../img/schedule-light-grass.svg'
+import scheduleBackground from '../img/schedule-background-grass.svg'
+import teepee1 from '../img/teepee1.png'
+import teepee2 from '../img/teepee2.png'
+import teepee3 from '../img/teepee3.png'
+import teepee4 from '../img/teepee4.png'
+import teepee5 from '../img/teepee5.png'
+import teepee6 from '../img/teepee6.png'
+
+import M from 'materialize-css'
+
 class Schedule extends Component {
- 
+
+state={
+  scheduleDarkGrass : scheduleDarkGrass,
+  scheduleLightGrass : scheduleLightGrass,
+  scheduleBackground : scheduleBackground,
+  teepee1: teepee1,
+  teepee2: teepee2,
+  teepee3: teepee3,
+  teepee4: teepee4,
+  teepee5: teepee5,
+  teepee6: teepee6
+}
+
+
+componentDidMount(){
+  M.AutoInit()
+}
+
 render() {
   return (
     <>
  
-     <div className="scheduleBg">
-     <h1 className="header-text white-text">Schedule</h1>
- 
- 
-      <input className={'schedule-input'} type="radio" name="choice" id="day1" checked="checked" readOnly />
-      <input className={'schedule-input'} type="radio" name="choice" id="day2" />
-      <label htmlFor="day2"> </label>
-      <label htmlFor="day1"> </label>
- 
-      <div className={"cards"}>
-        <div className="cards__content">IsoHack</div><br/>
-        <div className="cards__content">Hackathon duration</div><br/>
-        <div className="cards__content">7th, 00:00</div>
-        <div className="cards__content">to</div>
-        <div className="cards__content">9th, 12:00</div>
-        <footer className="cards__footer">
-          <span>This season, hack for a reason</span>
-        </footer>
-      </div>
- 
- 
-      <div className="cards cards--answer cards--day2">
-        <div className="cards__content">9th February</div><br/>
-        <div className="row">
-          <div className="col s4 m4 l4">12:00</div>
-          <div className="col s8 m8 l8">End of hack</div>
-        </div>
-        <div className="row">
-          <div className="col s4 m4 l4">15:00</div>
-          <div className="col s8 m8 l8">Presentations start</div>
-        </div>
-        <div className="row">
-          <div className="col s4 m4 l4">18:00</div>
-          <div className="col s8 m8 l8">Presentations end</div>
-        </div>
-        <div className="row">
-          <div className="col s4 m4 l4">18:30</div>
-          <div className="col s8 m8 l8">Results</div>
-        </div>
-        <div className="row">
-          <div className="col s4 m4 l4">19:00</div>
-          <div className="col s8 m8 l8">Terminus</div>
-        </div>
-      </div>
- 
- 
-      <div className="cards cards--answer cards--day1">
-        <div className="cards__content">7th February</div><br/>
-        <div className="row">
-          <div className="col s4 m4 l4">16:00</div>
-          <div className="col s8 m8 l8">Arrival</div>
-        </div>
-        <div className="row">
-          <div className="col s4 m4 l4">18:00</div>
-          <div className="col s8 m8 l8">Registration</div>
-        </div>
-        <div className="row">
-          <div className="col s4 m4 l4">20:00</div>
-          <div className="col s8 m8 l8">Dinner</div>
-        </div>
-        <div className="row">
-          <div className="col s4 m4 l4">21:30</div>
-          <div className="col s8 m8 l8">Inaugration</div>
-        </div>
-        <div className="row">
-          <div className="col s4 m4 l4">23:00</div>
-          <div className="col s8 m8 l8">Setup</div>
-        </div>
-      
-      </div>
-  
+    <div className="scheduleBg">
+     <img className={"schedule-background"} src={this.state.scheduleBackground} alt="schedule bg"/>
+     <img className={"schedule-dark-grass"} src={this.state.scheduleDarkGrass} alt="schedule bg"/>
+     <img className={"schedule-light-grass"} src={this.state.scheduleLightGrass} alt="schedule bg"/>
+     <img className="teepee-one modal-trigger" href="#modal1" src={this.state.teepee1} alt="teepee"/>
+     <img className="teepee-two modal-trigger" href="#modal1" src={this.state.teepee2} alt="teepee"/>
+     <img className="teepee-three modal-trigger" href="#modal1" src={this.state.teepee3} alt="teepee"/>
+     <img className="teepee-four modal-trigger" href="#modal1" src={this.state.teepee4} alt="teepee"/>
+     <img className="teepee-five modal-trigger" href="#modal1" src={this.state.teepee5} alt="teepee"/>
+     <img className="teepee-six modal-trigger" href="#modal1" src={this.state.teepee6} alt="teepee"/>
     </div>
+
+
+    <div id="modal1" class="modal bottom-sheet">
+    <div class="modal-content">
+      <h4>Modal Header</h4>
+      <p>A bunch of text</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+  </div>
+          
     </>
  
   );
