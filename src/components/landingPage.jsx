@@ -7,6 +7,7 @@ import Footer from "./Footer";
 import About from "./about";
 import Schedule from "./schedule";
 import Faq from "./faq";
+import Theme from "./theme";
 import Sponsor from "./Sponsor";
 import LightGrass from "../img/light-grass.png";
 import DarkGrass from "../img/dark-grass.png";
@@ -144,6 +145,7 @@ class LandingPage extends Component {
             {webapp_status}
           </div>
         <About />
+        <Theme />
         <Schedule />
         <Faq />
         <Sponsor />
