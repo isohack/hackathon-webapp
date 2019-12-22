@@ -4,6 +4,13 @@
   background-image: linear-gradient(black, rgb(2, 36, 74) );
 }
 
+.schedule-header {
+  color: white;
+  font-weight: 800;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
 .schedule-background{
   position: absolute;
   bottom: 0;

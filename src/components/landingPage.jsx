@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import "../css/landing.css";
 import "../css/timeGradient.css";
 import M from "materialize-css";
-import Navbar from "./navbar";
+// import Navbar from "./navbar";
 import Footer from "./Footer";
 import About from "./about";
 import Schedule from "./schedule";
@@ -20,6 +20,7 @@ import Moutain from "../img/mountain-1.png";
 import TestPage from "./TestPage";
 import SimpleBar from 'simplebar-react';
 import "../css/customScroll.css";
+import LoadingFire from './loadingFire';
 
 import {getAppStatus} from '../services/hackathon';
 
@@ -29,7 +30,15 @@ import {changeAppStatus} from "../actions";
 class LandingPage extends Component {
   state = {
     Tent: Tent,
-    isTest: false
+    isTest: false,
+    loadingFireBackground: {
+      opacity: 1,
+      height: "120vh"
+    },
+    loadingFireItem: {
+      opacity: 1
+    },
+    loading: true
   };
 
   handleScroll = () => {
@@ -45,6 +54,27 @@ class LandingPage extends Component {
   };
 
   componentDidMount() {
+
+    setTimeout(() => {
+      this.setState({
+        loadingFireItem: {
+          opacity: 0
+        }
+      });
+    }, 1800);
+    setTimeout(() => {
+      this.setState({
+        loadingFireBackground: {
+          opacity: 1,
+          height: 0
+        }
+      });
+    }, 2000);
+    setTimeout(() => {
+      this.setState({
+        loading: false,
+      })
+    }, 3000);
 
 	window.addEventListener('scroll', this.handleScroll, true);
 
@@ -110,8 +140,14 @@ class LandingPage extends Component {
 
     return (
       <>
+        <div>
+          <LoadingFire isLoading={this.state.loading}
+                       opacity={this.state.loadingFireBackground.opacity}
+                       height={this.state.loadingFireBackground.height}
+                       itemOpacity={this.state.loadingFireItem.opacity} />
+        </div>
 		<SimpleBar style={{maxHeight: "100vh", overflowX: "hidden"}}>
-          <Navbar/>
+          {/*<Navbar/>*/}
           <div className={"landing-sky"}>
             <div className={"header-title"}>
               <span className={"hack-name"}>IsoHack</span>
@@ -119,6 +155,9 @@ class LandingPage extends Component {
                 This season, hack for a reason
               </p>
             </div>
+            <section id="section10" className="demo">
+              <div><span></span></div>
+            </section>
 
             <img className={"landing-mountains"} src={Mountains} alt=""/>
             <img className={"landing-mountain-1"} src={Moutain} alt=""/>
