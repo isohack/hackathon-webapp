@@ -1,56 +1,34 @@
 
+ @media (min-width: 755px){
+	 .faq-section{
+		margin-top: 10%;
+	 }
+ }
 
-@media (min-width: 755px){
+ @media (max-width: 755px){
 	.faq-section{
-		margin-right: 5%;
-	}
-}
+		margin-top: 35%;
+	 }
+ }
 
-@media (min-width: 755px){
-	.top-text, .mid-text, .bottom-text{
-		margin-left: 30%;
-	}
-	.top-text{
-		margin-top: -10%;
-	}
-	.faq-image{
-		margin-left: 20%;
-	}
-}
 
-@media (max-width: 755px){
-	.top-text, .mid-text, .bottom-text{
-		margin-left: 25%;
-	}
-	.top-text{
-		margin-top: -15%;
-	}
-	.faq-image{
-		margin-left: 5%;
-	}
-}
-
- 
 .faqBackground {
     height: auto;
 	padding: 0;
 	justify-content: center;
 	position: relative;
-	background-image: linear-gradient(rgb(2, 34, 76), black );
-
-}
-
-.faq-image {
-	height: 60vh;
-	margin-top: 20%;
+	background-color: black;
+	color: white;
 }
 
 
 .text-gradient{
-	background: -webkit-linear-gradient(45deg,#FF8008, #FFC837);
+	background: -webkit-linear-gradient(45deg,#240b36, #c31432);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
+
+
 
 .header-text {
     position: absolute;
@@ -60,22 +38,14 @@
     transform: translateX(-50%)
 }
 
-.faq-section{
-	margin-top: 30%;
-	border: none;
-}
 
-.collapsible-header{
+.collapsible-header, .collapsible-body, .collapsible{
 	
 	background-color: transparent;
 	border-color: transparent;
 	z-index: 0;
 }
 
-.top-text{
-}
+.faq-section{
 
-.mid-text{
-}
-.bottom-text{
 }

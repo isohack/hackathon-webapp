@@ -36,6 +36,7 @@ render() {
     <>
  
     <div className="scheduleBg">
+      <h3 className={"schedule-header center"}>Theme</h3>
      <img className={"schedule-background"} src={this.state.scheduleBackground} alt="schedule bg"/>
      <img className={"schedule-dark-grass"} src={this.state.scheduleDarkGrass} alt="schedule bg"/>
      <img className={"schedule-light-grass"} src={this.state.scheduleLightGrass} alt="schedule bg"/>
