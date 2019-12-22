@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import "../css/landing.css";
 import "../css/timeGradient.css";
 import M from "materialize-css";
-import Navbar from "./navbar";
+// import Navbar from "./navbar";
 import Footer from "./Footer";
 import About from "./about";
 import Schedule from "./schedule";
@@ -111,7 +111,7 @@ class LandingPage extends Component {
     return (
       <>
 		<SimpleBar style={{maxHeight: "100vh", overflowX: "hidden"}}>
-          <Navbar/>
+          {/*<Navbar/>*/}
           <div className={"landing-sky"}>
             <div className={"header-title"}>
               <span className={"hack-name"}>IsoHack</span>
@@ -119,6 +119,9 @@ class LandingPage extends Component {
                 This season, hack for a reason
               </p>
             </div>
+            <section id="section10" className="demo">
+              <div><span></span></div>
+            </section>
 
             <img className={"landing-mountains"} src={Mountains} alt=""/>
             <img className={"landing-mountain-1"} src={Moutain} alt=""/>
