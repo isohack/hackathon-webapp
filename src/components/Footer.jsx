@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './Footer.css';
 import "../css/timeGradient.css";
-import logo from '../logo-favicon -android-chrome-512x512.png'
+import logo from '../img/isohack-light.png'
 
 class Footer extends Component {
   state = {};
@@ -26,7 +26,7 @@ class Footer extends Component {
 
         <div class="row footer-row footer-info">
           <div class="col-12">
-            <a href="mailto:isohack.atc@gmail.com">isohack.atc@gmail.com</a>
+            <a href="mailto:isohack.atc@gmail.com">atc.isohack@gmail.com</a>
           </div>
 
         </div>

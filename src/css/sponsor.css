@@ -61,14 +61,14 @@
 
  .devfolio{
    position: absolute;
-   height: 15vh;
+   height: 7vmax;
    -webkit-transform: translateX(-50%);
    transform: translateX(-50%);
  }
 
  .matic{
    position: absolute;
-   height: 15vh;
+   height: 7vmax;
    -webkit-transform: translateX(-50%);
    transform: translateX(-50%);
  }
