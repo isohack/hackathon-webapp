@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import "../css/landing.css";
 import "../css/timeGradient.css";
 import M from "materialize-css";
-import Navbar from "./navbar";
+// import Navbar from "./navbar";
 import Footer from "./Footer";
 import About from "./about";
 import Schedule from "./schedule";
@@ -147,7 +147,7 @@ class LandingPage extends Component {
                        itemOpacity={this.state.loadingFireItem.opacity} />
         </div>
 		<SimpleBar style={{maxHeight: "100vh", overflowX: "hidden"}}>
-          <Navbar/>
+          {/*<Navbar/>*/}
           <div className={"landing-sky"}>
             <div className={"header-title"}>
               <span className={"hack-name"}>IsoHack</span>

@@ -25,10 +25,9 @@ class Footer extends Component {
           </div>
         </div>
 
-
         <div className={"row footer-row footer-info"}>
           <div className={"col-12"}>
-            <a href="mailto:isohack.atc@gmail.com">atc.isohack@gmail.com</a>
+            <a href="mailto:atc.isohack@gmail.com">atc.isohack@gmail.com</a>
           </div>
 
         </div>
