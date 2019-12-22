@@ -1,10 +1,12 @@
 import React, {Component} from 'react';
 import './Footer.css';
 import "../css/timeGradient.css";
-import logo from '../logo-favicon -android-chrome-512x512.png'
+import logo from '../img/isohack-light.png'
 
 class Footer extends Component {
-  state = {};
+  state = {
+    made_by: "</> with ♥"
+  };
 
   componentDidMount() {
   }
@@ -14,19 +16,18 @@ class Footer extends Component {
     return (
 
 
-      <div class="container-fluid footer footer-background">
-        <div class="row footer-row">
-          <div class="col-12">
+      <div className={"container-fluid footer footer-background"}>
+        <div className={"row footer-row"}>
+          <div className={"col-12"}>
             <a href={"/"} className=" footer-title">
               <img className="footer-logo-img" src={logo} alt="NOT LOADED"/>
             </a>
           </div>
         </div>
 
-
-        <div class="row footer-row footer-info">
-          <div class="col-12">
-            <a href="mailto:isohack.atc@gmail.com">isohack.atc@gmail.com</a>
+        <div className={"row footer-row footer-info"}>
+          <div className={"col-12"}>
+            <a href="mailto:atc.isohack@gmail.com">atc.isohack@gmail.com</a>
           </div>
 
         </div>
@@ -65,6 +66,9 @@ class Footer extends Component {
           </div>
           <div className="col s12 m2 l2">
             <a href="https://www.isohack.in/code-of-conduct/">Code of Conduct</a>
+          </div>
+          <div className="col s12 m3 l3">
+            <a className={"right"} href="https://www.github.com/isohack/">{this.state.made_by}</a>
           </div>
         </div>
       </div>
