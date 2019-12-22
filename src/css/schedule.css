@@ -17,67 +17,47 @@
   width: 100%;
 }
 
-.schedule-dark-grass{
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-}
-
-.schedule-light-grass{
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-}
-
 .teepee-one{
   position: absolute;
-  bottom: 2vw;
-  width: 12%;
+  bottom: 9vw;
+  width: 18%;
   cursor: pointer;
-  left: 5%;
+  right: 18%;
 }
 
 
 .teepee-two{
   position: absolute;
   bottom: 9vw;  
-  width: 12%;
+  width: 18%;
   cursor: pointer;
   left: 20%;
+  transform: scaleX(-1);
 }
 
 .teepee-three{
   position: absolute;
   bottom: 2vw;
-  width: 12%;
+  width: 18%;
   cursor: pointer;
-  left: 35%;
+  left: 33%;
+  transform: scaleX(-1);
 }
 
 
 .teepee-four{
   position: absolute;
   bottom: 2vw;
-  width: 12%;
+  width: 18%;
   cursor: pointer;
-  left: 55%;
-}
-
-.teepee-five{
-  position: absolute;
-  bottom: 11vw;
-  width: 12%;
-  cursor: pointer;
-  right: 20%;
+  left: 51%;
 }
 
 
-.teepee-six{
+.bonfire{
   position: absolute;
-  bottom: 7vw;
-  width: 12%;
+  bottom: 5vw;
   cursor: pointer;
-  right: 5%;
+  left: 46%;
+  width: 10%;
 }
