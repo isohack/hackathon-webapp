@@ -17,6 +17,10 @@
     height: 50vh;
 }
 
+.footer-background {
+    background: linear-gradient(to bottom, rgba(26, 60, 104, 0.99) 0, rgb(123, 219, 255) 20%, rgba(255, 255, 255, 1) 100%);
+}
+
 .footer-runner {
     position: absolute;
     bottom: 10%;

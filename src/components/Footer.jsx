@@ -14,7 +14,7 @@ class Footer extends Component {
     return (
 
 
-      <div class="container-fluid footer">
+      <div class="container-fluid footer footer-background">
         <div class="row footer-row">
           <div class="col-12">
             <a href={"/"} className=" footer-title">
@@ -28,7 +28,7 @@ class Footer extends Component {
           <div class="col-12">
             <a href="mailto:isohack.atc@gmail.com">isohack.atc@gmail.com</a>
           </div>
-          
+
         </div>
         <div className={"footer-container"}>
           <div className={"footer-ground"} >
