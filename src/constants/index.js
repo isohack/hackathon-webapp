@@ -1,5 +1,5 @@
 const prod = {
-  BASE_URL: 'https://isohack.herokuapp.com',
+  BASE_URL: process.env.REACT_APP_BASE_URL
 };
 
 const dev = {
