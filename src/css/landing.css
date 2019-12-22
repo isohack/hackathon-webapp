@@ -364,7 +364,7 @@
 
 .demo div {
 	position: absolute;
-	bottom: 120px;
+	bottom: 20vh;
 	left: 50%;
 	z-index: 2;
 	display: inline-block;
