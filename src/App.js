@@ -7,9 +7,11 @@ import ErrorBoundary from "./components/ErrorPages/ErrorBoundary";
 class App extends Component {
 
     initializeReactGA() {
-        ReactGA.initialize('UA-154119463-1');
-        ReactGA.pageview('/');
+        const analytics_token = process.env.REACT_APP_ANALYTICS_TOKEN;
+        ReactGA.initialize(analytics_token);
+        ReactGA.pageview(window.location.pathname + window.location.search);
     }
+    
     componentDidMount() {
         this.initializeReactGA();
         M.AutoInit();
