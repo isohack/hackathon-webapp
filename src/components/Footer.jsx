@@ -14,7 +14,7 @@ class Footer extends Component {
     return (
 
 
-      <div class="container-fluid footer"   >
+      <div class="container-fluid footer"> 
         <div class="row footer-row">
           <div class="col-12">
             <a href={"/"} className=" footer-title">
