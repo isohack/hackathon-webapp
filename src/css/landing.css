@@ -364,7 +364,11 @@
 
 .demo div {
 	position: absolute;
+<<<<<<< HEAD
 	bottom: 120px;
+=======
+	bottom: 20vh;
+>>>>>>> upstream/test
 	left: 50%;
 	z-index: 2;
 	display: inline-block;

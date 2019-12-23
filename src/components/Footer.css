@@ -138,6 +138,11 @@
 .main-footer {
     margin-left: 0 !important;
     width: 100%;
+<<<<<<< HEAD
+=======
+    margin-top: 30px;
+    margin-bottom: 0 !important
+>>>>>>> upstream/test
 }
 
 .main-footer a {
@@ -145,6 +150,11 @@
     text-transform: uppercase;
     font-size: 0.8rem;
     font-weight: 700;
+<<<<<<< HEAD
+=======
+    margin-top: 10px;
+    margin-bottom: 0 !important;
+>>>>>>> upstream/test
 }
 
 @media screen and (max-width: 992px){
