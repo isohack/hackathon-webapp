@@ -5,6 +5,7 @@
 
 .about-body-background {
     background-image: linear-gradient(rgb(2, 36, 74), black);
+    position: relative;
 }
 
 .about-header {
