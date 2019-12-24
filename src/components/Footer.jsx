@@ -16,31 +16,18 @@ class Footer extends Component {
     return (
 
 
-<<<<<<< HEAD
-      <div class="container-fluid footer footer-background">
-        <div class="row footer-row">
-          <div class="col-12">
-=======
       <div className={"container-fluid footer footer-background"}>
         <div className={"row footer-row"}>
           <div className={"col-12"}>
->>>>>>> upstream/test
             <a href={"/"} className=" footer-title">
               <img className="footer-logo-img" src={logo} alt="NOT LOADED"/>
             </a>
           </div>
         </div>
 
-<<<<<<< HEAD
-
-        <div class="row footer-row footer-info">
-          <div class="col-12">
-            <a href="mailto:isohack.atc@gmail.com">atc.isohack@gmail.com</a>
-=======
         <div className={"row footer-row footer-info"}>
           <div className={"col-12"}>
             <a href="mailto:atc.isohack@gmail.com">atc.isohack@gmail.com</a>
->>>>>>> upstream/test
           </div>
 
         </div>
@@ -79,12 +66,9 @@ class Footer extends Component {
           </div>
           <div className="col s12 m2 l2">
             <a href="https://www.isohack.in/code-of-conduct/">Code of Conduct</a>
-<<<<<<< HEAD
-=======
           </div>
           <div className="col s12 m3 l3">
             <a className={"right"} href="https://www.github.com/isohack/">{this.state.made_by}</a>
->>>>>>> upstream/test
           </div>
         </div>
       </div>
