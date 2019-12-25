@@ -18,6 +18,13 @@
     background-color: rgb(1, 0, 173);
 }
 
+.server-error-background-unknown {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(173, 16, 37);
+}
+
 .server-error-body {
     margin: 10vh 5vw;
 }
@@ -28,6 +35,18 @@
     font-size: 1.5rem;
 }
 
+.server-error-body a {
+    color: #7fc0ff;
+    font-family: 'DosFont', Fallback, sans-serif !important;
+    font-size: 1.5rem;
+}
+
 .server-error-focus {
     font-weight: 500;
+}
+
+.server-error-focus-unknown {
+    font-weight: 500;
+    font-size: 5.5rem !important;
+    text-align: center;
 }
