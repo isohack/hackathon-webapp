@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import "./navbar.css";
-import IsohackLogo from "../img/isohack-light.png";
+import IsohackLogo from "../img/isohack.png";
 
 class Navbar extends Component {
   state = {
