@@ -1,19 +1,6 @@
 import React, {Component} from "react";
 import "../css/navbar.css";
 import IsohackLogo from "../img/isohack-light.png";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
-import LandingPage from "./landingPage";
-import Footer from "./Footer";
-import About from "./about";
-import Schedule from "./schedule";
-import Faq from "./faq";
-import Theme from "./theme";
-import Sponsor from "./Sponsor";
 
 class Navbar extends Component {
   state = {
@@ -56,44 +43,19 @@ class Navbar extends Component {
             }
           </a>
         </div>
-        <Router>
         <div className={"navbar-menu"} id={"navbar-menu"}>
-          {/* <h1 style={{position: "absolute"}}>Hello World</h1> */}
           <ul>
             <li><h5 className={"white-text center-align"}>space</h5></li>
-            <li><Link to="/"><h3 className={"black-text center-align"}>Home</h3></Link></li>
-            <li><Link to="/about"><h3 className={"black-text center-align"}>About</h3></Link></li>
-            <li><Link to="/theme"><h3 className={"black-text center-align"}>Theme</h3></Link></li>
-            <li><Link to="/schedule"><h3 className={"black-text center-align"}>Schedule</h3></Link></li>
-            <li><Link to="/faq"><h3 className={"black-text center-align"}>Faq</h3></Link></li>
-            <li><Link to="/sponsor"><h3 className={"black-text center-align"}>Sponsors</h3></Link></li>
-            <li><Link to="/contact"><h3 className={"black-text center-align"}>Contact-Us</h3></Link></li>
+            <li><a href="/"><h3 className={"black-text center-align"}>Home</h3></a></li>
+            <li><a href="/"><h3 className={"black-text center-align"}>About</h3></a></li>
+            <li><a href="/"><h3 className={"black-text center-align"}>Theme</h3></a></li>
+            <li><a href="/"><h3 className={"black-text center-align"}>Schedule</h3></a></li>
+            <li><a href="/"><h3 className={"black-text center-align"}>Faq</h3></a></li>
+            <li><a href="/"><h3 className={"black-text center-align"}>Sponsors</h3></a></li>
+            <li><a href="/"><h3 className={"black-text center-align"}>Contact-Us</h3></a></li>
           </ul>
-          <Switch>
-          <Route exact path="/">
-            <LandingPage />
-          </Route>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/theme">
-            <Theme />
-          </Route>
-          <Route path="/schedule">
-            <Schedule />
-          </Route>
-          <Route path="/faq">
-            <Faq />
-          </Route>
-          <Route path="/sponsor">
-            <Sponsor />
-          </Route>
-          <Route path="/contact">
-            <Footer />
-          </Route>
-        </Switch>
+          
         </div>
-        </Router>
       </div>
     );
   }
