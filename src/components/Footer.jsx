@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './Footer.css';
+import "../css/Footer.css";
 import "../css/timeGradient.css";
 import logo from '../img/isohack-light.png'
 
