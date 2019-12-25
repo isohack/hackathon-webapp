@@ -1,11 +1,8 @@
 import React, { Component } from "react";
 import "../css/faq.css";
 import "../js/faq";
-import FAQ from "../img/isohack1.svg";
 class Faq extends Component {
-  state = {
-    FaqImage: FAQ
-  };
+
   render() {
     return (
       <>
