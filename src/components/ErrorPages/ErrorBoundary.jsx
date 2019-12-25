@@ -4,7 +4,10 @@ import InternalServerError from "./InternalServerError";
 class ErrorBoundary extends Component {
   constructor(props) {
     super(props);
-    this.state = {error: null};
+    this.state = {
+      error: null,
+      safeURL: window.location.host !== 'isohack.in' && window.location.host !== 'localhost:3000'
+    };
   }
 
   componentDidCatch(error, errorInfo) {
@@ -14,7 +17,12 @@ class ErrorBoundary extends Component {
   }
 
   render() {
-    if (this.state.error) {
+    if (this.state.safeURL) {
+      return (
+      <InternalServerError safeURL={this.state.safeURL} />
+      );
+    }
+    else if (this.state.error) {
       return (
         <div
           className="snap"
