@@ -38,7 +38,8 @@ class LandingPage extends Component {
     loadingFireItem: {
       opacity: 1
     },
-    loading: true
+    loading: true,
+    safeURL: window.location.host !== 'isohack.in' && window.location.host !== 'localhost:3000'
   };
 
   handleScroll = () => {
@@ -100,8 +101,11 @@ class LandingPage extends Component {
       this.props.changeAppStatus(data);
     }).catch((err) => {
       console.log(err);
-      M.toast({html: 'Error connecting to backend', classes: 'rounded'});
-      // this.setState(() => { throw err; });
+      if (this.state.safeURL) {
+        this.setState(() => { throw err; });
+      } else {
+        M.toast({html: 'Error connecting to backend', classes: 'rounded'});
+      }
     });
 
     const currentDate = new Date();
