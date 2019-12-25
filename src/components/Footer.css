@@ -190,3 +190,8 @@
     }
 }
 
+@media screen and (max-width: 600px) {
+    .made-by {
+        transform: translate(0px, -27px);
+    }
+}
