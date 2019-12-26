@@ -14,22 +14,22 @@ class Faq extends Component {
           </div>
           <div className="row faq-section">
             <div className="col s12 m6 l6">
-              <ul class="collapsible z-depth-0">
+              <ul className={"collapsible z-depth-0"}>
                 <li style={{fontSize: '20px'}}>
-                  <div class="collapsible-header">
-                    <i class="material-icons">add_circle_outline</i> Where will the event be held and when will it start?
+                  <div className={"collapsible-header"}>
+                    <i className={"material-icons"}>add_circle_outline</i> Where will the event be held and when will it start?
                   </div>
-                  <div class="collapsible-body">
-                    <span> IsoHack will be held in the ATC CSE Department. You can
+                  <div className={"collapsible-body"}>
+                    <span> IsoHack will be held in the Acropolis by CSE Department. You can
                       find the detailed schedule, along with the venue and
-                      contact details of SPOC and organizers</span>
+                      contact details soon within 7 days</span>
                   </div>
                 </li>
                 <li style={{fontSize: '20px'}}>
-                  <div class="collapsible-header">
-                    <i class="material-icons">add_circle_outline</i>What should I bring on the event with me?
+                  <div className={"collapsible-header"}>
+                    <i className={"material-icons"}>add_circle_outline</i>What should I bring on the event with me?
                   </div>
-                  <div class="collapsible-body">
+                  <div className={"collapsible-body"}>
                     <span> Bring your laptops, mobile phones, wearable computing
                       devices and whatever technology inspires you. Make sure
                       that you will feel comfortable during intense hacking and
@@ -39,11 +39,11 @@ class Faq extends Component {
                   </div>
                 </li>
                 <li style={{fontSize: '20px'}}>
-                  <div class="collapsible-header">
-                    <i class="material-icons">add_circle_outline</i>What about food?
+                  <div className={"collapsible-header"}>
+                    <i className={"material-icons"}>add_circle_outline</i>What about food?
 
                   </div>
-                  <div class="collapsible-body">
+                  <div className={"collapsible-body"}>
                     <span>We will make sure that you don’t run out of energy during
                       intense hacking! Besides breakfast, lunch and dinner,
                       there will always be coffee and snacks provided in the
@@ -53,52 +53,35 @@ class Faq extends Component {
                   </div>
                 </li>
                 <li style={{fontSize: '20px'}}>
-                  <div class="collapsible-header">
-                    <i class="material-icons">add_circle_outline</i>When is the deadline for registration and submission of
+                  <div className={"collapsible-header"}>
+                    <i className={"material-icons"}>add_circle_outline</i>When is the deadline for registration and submission of
                       problem statement?
 
                   </div>
-                  <div class="collapsible-body">
+                  <div className={"collapsible-body"}>
                     <span>The final deadline for the application is February 15,
                       2020. We have limited amount of space, so hurry up!</span>
                   </div>
                 </li>
                 <li style={{fontSize: '20px'}}>
-                  <div class="collapsible-header">
-                    <i class="material-icons">add_circle_outline</i>What is the expected output of the event and how are the
+                  <div className={"collapsible-header"}>
+                    <i className={"material-icons"}>add_circle_outline</i>What is the expected output of the event and how are the
                       final presentations going to look like?
 
                   </div>
-                  <div class="collapsible-body">
+                  <div className={"collapsible-body"}>
                     <span>We expect that you will develop a working prototype which
-                      will represent your idea. We suggest to focus more on the
-                      working of your project rather than displaying a
-                      presentation. Final presentations are limited to a 5
-                      minute pitch and possible Q&A from the judges.</span>
+                      will represent your idea and satisfy the problem statement given at the hackathon</span>
                   </div>
                 </li>
               </ul>
             </div>
-            <div className="col s12 m6 l6"><ul class="collapsible z-depth-0">
+            <div className="col s12 m6 l6"><ul className={"collapsible z-depth-0"}>
                 <li style={{fontSize: '20px'}}>
-                  <div class="collapsible-header">
-                    <i class="material-icons">add_circle_outline</i>Can I apply to multiple challenges?
+                  <div className={"collapsible-header"}>
+                    <i className={"material-icons"}>add_circle_outline</i>I am not developer or designer, can I still apply?
                   </div>
-                  <div class="collapsible-body">
-                    <span>
-                      Yes, you can. Your ideas can present the solutions for
-                      more than one themes and problem statements. Problem
-                      statements are there to guide you to think about current
-                      issues in the society that are of our partners’ interests.
-                      All the hacks presented on Sunday will compete for the
-                      Best IsoHack award.</span>
-                  </div>
-                </li>
-                <li style={{fontSize: '20px'}}>
-                  <div class="collapsible-header">
-                    <i class="material-icons">add_circle_outline</i>I am not developer or designer, can I still apply?
-                  </div>
-                  <div class="collapsible-body">
+                  <div className={"collapsible-body"}>
                     <span>Yes, but keep in mind that you have to develop a working
                       prototype in 36 hours. It is not a problem if you are not
                       a programmer, we will have mentors and volunteers to guide
@@ -108,26 +91,26 @@ class Faq extends Component {
                   </div>
                 </li>
                 <li style={{fontSize: '20px'}}>
-                  <div class="collapsible-header">
-                    <i class="material-icons">add_circle_outline</i>Are there any rules that I should follow during the event?
+                  <div className={"collapsible-header"}>
+                    <i className={"material-icons"}>add_circle_outline</i>Are there any rules that I should follow during the event?
                   </div>
-                  <div class="collapsible-body">
-                    <span>Yes, see them <a href="code_of_conduct.html">here.</a></span>
+                  <div className={"collapsible-body"}>
+                    <span>Yes, and we will update it within 7 days</span>
                   </div>
                 </li>
                 <li style={{fontSize: '20px'}}>
-                  <div class="collapsible-header">
-                    <i class="material-icons">add_circle_outline</i> What is the team size?
+                  <div className={"collapsible-header"}>
+                    <i className={"material-icons"}>add_circle_outline</i> What is the team size?
                   </div>
-                  <div class="collapsible-body">
+                  <div className={"collapsible-body"}>
                     <span> The team size can be anywhere between 1-3 members</span>
                   </div>
                 </li>
                 <li style={{fontSize: '20px'}}>
-                  <div class="collapsible-header">
-                    <i class="material-icons">add_circle_outline</i>Do you have any more questions?
+                  <div className={"collapsible-header"}>
+                    <i className={"material-icons"}>add_circle_outline</i>Do you have any more questions?
                   </div>
-                  <div class="collapsible-body">
+                  <div className={"collapsible-body"}>
                     <span>Shoot us an email at atc.isohack@gmail.com</span>
                   </div>
                 </li>
@@ -137,7 +120,7 @@ class Faq extends Component {
                  
                     </p>
                   </div>
-                  <div class="collapsible-body" style={{ border: "none" }}>
+                  <div className={"collapsible-body}" style={{ border: "none" }}>
                     <span className="white-text">
                      
                     </span>
