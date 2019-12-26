@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import '../css/loadingFire.css';
-import './PageNotFound.css';
+import "../css/PageNotFound.css";
 
 class PageNotFound extends Component {
     state = {};

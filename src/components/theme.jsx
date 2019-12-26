@@ -1,5 +1,5 @@
 import React from "react";
-import './theme.css';
+import "../css/theme.css";
 import ThemeSnowImage from "../img/theme-snow.png";
 import ThemeCleanImage from "../img/theme-swachh-bharat.png";
 import ThemeClimateImage from "../img/theme-climate-change.png";
