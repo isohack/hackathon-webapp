@@ -54,12 +54,10 @@ class Faq extends Component {
                 </li>
                 <li style={{fontSize: '20px'}}>
                   <div className={"collapsible-header"}>
-                    <i className={"material-icons"}>add_circle_outline</i>When is the deadline for registration and submission of
-                      problem statement?
-
+                    <i className={"material-icons"}>add_circle_outline</i>When is the deadline for registration ?
                   </div>
                   <div className={"collapsible-body"}>
-                    <span>The final deadline for the application is February 15,
+                    <span>The final deadline for the application is February 7,
                       2020. We have limited amount of space, so hurry up!</span>
                   </div>
                 </li>

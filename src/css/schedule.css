@@ -1,6 +1,6 @@
 .scheduleBg{
   position: relative;
-  height: 50vh;
+  height: 60vh;
   background-image: linear-gradient(black, rgb(2, 36, 74) );
 }
 
@@ -8,12 +8,14 @@
   color: white;
   font-weight: 800;
   margin: 0 auto;
+  padding-top: 20px;
 }
 
 .schedule-background{
   position: absolute;
   bottom: 0;
   width: 100%;
+  z-index: 1;
 }
 
 .teepee-one{
@@ -88,5 +90,15 @@
   width: 5%;
   bottom: 18vw;
   right: 15%;
+}
+
+.schedule-body {
+  z-index: 200;
+  position: relative;
+  margin-top: 5%;
+}
+
+.modal.bottom-sheet {
+  max-height: 80% !important;
 }
 
