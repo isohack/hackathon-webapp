@@ -9,6 +9,9 @@
     left: 50%;
     top: 55%
   }
+  .sponsor-us{
+    font-size: 80px;
+  }
 }
 
 @media (max-width: 755px){
@@ -20,6 +23,9 @@
   .matic{
     left: 50%;
     top: 55%;
+  }
+  .sponsor-us{
+    font-size: 29px;
   }
 }
 
@@ -72,3 +78,14 @@
    -webkit-transform: translateX(-50%);
    transform: translateX(-50%);
  }
+
+ 
+ .sponsor-us{
+  position: absolute;
+  font-family: 'Fredoka One', cursive;
+  left: 50%;
+  top: 75%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+

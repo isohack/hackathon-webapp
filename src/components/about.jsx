@@ -1,5 +1,5 @@
 import React from "react";
-import "../css/about.css";
+import '../css/about.css';
 import AboutWorld from "../img/about-world.png";
 import Hours from '../img/36hrs.png';
 import Teams from '../img/50teams.png';

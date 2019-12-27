@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "../css/sponsor.css";
 import DevfolioLogo from "../img/devfolio.png";
 import MaticLogo from "../img/matic.png";
+import Pdf from '../Sponsors.pdf';
 
 class Sponsor extends Component {
   render() {
@@ -25,6 +26,11 @@ class Sponsor extends Component {
                 src={MaticLogo}
                 alt="matic"
               />
+            </a>
+          </div>
+          <div className="row">
+            <a className="white-text" href={Pdf} target="_blank" rel="noopener noreferrer">
+             <h1 className="sponsor-us">Sponsor Us</h1>
             </a>
           </div>
         </div>
