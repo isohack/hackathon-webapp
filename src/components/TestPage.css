@@ -1,23 +1,44 @@
+@font-face {
+    font-family: 'DosFont';
+    src: local('DosFont'), url(../fonts/dos-vga-437-win.ttf) format('truetype');
+}
+
+
 @media only screen and (max-width: 750px) {
     .test-title {
         color: white;
         opacity: 0;
-        font-size: 3rem !important;
+        font-size: 1.2rem !important;
         animation: text-rotate-blur 2s ease forwards;
         animation-delay: 1s;
+    }
+
+    .test-local-image {
+        width: 100% !important;
+        height: 100vh;
+    }
+
+    .test-timer {
+        font-size: 1rem !important;
+        color: white;
+    }
+
+    .card-background {
+        padding: 5px !important;
+        margin: 1px !important;
+        background-color: rgba(255, 255, 255, 0.5);
     }
 }
 
 .test-background {
     position: absolute;
-    background-image: url("../img/test-background.png");
-    width: 100%;
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     transition: transform .2s;
     animation: background-zoom 3s ease, background-reveal 3s forwards;
+}
+
+.test-local-image {
+    width: 100vw;
+    height: 100vh;
 }
 
 .test-base {
@@ -25,11 +46,12 @@
     top: 0;
     height: 100%;
     width: 100%;
-    z-index: 5;
+    z-index: 999;
 }
 
 .test-body {
     position: absolute;
+    font-family: 'DosFont', Fallback, sans-serif !important;
     margin-right: 40px;
     margin-left: 40px;
 }
@@ -38,6 +60,8 @@
     color: white;
     opacity: 0;
     font-size: 4rem;
+    font-weight: 900;
+    margin-left: 10px;
     animation: text-rotate-blur 2s ease forwards;
     animation-delay: 1s;
 }
@@ -81,4 +105,19 @@
     100% {
         opacity: 1;
     }
+}
+
+.test-timer {
+    font-size: 2.5rem;
+    color: white;
+}
+
+.test-body {
+    opacity: 0;
+    animation: text-rotate-blur 2s ease forwards;
+    animation-delay: 1s;
+}
+
+.card-background {
+    background-color: rgba(255, 255, 255, 0.5);
 }

@@ -25,9 +25,12 @@ class Footer extends Component {
           </div>
         </div>
 
-        <div className={"row footer-row footer-info"}>
+        <div className={"row footer-row footer-info white-text"}>
           <div className={"col-12"}>
-            <a href="mailto:atc.isohack@gmail.com">atc.isohack@gmail.com</a>
+            <p className={"isohack-title"}>IsoHack</p>
+          </div>
+          <div className={"col-12"}>
+            <a className={"white-text"} href="mailto:atc.isohack@gmail.com">atc.isohack@gmail.com</a>
           </div>
 
         </div>
@@ -68,7 +71,7 @@ class Footer extends Component {
             <a href="https://www.isohack.in/code-of-conduct/">Code of Conduct</a>
           </div>
           <div className="col s12 m3 l3">
-            <a className={"right"} href="https://www.github.com/isohack/">{this.state.made_by}</a>
+            <a className={"right made-by"} href="https://www.github.com/isohack/">{this.state.made_by}</a>
           </div>
         </div>
       </div>

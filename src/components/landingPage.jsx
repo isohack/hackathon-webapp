@@ -42,14 +42,14 @@ class LandingPage extends Component {
   };
 
   handleScroll = () => {
-    
-	/*console.log(document.body.scrollTop, document.documentElement.);
 
-	if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
-			document.getElementById("scroll-up-button").classList.add("scale-in");
-	} else {
-			document.getElementById("scroll-up-button").classList.remove("scale-in");
-	}*/
+    /*console.log(document.body.scrollTop, document.documentElement.);
+
+    if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+        document.getElementById("scroll-up-button").classList.add("scale-in");
+    } else {
+        document.getElementById("scroll-up-button").classList.remove("scale-in");
+    }*/
 
   };
 
@@ -64,7 +64,7 @@ class LandingPage extends Component {
   };
 
   handleLoad = () => {
-    new window.Devfolio({ key: 'isohack', buttonSelector: '#devfolio-apply-now' });
+    new window.Devfolio({key: 'isohack', buttonSelector: '#devfolio-apply-now'});
   };
 
   componentDidMount() {
@@ -92,7 +92,7 @@ class LandingPage extends Component {
       })
     }, 3000);
 
-	window.addEventListener('scroll', this.handleScroll, true);
+    window.addEventListener('scroll', this.handleScroll, true);
 
     M.AutoInit();
     getAppStatus().then((data) => {
@@ -138,6 +138,10 @@ class LandingPage extends Component {
     }, 1000);
   };
 
+  handleLandingScroll() {
+    window.scrollBy(0, 100);
+  }
+
   render() {
     const appStatus = this.props.appStatus;
     let webapp_status;
@@ -150,7 +154,7 @@ class LandingPage extends Component {
       webapp_status = <span className="new badge webapp-status down-status" data-badge-caption="">Down</span>;
     } else if (appStatus === 'testing') {
       webapp_status = <span className="new badge webapp-status testing-status" data-badge-caption="">Testing</span>;
-    } else if (appStatus === 'offline'){
+    } else if (appStatus === 'offline') {
       webapp_status = <span className="new badge webapp-status down-status" data-badge-caption="">Offline</span>;
     }
 
@@ -160,27 +164,27 @@ class LandingPage extends Component {
           <LoadingFire isLoading={this.state.loading}
                        opacity={this.state.loadingFireBackground.opacity}
                        height={this.state.loadingFireBackground.height}
-                       itemOpacity={this.state.loadingFireItem.opacity} />
+                       itemOpacity={this.state.loadingFireItem.opacity}/>
         </div>
-		<SimpleBar style={{maxHeight: "100vh", overflowX: "hidden"}}>
+        <SimpleBar style={{maxHeight: "100vh", overflowX: "hidden"}}>
           <Navbar/>
+          <div className={"header-title"}>
+            <span className={"hack-name"}>IsoHack</span>
+            <p className={"hack-slogan"}>
+              This season, hack for a reason
+            </p>
+            <button className={"landing-devfolio-button"} id="devfolio-apply-now">
+              <svg className={"logo"} xmlns="http://www.w3.org/2000/svg" fill="#fff" viewBox="0 0 115.46 123.46"
+                   style={{height: "24px", width: "24px", marginRight: "8px"}}>
+                <path
+                  d="M115.46 68a55.43 55.43 0 0 1-50.85 55.11S28.12 124 16 123a12.6 12.6 0 0 1-10.09-7.5 15.85 15.85 0 0 0 5.36 1.5c4 .34 10.72.51 20.13.51 13.82 0 28.84-.38 29-.38h.26a60.14 60.14 0 0 0 54.72-52.47c.05 1.05.08 2.18.08 3.34z"/>
+                <path
+                  d="M110.93 55.87A55.43 55.43 0 0 1 60.08 111s-36.48.92-48.58-.12C5 110.29.15 104.22 0 97.52l.2-83.84C.38 7 5.26.94 11.76.41c12.11-1 48.59.12 48.59.12a55.41 55.41 0 0 1 50.58 55.34z"/>
+              </svg>
+              Apply with Devfolio
+            </button>
+          </div>
           <div className={"landing-sky"}>
-            <div className={"header-title"}>
-              <span className={"hack-name"}>IsoHack</span>
-              <p className={"hack-slogan"}>
-                This season, hack for a reason
-              </p>
-              <button id="devfolio-apply-now">
-                <svg className={"logo"} xmlns="http://www.w3.org/2000/svg" fill="#fff" viewBox="0 0 115.46 123.46"
-                     style={{height: "24px", width:"24px", marginRight: "8px"}}>
-                  <path
-                    d="M115.46 68a55.43 55.43 0 0 1-50.85 55.11S28.12 124 16 123a12.6 12.6 0 0 1-10.09-7.5 15.85 15.85 0 0 0 5.36 1.5c4 .34 10.72.51 20.13.51 13.82 0 28.84-.38 29-.38h.26a60.14 60.14 0 0 0 54.72-52.47c.05 1.05.08 2.18.08 3.34z"/>
-                  <path
-                    d="M110.93 55.87A55.43 55.43 0 0 1 60.08 111s-36.48.92-48.58-.12C5 110.29.15 104.22 0 97.52l.2-83.84C.38 7 5.26.94 11.76.41c12.11-1 48.59.12 48.59.12a55.41 55.41 0 0 1 50.58 55.34z"/>
-                </svg>
-                Apply with Devfolio
-              </button>
-            </div>
             <section id="section10" className="demo">
               <div><span></span></div>
             </section>
@@ -209,16 +213,16 @@ class LandingPage extends Component {
             </div>
             {webapp_status}
           </div>
-        <About />
-        <Theme />
-        <Schedule />
-        <Faq />
-        <Sponsor />
-        <Footer footerTestHandler={this.footerTestHandler} />
-        {(this.state.isTest) ?
-          <TestPage testCloseHandler={this.testCloseHandler}/>
-          : <div> </div>
-        }
+          <About/>
+          <Theme/>
+          <Schedule/>
+          <Faq/>
+          <Sponsor/>
+          <Footer footerTestHandler={this.footerTestHandler}/>
+          {(this.state.isTest) ?
+            <TestPage testCloseHandler={this.testCloseHandler}/>
+            : <div></div>
+          }
         </SimpleBar>
       </>
     );
