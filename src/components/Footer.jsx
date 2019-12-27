@@ -71,7 +71,7 @@ class Footer extends Component {
             <a href="https://www.isohack.in/code-of-conduct/">Code of Conduct</a>
           </div>
           <div className="col s12 m3 l3">
-            <a className={"right"} href="https://www.github.com/isohack/">{this.state.made_by}</a>
+            <a className={"right made-by"} href="https://www.github.com/isohack/">{this.state.made_by}</a>
           </div>
         </div>
       </div>
