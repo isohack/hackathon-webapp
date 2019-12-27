@@ -1,6 +1,6 @@
 import React, {Component} from "react";
-import "./navbar.css";
-import IsohackLogo from "../img/isohack-light.png";
+import "../css/navbar.css";
+import IsohackLogo from "../img/isohack.png";
 
 class Navbar extends Component {
   state = {
@@ -44,7 +44,16 @@ class Navbar extends Component {
           </a>
         </div>
         <div className={"navbar-menu"} id={"navbar-menu"}>
-          <h1 style={{position: "absolute"}}>Hello World</h1>
+          <ul>
+            <li><h5 className="center-align white-text">top</h5></li>
+            <li><h3 className="center-align black-text"><a href="/">HOME</a></h3></li>
+            <li><h3 className="center-align black-text"><a href="/" >ABOUT</a></h3></li>
+            <li><h3 className="center-align"><a href="/" >THEME</a></h3></li>
+            <li><h3 className="center-align"><a href="/" >SCHEDULE</a></h3></li>
+            <li><h3 className="center-align"><a href="/">FAQ</a></h3></li>
+            <li><h3 className="center-align"><a href="/">SPONSORS</a></h3></li>
+            <li><h3 className="center-align"><a href="/">CONTACT-US</a></h3></li>
+          </ul>
         </div>
       </div>
     );
