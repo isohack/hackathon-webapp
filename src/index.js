@@ -8,6 +8,7 @@ import LoginPage from './components/Dashboard/LoginPage';
 import PageNotFoundError from './components/ErrorPages/PageNotFoundError';
 import InternalServerError from './components/ErrorPages/InternalServerError';
 import TestPage from "./components/TestPage";
+import CodeOfConductPage from './components/CodeOfConductPage';
 import * as Sentry from '@sentry/browser';
 import { createStore } from 'redux';
 import allReducer from './reducers';
@@ -42,6 +43,7 @@ const routing_safe = (
         <Route exact={true} path={"/"} component={App} />
         <Route path={"/login"} component={LoginPage} />
         <Route path={"/test"} component={TestPage} />
+		<Route path={"/code-of-conduct/"} component={CodeOfConductPage} />
         <Route path={"/error/500"} component={InternalServerError} />
         <Route component={PageNotFoundError} />
       </Switch>
