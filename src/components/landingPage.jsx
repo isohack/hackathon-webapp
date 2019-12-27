@@ -89,7 +89,10 @@ class LandingPage extends Component {
     setTimeout(() => {
       this.setState({
         loading: false,
-      })
+      });
+      setTimeout(() => {
+        document.getElementById("section10").style.opacity = 0;
+      }, 2000)
     }, 3000);
 
     window.addEventListener('scroll', this.handleScroll, true);
