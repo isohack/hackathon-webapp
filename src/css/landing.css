@@ -46,6 +46,18 @@
     .hack-slogan {
         font-size: 2rem !important;
     }
+
+	.header-title {
+		position: absolute;
+		margin: auto;
+		text-align: center;
+		width: 100% !important;
+		left: 0 !important;
+		padding: 10px;
+		top: 10vh;
+		z-index: 2;
+	}
+
 }
 
 @media only screen and (max-width: 470px) {
@@ -63,6 +75,17 @@
     .hack-slogan {
         font-size: 1.5rem !important;
     }
+	.landing-devfolio-button {
+		position: absolute;
+		margin: auto;
+		text-align: center;
+		width: 70% !important;
+		left: 15% !important;
+	}
+
+	#devfolio-apply-now {
+		padding-left: 8% !important;
+	}
 }
 
 @media only screen and (max-width: 400px) {
@@ -243,9 +266,25 @@
 
 .header-title {
 	position: absolute;
-	left: 7vh;
-	top: 15vh;
+	margin: auto;
+	text-align: center;
+	width: 50%;
+	left: 25%;
+	padding: 10px;
+	top: 10vh;
     z-index: 2;
+}
+
+.landing-devfolio-button {
+	position: absolute;
+	margin: auto;
+	text-align: center;
+	width: 50%;
+	left: 25%
+}
+
+#devfolio-apply-now {
+	padding-left: 10% !important;
 }
 
 .hack-name {
