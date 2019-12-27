@@ -1,25 +1,25 @@
-body {
+.coc-body {
     margin: 0;
     background-color: #51343c;
 }
 
 
-.wrapper {
+.coc-wrapper {
   width: 80%;
   margin: 0 auto;
 }
 
 
-li {
+.coc-li {
   list-style-type: square !important;
   list-style-position:inside;
 }
 
-.foot-note{
+.coc-foot-note{
     font-size:small;
 }
 
-.main_content {
+.coc-main_content {
     width: 100%;
     background-color: #d8d8de;
     opacity: 0.8;
@@ -28,22 +28,22 @@ li {
     border-radius: 3px;
 }
 
-.main_content p {
+.coc-main_content p {
  text-indent: 20px;
  text-align: justify;
 }
 
-h2, h4 {
+.coc-h2, .coc-h4 {
     color: #8ed644;
 }
 
-.main_content p:first-letter {
+.coc-main_content p:first-letter {
     text-transform: uppercase;
     font-size: 200%;
     color: #8ed644;
 }
 
-.logo {
+.coc-logo {
     border: 8px solid #252839;
     background-color: #252839;
     width: 70px;
