@@ -13,44 +13,44 @@ class CodeOfConductPage extends Component {
   render() {
     return (
 
-	<>
-		<div className="wrapper flow-text">
-			<div className="main_content">
+	<div className={"coc-body"}>
+		<div className="coc-wrapper flow-text">
+			<div className="coc-main_content">
 			<div>
-				<img className={"logo"} src={IsohackLogo} alt={"navbar-logo"} />
-				<h2>Code of Conduct</h2>
+				<img className={"coc-logo"} src={IsohackLogo} alt={"navbar-logo"} />
+				<h2 className={"coc-h2"}>Code of Conduct</h2>
 			</div>
-				<h4>The Quick Version</h4>
+				<h4 className={"coc-h4"}>The Quick Version</h4>
 				<p>Isohack is dedicated to providing a safe and comfortable environment
 					and harassment-free experience for everyone, regardless of the
 					following:</p>
 				<ul>
-					<li>gender</li>
-					<li>gender identity and expression</li>
-					<li>age</li>
-					<li>sexual orientation</li>
-					<li>disability</li>
-					<li>physical appearance</li>
-					<li>body size</li>
-					<li>race</li>
-					<li>ethnicity</li>
-					<li>nationality</li>
-					<li>religion</li>
-					<li>political views</li>
-					<li>previous hackathon attendance or lack of</li>
-					<li>computing experience or lack of</li>
-					<li>chosen programming language or tech stack</li>
+					<li className={"coc-li"}>gender</li>
+					<li className={"coc-li"}>gender identity and expression</li>
+					<li className={"coc-li"}>age</li>
+					<li className={"coc-li"}>sexual orientation</li>
+					<li className={"coc-li"}>disability</li>
+					<li className={"coc-li"}>physical appearance</li>
+					<li className={"coc-li"}>body size</li>
+					<li className={"coc-li"}>race</li>
+					<li className={"coc-li"}>ethnicity</li>
+					<li className={"coc-li"}>nationality</li>
+					<li className={"coc-li"}>religion</li>
+					<li className={"coc-li"}>political views</li>
+					<li className={"coc-li"}>previous hackathon attendance or lack of</li>
+					<li className={"coc-li"}>computing experience or lack of</li>
+					<li className={"coc-li"}>chosen programming language or tech stack</li>
 				</ul>
 				<p>We do not tolerate harassment of hackathon participants in any form. Sexual
 				language and imagery is not appropriate at any hackathon venue, this
 				includes the following:</p>
 				<ul>
-					<li>hacks</li>
-					<li>talks, presentations, or demos</li>
-					<li>demos</li>
-					<li>any parties associated with the hackathon</li>
-					<li>social media</li>
-					<li>any other online media</li>
+					<li className={"coc-li"}>hacks</li>
+					<li className={"coc-li"}>talks, presentations, or demos</li>
+					<li className={"coc-li"}>demos</li>
+					<li className={"coc-li"}>any parties associated with the hackathon</li>
+					<li className={"coc-li"}>social media</li>
+					<li className={"coc-li"}>any other online media</li>
 				</ul>
 				<h3>The Less Quick Version</h3>
 				<p>Harassment includes offensive verbal comments related to gender, gender
@@ -94,10 +94,10 @@ class CodeOfConductPage extends Component {
 				termination.</p>
 				<p>We expect participants to follow these rules at hackathon and workshop
 				venues and hackathon-related social events.</p>
-				<section className="foot-note">Our code of conduct is based on the <a href="https://hackcodeofconduct.org/">Hack Code of Conduct</a> .</section>
+				<section className="coc-foot-note">Our code of conduct is based on the <a href="https://hackcodeofconduct.org/">Hack Code of Conduct</a> .</section>
 			</div>
 		</div>
-	</>
+	</div>
 
 	)
   };
