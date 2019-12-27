@@ -25,9 +25,12 @@ class Footer extends Component {
           </div>
         </div>
 
-        <div className={"row footer-row footer-info"}>
+        <div className={"row footer-row footer-info white-text"}>
           <div className={"col-12"}>
-            <a href="mailto:atc.isohack@gmail.com">atc.isohack@gmail.com</a>
+            <p className={"isohack-title"}>IsoHack</p>
+          </div>
+          <div className={"col-12"}>
+            <a className={"white-text"} href="mailto:atc.isohack@gmail.com">atc.isohack@gmail.com</a>
           </div>
 
         </div>

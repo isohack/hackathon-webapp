@@ -43,16 +43,15 @@ class Navbar extends Component {
             }
           </a>
         </div>
-        <div className={"navbar-menu"} id={"navbar-menu"}>
+        <div className={"navbar-menu teal darken-2"} id={"navbar-menu"}>
           <ul>
-            <li><h5 className="center-align white-text">top</h5></li>
-            <li><h3 className="center-align black-text"><a href="/">HOME</a></h3></li>
-            <li><h3 className="center-align black-text"><a href="/" >ABOUT</a></h3></li>
-            <li><h3 className="center-align"><a href="/" >THEME</a></h3></li>
-            <li><h3 className="center-align"><a href="/" >SCHEDULE</a></h3></li>
-            <li><h3 className="center-align"><a href="/">FAQ</a></h3></li>
-            <li><h3 className="center-align"><a href="/">SPONSORS</a></h3></li>
-            <li><h3 className="center-align"><a href="/">CONTACT-US</a></h3></li>
+            <li><h3 className="center-align"><a className={"navbar-link"} href="/">HOME</a></h3></li>
+            <li><h3 className="center-align"><a className={"navbar-link"} href="/" >ABOUT</a></h3></li>
+            <li><h3 className="center-align"><a className={"navbar-link"} href="/" >THEME</a></h3></li>
+            <li><h3 className="center-align"><a className={"navbar-link"} href="/" >SCHEDULE</a></h3></li>
+            <li><h3 className="center-align"><a className={"navbar-link"} href="/">FAQ</a></h3></li>
+            <li><h3 className="center-align"><a className={"navbar-link"} href="/">SPONSORS</a></h3></li>
+            <li><h3 className="center-align"><a className={"navbar-link"} href="/">CONTACT-US</a></h3></li>
           </ul>
         </div>
       </div>

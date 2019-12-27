@@ -18,7 +18,7 @@
 }
 
 .footer-background {
-    background: linear-gradient(to bottom, rgba(26, 60, 104, 0.99) 0, rgb(123, 219, 255) 20%, rgba(255, 255, 255, 1) 100%);
+    background: linear-gradient(to bottom, rgba(26, 60, 104, 0.99) 0, rgb(123, 219, 255) 50%, rgba(255, 255, 255, 1) 100%);
 }
 
 .footer-runner {
@@ -188,5 +188,10 @@
     .footer-logo-img{
         width: 50%;
     }
+}
+
+.isohack-title {
+    font-size: 3rem;
+    font-weight: 900;
 }
 
