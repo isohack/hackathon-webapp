@@ -30,7 +30,7 @@ class Footer extends Component {
             <p className={"isohack-title"}>IsoHack</p>
           </div>
           <div className={"col-12"}>
-            <a className={"white-text"} href="mailto:atc.isohack@gmail.com">atc.isohack@gmail.com</a>
+            <a className={"white-text"} href="mailto:atc.isohack@gmail.com"><b>atc.isohack@gmail.com</b></a>
           </div>
 
         </div>

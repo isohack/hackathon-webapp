@@ -86,13 +86,19 @@
    -webkit-transform: translateX(-50%);
    transform: translateX(-50%);
    top: 80%;
-   border-radius: 12px;
-   border-color: white;
+   border: 5px solid white;
+   padding: 10px;
+   font-weight: 500;
+   font-size: 2rem;
+   font-family: 'Fredoka One', cursive;
    background:  rgba(26, 60, 104, 0.99);
    color: white;
    height: auto;
+   transition: background-color 0.2s linear, color 0.2s linear;
  }
 
- .sponsor-us-text {
-  font-family: 'Fredoka One', cursive;
- }
+.sponsor-us-button:hover{
+  background-color: white;
+  color: black !important;
+  cursor: pointer;
+}
