@@ -39,6 +39,8 @@ class LandingPage extends Component {
       opacity: 1
     },
     loading: true,
+    landingValue: null,
+    countDownDate: new Date("Dec 30, 2019 12:00:00").getTime(),
   };
 
   handleScroll = () => {
@@ -51,6 +53,33 @@ class LandingPage extends Component {
         document.getElementById("scroll-up-button").classList.remove("scale-in");
     }*/
 
+  };
+
+  setCountDown = () => {
+    this.landingValue = setInterval(() => {
+
+      // Get today's date and time
+      var now = new Date().getTime();
+
+      // Find the distance between now and the count down date
+      var distance = this.state.countDownDate - now;
+
+      // Time calculations for days, hours, minutes and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      // Display the result in the element with id="demo"
+      document.getElementById("landing-count-down").innerHTML = hours + (24 * days) + ":"
+        + minutes + ":" + seconds;
+
+      // If the count down is finished, write some text
+      if (distance < 0) {
+        clearInterval(this.landingValue);
+        document.getElementById("landing-count-down").innerHTML = "00:00:00";
+      }
+    }, 1000);
   };
 
   loadApplyNowScript = () => {
@@ -71,6 +100,7 @@ class LandingPage extends Component {
     console.log('\n\n\n\nSeems like you are curious for something ? Search for Panda, it will guide you ...\n\n\n\n');
 
     window.onload = this.loadApplyNowScript();
+    this.setCountDown();
 
     setTimeout(() => {
       this.setState({
@@ -177,6 +207,7 @@ class LandingPage extends Component {
             <p className={"hack-slogan white-text"}>
               This season, hack for a reason
             </p>
+            <span id={"landing-count-down"}> </span>
             <button className={"landing-devfolio-button"} id="devfolio-apply-now">
               <svg className={"logo"} xmlns="http://www.w3.org/2000/svg" fill="#fff" viewBox="0 0 115.46 123.46"
                    style={{height: "24px", width: "24px", marginRight: "8px"}}>
