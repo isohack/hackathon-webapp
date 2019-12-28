@@ -54,7 +54,6 @@ class LandingPage extends Component {
   };
 
   loadApplyNowScript = () => {
-    console.log('set');
     const script = document.createElement('script');
     script.src = 'https://apply.devfolio.co';
     script.async = true;
@@ -68,6 +67,8 @@ class LandingPage extends Component {
   };
 
   componentDidMount() {
+
+    console.log('\n\n\n\nSeems like you are curious for something ? Search for Panda, it will guide you ...\n\n\n\n');
 
     window.onload = this.loadApplyNowScript();
 
@@ -89,7 +90,10 @@ class LandingPage extends Component {
     setTimeout(() => {
       this.setState({
         loading: false,
-      })
+      });
+      setTimeout(() => {
+        document.getElementById("section10").style.opacity = 0;
+      }, 2000)
     }, 3000);
 
     window.addEventListener('scroll', this.handleScroll, true);

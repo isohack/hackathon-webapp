@@ -1,0 +1,51 @@
+.coc-body {
+    margin: 0;
+    background-color: #51343c;
+}
+
+
+.coc-wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+
+
+.coc-li {
+  list-style-type: square !important;
+  list-style-position:inside;
+}
+
+.coc-foot-note{
+    font-size:small;
+}
+
+.coc-main_content {
+    width: 100%;
+    background-color: #d8d8de;
+    opacity: 0.8;
+    margin: 20px 0;
+    padding: 20px 20px 10px 20px;
+    border-radius: 3px;
+}
+
+.coc-main_content p {
+ text-indent: 20px;
+ text-align: justify;
+}
+
+.coc-h2, .coc-h4 {
+    color: #8ed644;
+}
+
+.coc-main_content p:first-letter {
+    text-transform: uppercase;
+    font-size: 200%;
+    color: #8ed644;
+}
+
+.coc-logo {
+    border: 8px solid #252839;
+    background-color: #252839;
+    width: 70px;
+    border-radius: 100%;
+}
