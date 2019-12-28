@@ -16,11 +16,12 @@ const About = () => (
           className="white-text flow-text"
         >
           Isohack is a collection of like-minded people from various walks of life, attempting to solve a pertaining social issue, 
-          or to improve an existing solution from all over India. Isohack aims at providing a stage where enthusiasts can 
-          display their abilities and unlock their potential.<br/>
+          or to improve an existing solution from all over India.<br/>
           The 36-hour long hackathon will be embedded with various engrossing workshops, inspiring talks and other interactive sessions from experienced 
           individuals from the industry. 
-          Pickup the challenge and get to be a part of something remarkable happening in the cleanest city and the heart of central India 
+          Pickup the challenge and get to be a part of something remarkable happening in the cleanest city and the heart of central India.<br/>
+          <br/>
+          <b>Acropolis Technical Campus, Indore</b>
 
 		  <br/><br/>
         </p>
