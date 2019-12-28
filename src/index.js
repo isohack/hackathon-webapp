@@ -16,7 +16,7 @@ import { Provider } from 'react-redux';
 
 const store = createStore(allReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 const sentry_token = process.env.REACT_APP_SENTRY_DSN;
-const safeURL = window.location.host !== 'isohack.in' && window.location.host !== 'localhost:3000';
+const safeURL = window.location.host !== 'www.isohack.in' && window.location.host !== 'localhost:3000' && window.location.host !== 'isohack.herokuapp.com';
 
 
 if (sentry_token) {
