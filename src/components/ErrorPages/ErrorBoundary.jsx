@@ -6,12 +6,11 @@ class ErrorBoundary extends Component {
     super(props);
     this.state = {
       error: null,
-      safeURL: window.location.host !== 'isohack.in' && window.location.host !== 'localhost:3000'
+      safeURL: window.location.host !== 'www.isohack.in' && window.location.host !== 'localhost:3000' && window.location.host !== 'isohack.herokuapp.com'
     };
   }
 
   componentDidCatch(error, errorInfo) {
-    console.log('YESSSS');
     this.setState({error});
     // Raven.captureException(error, {extra: errorInfo});
   }
