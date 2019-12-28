@@ -40,7 +40,7 @@ class LandingPage extends Component {
     },
     loading: true,
     landingValue: null,
-    countDownDate: new Date("Dec 28, 2019 18:10:00").getTime(),
+    countDownDate: new Date("Dec 30, 2019 12:00:00").getTime(),
   };
 
   handleScroll = () => {
