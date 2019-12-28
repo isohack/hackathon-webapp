@@ -41,3 +41,28 @@
     transition: height 1s ease-in-out;
     overflow: hidden;
 }
+
+
+/* Media Querries */
+
+@media screen and (max-width:768px)
+{
+    .navbar-button
+    {
+        border-radius: 30px;
+        width: 67px !important;
+        height: 38px !important;
+    }
+    .navbar-menu-logo
+    {
+        margin-left: 2px;
+        margin-top: 5px;
+    }
+    .navbar-logo
+    {
+        width: 25px;
+        margin-left: 8px;
+        margin-top: 5px;
+    }
+    
+}
