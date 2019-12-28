@@ -291,11 +291,13 @@
 	font-size: 5rem;
 	font-weight: 900;
 	color: white;
+	text-shadow: 0 0 4px white;
 }
 
 .hack-slogan {
 	font-size: 2rem;
 	font-weight: 900;
+	text-shadow: 0 0 2px white;
 }
 
 .webapp-status {

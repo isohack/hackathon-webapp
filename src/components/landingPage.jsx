@@ -173,8 +173,8 @@ class LandingPage extends Component {
         <SimpleBar style={{maxHeight: "100vh", overflowX: "hidden"}}>
           <Navbar/>
           <div className={"header-title"}>
-            <span className={"hack-name"}>IsoHack</span>
-            <p className={"hack-slogan"}>
+            <span className={"hack-name white-text"}>IsoHack</span>
+            <p className={"hack-slogan white-text"}>
               This season, hack for a reason
             </p>
             <button className={"landing-devfolio-button"} id="devfolio-apply-now">
