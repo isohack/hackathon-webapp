@@ -275,6 +275,13 @@
     z-index: 2;
 }
 
+
+#landing-count-down {
+	font-size: 5rem;
+	font-weight: 900;
+	opacity: 0.7;
+}
+
 .landing-devfolio-button {
 	position: absolute;
 	margin: auto;
