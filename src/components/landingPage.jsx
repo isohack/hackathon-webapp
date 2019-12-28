@@ -40,7 +40,7 @@ class LandingPage extends Component {
     },
     loading: true,
     landingValue: null,
-    countDownDate: new Date("Dec 30, 2019 12:00:00").getTime(),
+    countDownDate: new Date("Dec 28, 2019 18:10:00").getTime(),
   };
 
   handleScroll = () => {
@@ -53,6 +53,10 @@ class LandingPage extends Component {
         document.getElementById("scroll-up-button").classList.remove("scale-in");
     }*/
 
+  };
+
+  prettyNumber = (n) => {
+    return n > 9 ? "" + n: "0" + n;
   };
 
   setCountDown = () => {
@@ -71,8 +75,8 @@ class LandingPage extends Component {
       var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
       // Display the result in the element with id="demo"
-      document.getElementById("landing-count-down").innerHTML = hours + (24 * days) + ":"
-        + minutes + ":" + seconds;
+      document.getElementById("landing-count-down").innerHTML = this.prettyNumber(hours + (24 * days)) + ":"
+        + this.prettyNumber(minutes) + ":" + this.prettyNumber(seconds);
 
       // If the count down is finished, write some text
       if (distance < 0) {
@@ -177,20 +181,20 @@ class LandingPage extends Component {
   }
 
   render() {
-    const appStatus = this.props.appStatus;
-    let webapp_status;
-    if (appStatus === 'live') {
-      webapp_status = <span className="new badge webapp-status live-status" data-badge-caption="">Live</span>;
-    } else if (appStatus === 'maintenance') {
-      webapp_status =
-        <span className="new badge webapp-status maintenance-status" data-badge-caption="">Maintenance</span>;
-    } else if (appStatus === 'down') {
-      webapp_status = <span className="new badge webapp-status down-status" data-badge-caption="">Down</span>;
-    } else if (appStatus === 'testing') {
-      webapp_status = <span className="new badge webapp-status testing-status" data-badge-caption="">Testing</span>;
-    } else if (appStatus === 'offline') {
-      webapp_status = <span className="new badge webapp-status down-status" data-badge-caption="">Offline</span>;
-    }
+    // const appStatus = this.props.appStatus;
+    // // let webapp_status;
+    // // if (appStatus === 'live') {
+    // //   webapp_status = <span className="new badge webapp-status live-status" data-badge-caption="">Live</span>;
+    // // } else if (appStatus === 'maintenance') {
+    // //   webapp_status =
+    // //     <span className="new badge webapp-status maintenance-status" data-badge-caption="">Maintenance</span>;
+    // // } else if (appStatus === 'down') {
+    // //   webapp_status = <span className="new badge webapp-status down-status" data-badge-caption="">Down</span>;
+    // // } else if (appStatus === 'testing') {
+    // //   webapp_status = <span className="new badge webapp-status testing-status" data-badge-caption="">Testing</span>;
+    // // } else if (appStatus === 'offline') {
+    // //   webapp_status = <span className="new badge webapp-status down-status" data-badge-caption="">Offline</span>;
+    // // }
 
     return (
       <>
@@ -246,7 +250,6 @@ class LandingPage extends Component {
             <div className={"bird-container bird-container--four"}>
               <div className={"bird bird--four"}></div>
             </div>
-            {webapp_status}
           </div>
           <About/>
           <Theme/>
