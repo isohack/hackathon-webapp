@@ -2,8 +2,11 @@ from rest_framework.filters import OrderingFilter
 from rest_framework.pagination import LimitOffsetPagination
 from django.http import HttpResponse, JsonResponse
 from django.core.mail import send_mail
+from email.message import EmailMessage
+import smtplib
+from django.conf import settings
 
-
+from jinja2 import Template ,Environment, FileSystemLoader
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from backend.settings import LATEST_COMMIT_VERSION, LATEST_COMMIT_DATE, app_status
@@ -76,13 +79,13 @@ class HackathonEventAPIView(generics.ListAPIView):
 
 
 class HackathonTeamProgressAPIView(generics.ListAPIView):
-	serializer_class = HackathonTeamProgressSerializer
-	permission_classes = (IsAdminOrSuperUser,)
-	# filter_backends = [OrderingFilter]
-	# pagination_class = LimitOffsetPagination
+    serializer_class = HackathonTeamProgressSerializer
+    permission_classes = (IsAdminOrSuperUser,)
+    # filter_backends = [OrderingFilter]
+    # pagination_class = LimitOffsetPagination
 
-	def get_queryset(self):
-		return HackathonTeamProgress.objects.all()
+    def get_queryset(self):
+        return HackathonTeamProgress.objects.all()
 
 class ProblemCategoryClass(generics.ListAPIView):
     permission_classes = []
@@ -101,6 +104,7 @@ class ProblemStatementClass(generics.ListAPIView):
         print(category_id)
         return ProblemStatement.objects.filter(category=category_id)
 
+
 def Send_to_Email(request):
     email_to = "harshzf2@gmail.com"
     subject = 'Thank you for registering to our site'
@@ -114,10 +118,43 @@ def Send_to_Email(request):
     return HttpResponse(response, content_type='text/json')
 
 
+# this will return all the team data
+class HackathonTeamClass(generics.ListAPIView):
+    permission_classes = []
+    serializer_class = HackathonTeamSerializer
+
+    def get_queryset(self):
+        return HackathonTeam.objects.all()
 
 
 
 
+
+def send_mail_html(request):
+    payload = json.loads(request.body)
+    data = {}
+    data['name']="Harsh"
+    file_loader = FileSystemLoader("templates")
+    env = Environment(loader=file_loader)
+    template = env.get_template("email_template.html")
+
+    msg = EmailMessage()
+    msg['From'] = settings.EMAIL_HOST_USER
+
+    msg['Subject'] = "IsoHack mail"
+    msg['To'] = "harshzf2@gmail.com"
+    msg.set_content("Thank you for shopping with us")
+
+
+    html_output = template.render(data=data)
+    msg.add_alternative(html_output,subtype='html')
+
+
+    with smtplib.SMTP_SSL('smtp.gmail.com',465) as smtp:
+        smtp.login(settings.EMAIL_HOST_USER,settings.EMAIL_HOST_PASSWORD)
+        smtp.send_message(msg)
+
+    return HttpResponse(html_output)
 
 
 
