@@ -28,11 +28,9 @@ class Sponsor extends Component {
               />
             </a>
           </div>
-          <div className="row">
-            <a className="white-text" href={Pdf} target="_blank" rel="noopener noreferrer">
-             <h1 className="sponsor-us">Sponsor Us</h1>
-            </a>
-          </div>
+          <button className="sponsor-us-button">
+            <a href={Pdf} className="center white-text sponsor-us-text" target="_blank" rel="noopener noreferrer">Sponsor Us</a>
+          </button>
         </div>
       </>
     );

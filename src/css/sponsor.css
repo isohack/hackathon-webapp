@@ -9,8 +9,12 @@
     left: 50%;
     top: 55%
   }
-  .sponsor-us{
-    font-size: 80px;
+  .sponsor-us-button{
+    font-size: 70px;
+    width: 30%;
+  }
+  .sponsor-header-text{
+    font-size: 75px;
   }
 }
 
@@ -24,8 +28,12 @@
     left: 50%;
     top: 55%;
   }
-  .sponsor-us{
-    font-size: 29px;
+  .sponsor-us-button{
+    font-size: 22px;
+    width: 50%;
+  }
+  .sponsor-header-text{
+    font-size: 25px;
   }
 }
 
@@ -54,14 +62,6 @@
  }
 
 
-.title-sponsor-text {
-  font-size: 48px;
-  position: absolute;
-  left: 50%;
-  top: 20%;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%)
- }
 
 
 
@@ -80,12 +80,19 @@
  }
 
  
- .sponsor-us{
-  position: absolute;
-  font-family: 'Fredoka One', cursive;
-  left: 50%;
-  top: 75%;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
+ .sponsor-us-button{
+   position: absolute;
+   left: 50%;
+   -webkit-transform: translateX(-50%);
+   transform: translateX(-50%);
+   top: 80%;
+   border-radius: 12px;
+   border-color: white;
+   background:  rgba(26, 60, 104, 0.99);
+   color: white;
+   height: auto;
+ }
 
+ .sponsor-us-text {
+  font-family: 'Fredoka One', cursive;
+ }
