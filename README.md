@@ -42,7 +42,7 @@ Obviously this is not the only method, there are other ways to do this so try se
 Now this command will install Virtual environment in that present directory (hackathon-webapp). Now assuming that you have myvenv folder so we need to activate it. Activation is used to activate that partiuclar environment for present session. So to do that:
 
 `source myvenv/bin/activate`
-
+ 'myvenv\Scripts\activate' (for windows)
 Note: Your virtualenv file must be `myvenv`.
 
 Now as soon as you will type this, you will see that virutal env is activated by showing: `(myvenv)` at left hand side of your command.
