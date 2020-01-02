@@ -8,8 +8,6 @@ import loginBackgroundTreeOne from '../../img/login-background-tree-1.png';
 import loginBackgroundTreeTwo from '../../img/login-background-tree-2.png';
 import loginBackgroundTreeInvertOne from '../../img/login-background-tree-invert-1.png';
 import loginBackgroundTreeInvertTwo from '../../img/login-background-tree-invert-2.png';
-import {config} from '../../constants'
-import  { Redirect } from 'react-router-dom'
 import {getToken} from '../../services/hackathon';
 
 class LoginPage extends Component {
