@@ -8,9 +8,9 @@ import loginBackgroundTreeOne from '../../img/login-background-tree-1.png';
 import loginBackgroundTreeTwo from '../../img/login-background-tree-2.png';
 import loginBackgroundTreeInvertOne from '../../img/login-background-tree-invert-1.png';
 import loginBackgroundTreeInvertTwo from '../../img/login-background-tree-invert-2.png';
-import axios from 'axios'
 import {config} from '../../constants'
 import  { Redirect } from 'react-router-dom'
+import {getToken} from '../../services/hackathon';
 
 class LoginPage extends Component {
     state = {
@@ -50,36 +50,17 @@ class LoginPage extends Component {
 
 	handleClick(event){
 		
-
-		
-		 var apiBaseUrl = config.BASE_URL
 		 const payload={
 			 "email":this.state.username,
 			 "password":this.state.password
 		 }
-
-		 axios.post(apiBaseUrl+'/api/v1/account/login/', payload)
-				.then(function (response) {
-					console.log(response);
-
-					if(response.status === 200){
-						console.log("Login successfull");
-						return <Redirect to='/DashboardHome' />
-						/* page redirect or load profile */
-
-					}
-					else if(response.status === 204){
-						 console.log("Username password do not match");
-						 alert("username password do not match")
-					}
-					else{
-						 console.log("Username does not exists");
-						 alert("Username does not exist");
-					}
-				})
-				.catch(function (error) {
-					console.log(error);
-				});
+		 getToken(payload).then((data) => {
+			console.log('token:', data.data.token);
+			// store token
+			localStorage.setItem("token", data.data.token);
+			}).catch((err) => {
+			console.log(err);
+		 });
 	}
 
     render() {
