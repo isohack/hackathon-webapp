@@ -53,9 +53,24 @@ class LoginPage extends Component {
 			 "password":this.state.password
 		 }
 		 getToken(payload).then((data) => {
-			console.log('token:', data.data.token);
-			// store token
-			localStorage.setItem("token", data.data.token);
+			//console.log('token:', data);
+
+			if(data.status === 200){
+				console.log("Login successfull");
+				//return <Redirect to='/DashboardHome' />
+				/* page redirect or load profile */
+				// store token
+				localStorage.setItem("token", data.token);
+			}
+			else if(data.status === 204){
+				console.log("Username password do not match");
+				alert("username password do not match")
+			}
+			else{
+				console.log("Username does not exists");
+				alert("Username does not exist");
+			}
+
 			}).catch((err) => {
 			console.log(err);
 		 });
