@@ -46,7 +46,7 @@ class Footer extends Component {
         <div className="row justify-content-around footer-social-links main-footer">
 
           <div className="col s12 m2 l2">
-            <a href="https://isohacl.in">© Isohack 2019</a>
+            <a href="https://isohack.in">© Isohack 2019</a>
           </div>
 
           <div className="col s12 m1 l1">
