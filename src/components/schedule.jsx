@@ -44,11 +44,11 @@ class Schedule extends Component {
             </div>
             <div className={"col s3 m3 l3"}>
               <a className="btn-floating btn-large modal-trigger" href="#modal4"><i className="material-icons">cloud</i></a>
-              <p>21st of February, 2020</p>
+              <p>22nd of February, 2020</p>
             </div>
             <div className={"col s3 m3 l3"}>
               <a className="btn-floating btn-large modal-trigger" href="#modal1"><i className="material-icons">cloud</i></a>
-              <p>22nd of Feburary, 2020</p>
+              <p>23nd of Feburary, 2020</p>
             </div>
           </div>
           {/*<img className="bonfire" src={this.state.Bonfire} alt="bonfire"/>*/}
@@ -73,7 +73,7 @@ class Schedule extends Component {
 
         <div id="modal1" className="modal bottom-sheet">
           <div className="modal-content">
-            <h4 className="center">22/2/2020</h4>
+            <h4 className="center">23/2/2020</h4>
             <table className="centered highlight responsive-table">
               <thead>
               <tr>
@@ -143,7 +143,7 @@ class Schedule extends Component {
 
         <div id="modal4" className="modal bottom-sheet">
           <div className="modal-content">
-            <h4 className="center">21/2/20</h4>
+            <h4 className="center">22/2/20</h4>
             <table className="centered highlight responsive-table">
               <thead>
               <tr>

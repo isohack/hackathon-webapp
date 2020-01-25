@@ -3,6 +3,10 @@
     box-sizing: border-box;
 }
 
+input {
+       width: auto !important;
+}
+
 @media only screen and (max-width: 1000px) {
     .landing-sky{
         position: relative;

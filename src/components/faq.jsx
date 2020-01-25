@@ -104,7 +104,7 @@ class Faq extends Component {
                     <span>
                       IsoHack will be held within the campus of Acropolis
                       Technical Campus, Indore. The 36-hour hackathon will start
-                      on the 21st of February 2020 and end on the 23rd of
+                      on the 22nd of February 2020 and end on the 24th of
                       February 2020.
                     </span>
                   </div>
