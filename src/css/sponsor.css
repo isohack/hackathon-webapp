@@ -1,14 +1,6 @@
 
 @media (min-width: 755px){
  
-  .devfolio{
-    left: 50%;
-    top: 30%;
-  }
-  .matic{
-    left: 50%;
-    top: 55%
-  }
   .sponsor-us-button{
     font-size: 70px;
     width: 30%;
@@ -20,14 +12,6 @@
 
 @media (max-width: 755px){
 
-  .devfolio{
-    left: 50%;
-    top: 30%;
-  }
-  .matic{
-    left: 50%;
-    top: 55%;
-  }
   .sponsor-us-button{
     font-size: 22px;
     width: 50%;
@@ -56,30 +40,25 @@
   position: absolute;
   font-family: 'Fredoka One', cursive;
   left: 50%;
-  top: 0;
+  top: -10%;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%)
  }
 
-
-
-
-
  .devfolio{
    position: absolute;
-   height: 7vmax;
-   -webkit-transform: translateX(-50%);
-   transform: translateX(-50%);
+   height: 5vmax;
  }
 
  .matic{
    position: absolute;
-   height: 7vmax;
-   -webkit-transform: translateX(-50%);
-   transform: translateX(-50%);
+   height: 5vmax;
  }
 
- 
+ .sponsor-logo-new {
+     margin-bottom: 20px;
+ }
+
  .sponsor-us-button{
    position: absolute;
    left: 50%;
