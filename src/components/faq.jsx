@@ -5,6 +5,7 @@ class Faq extends Component {
   render() {
     return (
       <>
+      
         <div className="faqBackground">
           <div className="row">
             <h1
@@ -46,8 +47,7 @@ class Faq extends Component {
                       that you will feel comfortable during the intense hacking
                       and if you are going to sleep on the venue, please bring a
                       blanket or a sleeping bag. Above all, bring your energy
-                      and your brain!
-                    </span>
+                      and your brain!</span>
                   </div>
                 </li>
                 <li style={{ fontSize: "20px" }}>
@@ -121,8 +121,7 @@ class Faq extends Component {
                       a programmer, we will have mentors and volunteers to guide
                       you throughout the hackathon and hear out your doubts and
                       navigate you through the problems you and your team are
-                      facing.
-                    </span>
+                      facing.</span>
                   </div>
                 </li>
                 <li style={{ fontSize: "20px" }}>
@@ -160,7 +159,7 @@ class Faq extends Component {
                 </li>
               </ul>
             </div>
-          </div>
+          </div> */}
         </div>
       </>
     );

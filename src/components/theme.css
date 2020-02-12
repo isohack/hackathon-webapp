@@ -1,0 +1,15 @@
+.theme-body {
+}
+
+.theme-body-background {
+    background-color: black;
+}
+
+.theme-header {
+    color: white;
+    font-weight: 800;
+}
+
+.theme-image {
+    width: 100%;
+}

@@ -36,19 +36,19 @@ class Schedule extends Component {
           <div className={"row center white-text schedule-body"}>
             <div className={"col s3 m3 l3"}>
               <a className="btn-floating btn-large pulse modal-trigger red" href="#modal2"><i className="material-icons">cloud</i></a>
-              <p>28th of December, 2019</p>
-            </div>
-            <div className={"col s3 m3 l3"}>
-              <a className="btn-floating btn-large modal-trigger" href="#modal3"><i className="material-icons">cloud</i></a>
               <p>10th of Feburary, 2020</p>
             </div>
             <div className={"col s3 m3 l3"}>
-              <a className="btn-floating btn-large modal-trigger" href="#modal4"><i className="material-icons">cloud</i></a>
+              <a className="btn-floating btn-large modal-trigger" href="#modal3"><i className="material-icons">cloud</i></a>
               <p>22nd of February, 2020</p>
             </div>
             <div className={"col s3 m3 l3"}>
+              <a className="btn-floating btn-large modal-trigger" href="#modal4"><i className="material-icons">cloud</i></a>
+              <p>23rd of February, 2020</p>
+            </div>
+            <div className={"col s3 m3 l3"}>
               <a className="btn-floating btn-large modal-trigger" href="#modal1"><i className="material-icons">cloud</i></a>
-              <p>23nd of Feburary, 2020</p>
+              <p>24th of Feburary, 2020</p>
             </div>
           </div>
           {/*<img className="bonfire" src={this.state.Bonfire} alt="bonfire"/>*/}
@@ -73,7 +73,7 @@ class Schedule extends Component {
 
         <div id="modal1" className="modal bottom-sheet">
           <div className="modal-content">
-            <h4 className="center">23/2/2020</h4>
+            <h4 className="center">24/2/2020</h4>
             <table className="centered highlight responsive-table">
               <thead>
               <tr>
@@ -85,29 +85,34 @@ class Schedule extends Component {
 
               <tbody>
               <tr>
-                <td>__:__</td>
-                <td>__:__</td>
+                <td>1:00</td>
+                <td></td>
+                <td>Final Mentor Round</td>
+              </tr>
+              <tr>
+                <td>2:00</td>
+                <td>2:30</td>
+                <td>Midnight Snacks</td>
+              </tr>
+              <tr>
+                <td>5:00</td>
+                <td></td>
+                <td>Hackathon Ends</td>
+              </tr>
+              <tr>
+                <td>6:00</td>
+                <td>10:00</td>
+                <td>Presentation Rounds</td>
+              </tr>
+              <tr>
+                <td>10:00</td>
+                <td>10:30</td>
                 <td>Breakfast</td>
               </tr>
               <tr>
-                <td>__:__</td>
-                <td>__:__</td>
-                <td>Lunch</td>
-              </tr>
-              <tr>
-                <td>__:__</td>
-                <td>__:__</td>
-                <td>Presentations Begin</td>
-              </tr>
-              <tr>
-                <td>__:__</td>
-                <td>__:__</td>
-                <td>Winners Announcement</td>
-              </tr>
-              <tr>
-                <td>__:__</td>
-                <td>__:__</td>
-                <td>Goodbye with warm memories</td>
+                <td>10:30</td>
+                <td>11:00</td>
+                <td>Prize Distribution Ceremony and goodbye with warm memories</td>
               </tr>
               </tbody>
             </table>
@@ -120,8 +125,8 @@ class Schedule extends Component {
 
         <div id="modal2" className="modal bottom-sheet">
           <div className="modal-content">
-            <h4 className="header center">28/12/2019 to 7/2/2020</h4>
-            <h5 className="center">Registration starts and ends</h5>
+            <h4 className="header center">10/2/2020</h4>
+            <h5 className="center">Shortlisted teams announced and RSVP mails sent</h5>
 
           </div>
           <div className="modal-footer">
@@ -132,18 +137,7 @@ class Schedule extends Component {
 
         <div id="modal3" className="modal bottom-sheet">
           <div className="modal-content">
-            <h4 className="header center">10/2/2020</h4>
-            <h5 className="center">Shortlisted teams annonuced and RSVP sent to shortlisted teams</h5>
-          </div>
-          <div className="modal-footer">
-            <a href="#!" className="modal-close waves-effect waves-green btn-flat">Close</a>
-          </div>
-        </div>
-
-
-        <div id="modal4" className="modal bottom-sheet">
-          <div className="modal-content">
-            <h4 className="center">22/2/20</h4>
+            <h4 className="header center">22/2/2020</h4>
             <table className="centered highlight responsive-table">
               <thead>
               <tr>
@@ -155,64 +149,96 @@ class Schedule extends Component {
 
               <tbody>
               <tr>
-                <td>__:__</td>
-                <td>__:__</td>
+                <td>15:00</td>
+                <td>17:00</td>
                 <td>Checkin and registration of participants</td>
               </tr>
               <tr>
-                <td>__:__</td>
-                <td>__:__</td>
-                <td>Opening ceremony</td>
+                <td>17:00</td>
+                <td>19:00</td>
+                <td>Isohack inaugration with keynote sessions from mentors</td>
               </tr>
               <tr>
-                <td>__:__</td>
-                <td>__:__</td>
-                <td>Keynote session</td>
-              </tr>
-              <tr>
-                <td>__:__</td>
-                <td>__:__</td>
+                <td>19:00</td>
+                <td>20:00</td>
                 <td>Dinner</td>
               </tr>
               <tr>
-                <td>__:__</td>
-                <td>__:__</td>
-                <td>Workshop A</td>
-              </tr>
-              <tr>
-                <td>__:__</td>
-                <td>__:__</td>
+                <td>20:00</td>
+                <td>20:30</td>
                 <td>Release of Problem Statements</td>
               </tr>
               <tr>
-                <td>__:__</td>
-                <td>__:__</td>
+                <td>20:30</td>
+                <td></td>
                 <td>Hackathon begins</td>
               </tr>
+              </tbody>
+            </table>
+          </div>
+          <div className="modal-footer">
+            <a href="#!" className="modal-close waves-effect waves-green btn-flat">Close</a>
+          </div>
+        </div>
+
+
+        <div id="modal4" className="modal bottom-sheet">
+          <div className="modal-content">
+            <h4 className="center">23/2/20</h4>
+            <table className="centered highlight responsive-table">
+              <thead>
               <tr>
-                <td>__:__</td>
-                <td>__:__</td>
-                <td>Snacks Break</td>
+                <th>Start Time</th>
+                <th>End Time</th>
+                <th>Event</th>
+              </tr>
+              </thead>
+
+              <tbody>
+              <tr>
+                <td>2:00</td>
+                <td>2:30</td>
+                <td>Midnight Snacks</td>
               </tr>
               <tr>
-                <td>__:__</td>
-                <td>__:__</td>
+                <td>4:00</td>
+                <td></td>
+                <td>Mentor Round - 1</td>
+              </tr>
+              <tr>
+                <td>9:00</td>
+                <td>9:30</td>
                 <td>Breakfast</td>
               </tr>
               <tr>
-                <td>__:__</td>
-                <td>__:__</td>
+                <td>12:00</td>
+                <td></td>
+                <td>Mentor Round - 2</td>
+              </tr>
+              <tr>
+                <td>13:30</td>
+                <td>14:30</td>
                 <td>Lunch</td>
               </tr>
               <tr>
-                <td>__:__</td>
-                <td>__:__</td>
-                <td>Dinner</td>
+                <td>15:00</td>
+                <td>15:30</td>
+                <td>Keynote session by Sameer Khan</td>
               </tr>
               <tr>
-                <td>__:__</td>
-                <td>__:__</td>
-                <td>Midnight Snacks Break</td>
+                <td>17:30</td>
+                <td>18:00</td>
+                <td>High Tea</td>
+              </tr>
+              <tr>
+                <td>20:00</td>
+                <td></td>
+                <td>Mentor Round - 3</td>
+              </tr>
+              <tr>
+                <td>21:00</td>
+                <td>22:00</td>
+                <td>Dinner</td>
               </tr>
               </tbody>
             </table>
