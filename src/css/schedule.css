@@ -1,76 +1,104 @@
 .scheduleBg{
   position: relative;
-  height: 100vh;  
+  height: 60vh;
   background-image: linear-gradient(black, rgb(2, 36, 74) );
+}
+
+.schedule-header {
+  color: white;
+  font-weight: 800;
+  margin: 0 auto;
+  padding-top: 20px;
 }
 
 .schedule-background{
   position: absolute;
   bottom: 0;
   width: 100%;
-}
-
-.schedule-dark-grass{
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-}
-
-.schedule-light-grass{
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 100%;
+  z-index: 1;
 }
 
 .teepee-one{
   position: absolute;
-  bottom: 2vw;
-  width: 12%;
+  bottom: 9vw;
+  width: 18%;
   cursor: pointer;
-  left: 5%;
+  right: 8%;
 }
 
 
 .teepee-two{
   position: absolute;
   bottom: 9vw;  
-  width: 12%;
+  width: 18%;
   cursor: pointer;
-  left: 20%;
+  left: 10%;
+  transform: scaleX(-1);
 }
 
 .teepee-three{
   position: absolute;
-  bottom: 2vw;
-  width: 12%;
+  bottom: 0;
+  width: 18%;
   cursor: pointer;
-  left: 35%;
+  left: 26%;
+  transform: scaleX(-1);
 }
 
 
 .teepee-four{
   position: absolute;
-  bottom: 2vw;
-  width: 12%;
+  bottom: 0;
+  width: 18%;
   cursor: pointer;
-  left: 55%;
+  left: 57%;
 }
 
-.teepee-five{
+
+.bonfire{
   position: absolute;
-  bottom: 11vw;
-  width: 12%;
+  bottom: 5vw;
   cursor: pointer;
-  right: 20%;
+  left: 46%;
+  width: 10%;
 }
 
 
-.teepee-six{
+.register-date{
   position: absolute;
-  bottom: 7vw;
-  width: 12%;
-  cursor: pointer;
-  right: 5%;
+  width: 10%;
+  bottom: 18vw;
+  left: 14%;
 }
+
+.shortlist-date{
+  position: absolute;
+  width: 5%;
+  bottom: 9.5vw;
+  left: 33%;
+}
+
+.first-day-date{
+  position: absolute;
+  width: 5%;
+  bottom: 9.5vw;
+  left: 63%;
+}
+
+.second-day-date{
+  position: absolute;
+  width: 5%;
+  bottom: 18vw;
+  right: 15%;
+}
+
+.schedule-body {
+  z-index: 200;
+  position: relative;
+  margin-top: 5%;
+}
+
+.modal.bottom-sheet {
+  max-height: 80% !important;
+}
+

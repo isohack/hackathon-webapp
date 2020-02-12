@@ -1,87 +1,59 @@
 import React, {Component} from "react";
-import "./navbar.css";
-import logo from '../IsoHack-trans-logo.png'
+import "../css/navbar.css";
+import IsohackLogo from "../img/isohack.png";
 
 class Navbar extends Component {
-  state = {};
-
-  componentDidMount = () => {
-    window.addEventListener('scroll', this.handleScroll);
+  state = {
+    is_menu_open: false
   };
 
-  componentWillUnmount = () => {
-    window.removeEventListener('scroll', this.handleScroll);
-  };
+  // componentDidMount = () => {
+  //   window.addEventListener('scroll', this.handleScroll);
+  // };
+  //
+  // componentWillUnmount = () => {
+  //   window.removeEventListener('scroll', this.handleScroll);
+  // };
+  //
+  // handleScroll = (event) => {
+  //   console.log(event);
+  // }
 
-  handleScroll = (event) => {
-    console.log(event);
+  menuClickHandler() {
+    if (this.state.is_menu_open) {
+      document.getElementById("navbar-menu").style.height = "0";
+    } else {
+      document.getElementById("navbar-menu").style.height = "100vh";
+    }
+    this.setState({
+      is_menu_open: !this.state.is_menu_open
+    });
   }
 
   render() {
     return (
       <div>
-        <div className="navbar-fixed absolute-navbar">
-          <nav className={"main-nav"}>
-            <div className="nav-wrapper main-nav-content">
-              <a href={"/"} className=" brand-logo blue-text text-darken-4">
-                <img className="nav-logo" src={logo} alt="NOT LOADED" />
-              </a>
-              {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-              <a href={""} data-target="mobile-demo" className="sidenav-trigger">
-                <i className="material-icons">menu</i>
-              </a>
-              <ul className="right hide-on-med-and-down">
-                <li>
-                  <a className="blue-text text-darken-4" href="sass.html">Home</a>
-                </li>
-                <li>
-                  <a className="blue-text text-darken-4" href="badges.html">About</a>
-                </li>
-                <li>
-                  <a className="blue-text text-darken-4" href="collapsible.html">Schedule</a>
-                </li>
-                <li>
-                  <a className="blue-text text-darken-4" href="mobile.html">Sponsors</a>
-                </li>
-                <li>
-                  <a className="blue-text text-darken-4" href="mobile.html">Judges</a>
-                </li>
-                <li>
-                  <a className="blue-text text-darken-4" href="mobile.html">Prizes</a>
-                </li>
-                <li>
-                  <a className="blue-text text-darken-4" href="mobile.html">Faq</a>
-                </li>
-                <li>
-                  <a className="blue-text text-darken-4" href="mobile.html">Contact Us</a>
-                </li>
-              </ul>
-            </div>
-          </nav>
+        <div className="navbar-body">
+          {/*eslint-disable-next-line jsx-a11y/anchor-is-valid*/}
+          <a className={"btn-floating btn-large white navbar-button"} onClick={() => {this.menuClickHandler()}}>
+            <img className={"navbar-logo"} src={IsohackLogo} alt={"navbar-logo"} />
+            {(this.state.is_menu_open) ?
+              <span className={"material-icons large navbar-menu-logo black-text"}>close</span>
+              : <span className={"material-icons large navbar-menu-logo black-text"}>menu</span>
+            }
+          </a>
         </div>
-        <ul className="sidenav" id="mobile-demo">
-          <li>
-            <a href="sass.html">Home</a>
-          </li>
-          <li>
-            <a href="badges.html">About</a>
-          </li>
-          <li>
-            <a href="collapsible.html">Schedule</a>
-          </li>
-          <li>
-            <a href="mobile.html">Sponsors</a>
-          </li>
-          <li>
-            <a href="mobile.html">Judges</a>
-          </li>
-          <li>
-            <a href="mobile.html">Prizes</a>
-          </li>
-          <li>
-            <a href="mobile.html">Contact</a>
-          </li>
-        </ul>
+        <div className={"navbar-menu teal darken-2"} id={"navbar-menu"}>
+          <ul>
+            <li><h3 className="center-align"><a className={"navbar-link"} href="/">HOME</a></h3></li>
+            <li><h3 className="center-align"><a className={"navbar-link"} href="/" >ABOUT</a></h3></li>
+            <li><h3 className="center-align"><a className={"navbar-link"} href="/" >THEME</a></h3></li>
+            <li><h3 className="center-align"><a className={"navbar-link"} href="/" >SCHEDULE</a></h3></li>
+            <li><h3 className="center-align"><a className={"navbar-link"} href="/">FAQ</a></h3></li>
+            <li><h3 className="center-align"><a className={"navbar-link"} href="/">SPONSORS</a></h3></li>
+            <li><h3 className="center-align"><a className={"navbar-link"} href="/">CONTACT-US</a></h3></li>
+          </ul>
+        </div>
       </div>
     );
   }

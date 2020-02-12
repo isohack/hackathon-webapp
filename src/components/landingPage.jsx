@@ -20,6 +20,7 @@ import Moutain from "../img/mountain-1.png";
 import TestPage from "./TestPage";
 import SimpleBar from 'simplebar-react';
 import "../css/customScroll.css";
+import LoadingFire from './loadingFire';
 
 import {getAppStatus} from '../services/hackathon';
 
@@ -29,32 +30,115 @@ import {changeAppStatus} from "../actions";
 class LandingPage extends Component {
   state = {
     Tent: Tent,
-    isTest: false
+    isTest: false,
+    loadingFireBackground: {
+      opacity: 1,
+      height: "120vh"
+    },
+    loadingFireItem: {
+      opacity: 1
+    },
+    loading: true,
+    landingValue: null,
+    countDownDate: new Date("Dec 30, 2019 12:00:00").getTime(),
   };
 
   handleScroll = () => {
-    
-	/*console.log(document.body.scrollTop, document.documentElement.);
 
-	if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
-			document.getElementById("scroll-up-button").classList.add("scale-in");
-	} else {
-			document.getElementById("scroll-up-button").classList.remove("scale-in");
-	}*/
+    /*console.log(document.body.scrollTop, document.documentElement.);
 
+    if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+        document.getElementById("scroll-up-button").classList.add("scale-in");
+    } else {
+        document.getElementById("scroll-up-button").classList.remove("scale-in");
+    }*/
+
+  };
+
+  prettyNumber = (n) => {
+    return n > 9 ? "" + n: "0" + n;
+  };
+
+  setCountDown = () => {
+    this.landingValue = setInterval(() => {
+
+      // Get today's date and time
+      var now = new Date().getTime();
+
+      // Find the distance between now and the count down date
+      var distance = this.state.countDownDate - now;
+
+      // Time calculations for days, hours, minutes and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      // Display the result in the element with id="demo"
+      document.getElementById("landing-count-down").innerHTML = this.prettyNumber(hours + (24 * days)) + ":"
+        + this.prettyNumber(minutes) + ":" + this.prettyNumber(seconds);
+
+      // If the count down is finished, write some text
+      if (distance < 0) {
+        clearInterval(this.landingValue);
+        document.getElementById("landing-count-down").innerHTML = "00:00:00";
+      }
+    }, 1000);
+  };
+
+  loadApplyNowScript = () => {
+    const script = document.createElement('script');
+    script.src = 'https://apply.devfolio.co';
+    script.async = true;
+    document.body.appendChild(script);
+
+    script.onload = this.handleLoad;
+  };
+
+  handleLoad = () => {
+    new window.Devfolio({key: 'isohack', buttonSelector: '#devfolio-apply-now'});
   };
 
   componentDidMount() {
 
-	window.addEventListener('scroll', this.handleScroll, true);
+    console.log('\n\n\n\nSeems like you are curious for something ? Search for Panda, it will guide you ...\n\n\n\n');
+
+    window.onload = this.loadApplyNowScript();
+    this.setCountDown();
+
+    setTimeout(() => {
+      this.setState({
+        loadingFireItem: {
+          opacity: 0
+        }
+      });
+    }, 1800);
+    setTimeout(() => {
+      this.setState({
+        loadingFireBackground: {
+          opacity: 1,
+          height: 0
+        }
+      });
+    }, 2000);
+    setTimeout(() => {
+      this.setState({
+        loading: false,
+      });
+      setTimeout(() => {
+        document.getElementById("section10").style.opacity = 0;
+      }, 2000)
+    }, 3000);
+
+    window.addEventListener('scroll', this.handleScroll, true);
 
     M.AutoInit();
     getAppStatus().then((data) => {
+      console.log('STATUS:', data);
       this.props.changeAppStatus(data);
     }).catch((err) => {
       console.log(err);
       M.toast({html: 'Error connecting to backend', classes: 'rounded'});
-      // this.setState(() => { throw err; });
     });
 
     const currentDate = new Date();
@@ -92,33 +176,57 @@ class LandingPage extends Component {
     }, 1000);
   };
 
+  handleLandingScroll() {
+    window.scrollBy(0, 100);
+  }
+
   render() {
-    const appStatus = this.props.appStatus;
-    let webapp_status;
-    if (appStatus === 'live') {
-      webapp_status = <span className="new badge webapp-status live-status" data-badge-caption="">Live</span>;
-    } else if (appStatus === 'maintenance') {
-      webapp_status =
-        <span className="new badge webapp-status maintenance-status" data-badge-caption="">Maintenance</span>;
-    } else if (appStatus === 'down') {
-      webapp_status = <span className="new badge webapp-status down-status" data-badge-caption="">Down</span>;
-    } else if (appStatus === 'testing') {
-      webapp_status = <span className="new badge webapp-status testing-status" data-badge-caption="">Testing</span>;
-    } else if (appStatus === 'offline'){
-      webapp_status = <span className="new badge webapp-status down-status" data-badge-caption="">Offline</span>;
-    }
+    // const appStatus = this.props.appStatus;
+    // // let webapp_status;
+    // // if (appStatus === 'live') {
+    // //   webapp_status = <span className="new badge webapp-status live-status" data-badge-caption="">Live</span>;
+    // // } else if (appStatus === 'maintenance') {
+    // //   webapp_status =
+    // //     <span className="new badge webapp-status maintenance-status" data-badge-caption="">Maintenance</span>;
+    // // } else if (appStatus === 'down') {
+    // //   webapp_status = <span className="new badge webapp-status down-status" data-badge-caption="">Down</span>;
+    // // } else if (appStatus === 'testing') {
+    // //   webapp_status = <span className="new badge webapp-status testing-status" data-badge-caption="">Testing</span>;
+    // // } else if (appStatus === 'offline') {
+    // //   webapp_status = <span className="new badge webapp-status down-status" data-badge-caption="">Offline</span>;
+    // // }
 
     return (
       <>
-		<SimpleBar style={{maxHeight: "100vh", overflowX: "hidden"}}>
+        <div>
+          <LoadingFire isLoading={this.state.loading}
+                       opacity={this.state.loadingFireBackground.opacity}
+                       height={this.state.loadingFireBackground.height}
+                       itemOpacity={this.state.loadingFireItem.opacity}/>
+        </div>
+        <SimpleBar style={{maxHeight: "100vh", overflowX: "hidden"}}>
           <Navbar/>
+          <div className={"header-title"}>
+            <span className={"hack-name white-text"}>IsoHack</span>
+            <p className={"hack-slogan white-text"}>
+              This season, hack for a reason
+            </p>
+            <span id={"landing-count-down"}> </span>
+            <button className={"landing-devfolio-button"} id="devfolio-apply-now">
+              <svg className={"logo"} xmlns="http://www.w3.org/2000/svg" fill="#fff" viewBox="0 0 115.46 123.46"
+                   style={{height: "24px", width: "24px", marginRight: "8px"}}>
+                <path
+                  d="M115.46 68a55.43 55.43 0 0 1-50.85 55.11S28.12 124 16 123a12.6 12.6 0 0 1-10.09-7.5 15.85 15.85 0 0 0 5.36 1.5c4 .34 10.72.51 20.13.51 13.82 0 28.84-.38 29-.38h.26a60.14 60.14 0 0 0 54.72-52.47c.05 1.05.08 2.18.08 3.34z"/>
+                <path
+                  d="M110.93 55.87A55.43 55.43 0 0 1 60.08 111s-36.48.92-48.58-.12C5 110.29.15 104.22 0 97.52l.2-83.84C.38 7 5.26.94 11.76.41c12.11-1 48.59.12 48.59.12a55.41 55.41 0 0 1 50.58 55.34z"/>
+              </svg>
+              Apply with Devfolio
+            </button>
+          </div>
           <div className={"landing-sky"}>
-            <div className={"header-title"}>
-              <span className={"hack-name"}>IsoHack</span>
-              <p className={"hack-slogan"}>
-                This season, hack for a reason
-              </p>
-            </div>
+            <section id="section10" className="demo">
+              <div><span></span></div>
+            </section>
 
             <img className={"landing-mountains"} src={Mountains} alt=""/>
             <img className={"landing-mountain-1"} src={Moutain} alt=""/>
@@ -142,18 +250,17 @@ class LandingPage extends Component {
             <div className={"bird-container bird-container--four"}>
               <div className={"bird bird--four"}></div>
             </div>
-            {webapp_status}
           </div>
-        <About />
-        <Theme />
-        <Schedule />
-        <Faq />
-        <Sponsor />
-        <Footer footerTestHandler={this.footerTestHandler} />
-        {(this.state.isTest) ?
-          <TestPage testCloseHandler={this.testCloseHandler}/>
-          : <div> </div>
-        }
+          <About/>
+          <Theme/>
+          <Schedule/>
+          <Faq/>
+          <Sponsor/>
+          <Footer footerTestHandler={this.footerTestHandler}/>
+          {(this.state.isTest) ?
+            <TestPage testCloseHandler={this.testCloseHandler}/>
+            : <div></div>
+          }
         </SimpleBar>
       </>
     );

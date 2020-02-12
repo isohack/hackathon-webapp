@@ -3,6 +3,10 @@
     box-sizing: border-box;
 }
 
+input {
+       width: auto !important;
+}
+
 @media only screen and (max-width: 1000px) {
     .landing-sky{
         position: relative;
@@ -46,6 +50,18 @@
     .hack-slogan {
         font-size: 2rem !important;
     }
+
+	.header-title {
+		position: absolute;
+		margin: auto;
+		text-align: center;
+		width: 100% !important;
+		left: 0 !important;
+		padding: 10px;
+		top: 10vh;
+		z-index: 2;
+	}
+
 }
 
 @media only screen and (max-width: 470px) {
@@ -63,6 +79,17 @@
     .hack-slogan {
         font-size: 1.5rem !important;
     }
+	.landing-devfolio-button {
+		position: absolute;
+		margin: auto;
+		text-align: center;
+		width: 70% !important;
+		left: 15% !important;
+	}
+
+	#devfolio-apply-now {
+		padding-left: 8% !important;
+	}
 }
 
 @media only screen and (max-width: 400px) {
@@ -218,7 +245,7 @@
 
 .landing-sea {
     position: absolute;
-    bottom: 5.2vw;
+    bottom: 5.0vw;
     width: 100%;
 }
 
@@ -237,23 +264,51 @@
 .landing-tent {
     position: absolute;
     bottom: 13vw;
-    height: 10vw;
+    height: 11vw;
     right: 4%;
 }
 
 .header-title {
 	position: absolute;
-	left: 7vh;
-	top: 15vh;
+	margin: auto;
+	text-align: center;
+	width: 50%;
+	left: 25%;
+	padding: 10px;
+	top: 10vh;
     z-index: 2;
 }
 
+
+#landing-count-down {
+	font-size: 5rem;
+	font-weight: 900;
+	opacity: 0.7;
+}
+
+.landing-devfolio-button {
+	position: absolute;
+	margin: auto;
+	text-align: center;
+	width: 50%;
+	left: 25%
+}
+
+#devfolio-apply-now {
+	padding-left: 10% !important;
+}
+
 .hack-name {
-	font-size: 6rem;
+	font-size: 5rem;
+	font-weight: 900;
+	color: white;
+	text-shadow: 0 0 4px white;
 }
 
 .hack-slogan {
-	font-size: 3rem;
+	font-size: 2rem;
+	font-weight: 900;
+	text-shadow: 0 0 2px white;
 }
 
 .webapp-status {
@@ -280,4 +335,132 @@
 .testing-status {
 	background-color: #7b1fa2 !important;
 	box-shadow: 0 0 5px 5px #7b1fa2;
+}
+
+.section-scroll {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.section-scroll::after {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	content: '';
+	width: 100%;
+	height: 80%;
+	background: -webkit-linear-gradient(top,rgba(0,0,0,0) 0,rgba(0,0,0,.8) 80%,rgba(0,0,0,.8) 100%);
+	background: linear-gradient(to bottom,rgba(0,0,0,0) 0,rgba(0,0,0,.8) 80%,rgba(0,0,0,.8) 100%);
+}
+
+#section10 {
+    opacity: 1;
+    transition: opacity 2s ease-in-out;
+}
+
+#section10 div {
+	padding-top: 60px;
+}
+#section10 div span {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 30px;
+	height: 50px;
+	margin-left: -15px;
+	border: 2px solid #fff;
+	border-radius: 50px;
+	box-sizing: border-box;
+}
+#section10 div span::before {
+	position: absolute;
+	top: 10px;
+	left: 50%;
+	content: '';
+	width: 6px;
+	height: 6px;
+	margin-left: -3px;
+	background-color: #fff;
+	border-radius: 100%;
+	-webkit-animation: sdb10 2s infinite;
+	animation: sdb10 2s infinite;
+	box-sizing: border-box;
+}
+@-webkit-keyframes sdb10 {
+	0% {
+		-webkit-transform: translate(0, 0);
+		opacity: 0;
+	}
+	40% {
+		opacity: 1;
+	}
+	80% {
+		-webkit-transform: translate(0, 20px);
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+@keyframes sdb10 {
+	0% {
+		transform: translate(0, 0);
+		opacity: 0;
+	}
+	40% {
+		opacity: 1;
+	}
+	80% {
+		transform: translate(0, 20px);
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+.demo div {
+	position: absolute;
+	bottom: 20vh;
+	left: 50%;
+	z-index: 2;
+	display: inline-block;
+	-webkit-transform: translate(0, -50%);
+	transform: translate(0, -50%);
+	color: #fff;
+	letter-spacing: .1em;
+	text-decoration: none;
+	opacity: 0.7;
+	transition: opacity .3s;
+}
+.demo div:hover {
+	opacity: .3;
+}
+
+#devfolio-apply-now {
+	-ms-flex-align: center;
+	-webkit-box-align: center;
+	align-items: center;
+	background-color: #3770FF;
+	border-radius: 3px;
+	border: none;
+	color: #FFFFFF;
+	cursor: pointer;
+	display: -ms-flexbox;
+	display: -webkit-box;
+	display: flex;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+	font-size: 18px;
+	font-weight: 600;
+	padding: 12px 20px;
+	text-align: center;
+	text-transform: lowercase;
+}
+
+#devfolio-apply-now:not([disabled]) {
+	cursor: pointer;
+}
+
+#devfolio-apply-now:hover {
+	background-color: #2954BF !important;
 }
