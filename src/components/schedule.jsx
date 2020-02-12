@@ -218,6 +218,11 @@ class Schedule extends Component {
               <tr>
                 <td>13:30</td>
                 <td>14:30</td>
+                <td>Lunch</td>
+              </tr>
+              <tr>
+                <td>15:00</td>
+                <td>15:30</td>
                 <td>Keynote session by Sameer Khan</td>
               </tr>
               <tr>
